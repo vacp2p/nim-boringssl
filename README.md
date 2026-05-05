@@ -38,6 +38,10 @@ import boringssl
 
 The bindings expose BoringSSL's C API; refer to the headers under [`boringssl/include/openssl/`](boringssl/include/openssl/) for the available symbols.
 
+[`boringssl.nim`](boringssl.nim) is a generated file. It is the concatenation of [`prelude.nim`](prelude.nim) — which carries the build glue (`{.compile:.}` directives for the C/assembly sources, compiler flags, platform guards) — and `tmp_boringssl_ffi.nim`, the raw FFI bindings produced by [futhark](https://github.com/PMunch/futhark) from the BoringSSL headers. See [Regenerating bindings](#regenerating-bindings) below.
+
+BoringSSL is a C++ library, so [`config.nims`](config.nims) overrides the linker to `g++` (Linux), `clang++` (macOS) for downstream builds. Windows uses the default `clang` toolchain.
+
 ## Build options
 
 | Define | Default | Effect |
@@ -50,6 +54,16 @@ The bindings expose BoringSSL's C API; refer to the headers under [`boringssl/in
 - **Windows**: builds with `clang` (llvm-mingw) and assembles `.asm` files with [NASM](https://www.nasm.us/). NASM must be on `PATH`.
 - **Linux i386**: requires `-msse2` (set automatically).
 - **Threads**: bindings are built with `--threads:on` for testing; downstream consumers may build either way.
+
+## Regenerating bindings
+
+The committed [`boringssl.nim`](boringssl.nim) only needs to be regenerated when the BoringSSL submodule is bumped or when the set of imported headers in [`generate_boringssl_ffi.nim`](generate_boringssl_ffi.nim) changes. The [`build.sh`](build.sh) script drives the whole flow:
+
+```sh
+./build.sh
+```
+
+It installs `futhark@0.15.0`, runs `generate_boringssl_ffi.nim` to emit `tmp_boringssl_ffi.nim`, and prepends `prelude.nim` to produce the final `boringssl.nim`.
 
 ## Testing
 
