@@ -6,6 +6,8 @@
 
 import std/[os, strutils]
 
+type ptrdiff_t* {.importc: "ptrdiff_t", header: "<stddef.h>".} = int
+
 # ----- toolchain + includes -----
 {.localPassC: "-DBORINGSSL_IMPLEMENTATION -DS2N_BN_HIDE_SYMBOLS".}
 
