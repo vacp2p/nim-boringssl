@@ -33,6 +33,11 @@ elif defined(windows):
 when defined(i386):
   {.passc: "-msse2".}
 
+when defined(windows):
+  {.passl: "-lws2_32".}
+  when defined(clang):
+    {.passl: "-lpthread".}
+
 const BORINGSS_USE_ASM {.booldefine.}: bool = true
 when BORINGSS_USE_ASM:
   when not defined(windows):
@@ -165,7 +170,7 @@ when BORINGSS_USE_ASM:
   when defined(windows):
     import std/[macros, md5, os, pathnorm]
     const baseDir = currentSourcePath.parentDir
-    const outDir = baseDir / "libs"
+    const outDir = baseDir
     const asmFiles = [
       "./boringssl/gen/bcm/aes-gcm-avx2-x86_64-win.asm",
       "./boringssl/gen/bcm/aes-gcm-avx512-x86_64-win.asm",

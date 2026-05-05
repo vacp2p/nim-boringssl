@@ -6,7 +6,6 @@ from os import parentDir, `/`
 
 importc:
   outputPath currentSourcePath.parentDir / "tmp_boringssl_ffi.nim"
-  path currentSourcePath.parentDir / "libs/lsquic/include"
   path currentSourcePath.parentDir / "boringssl/include"
   rename FILE, CFile # Rename `FILE` that STB uses to `CFile` which is the Nim equivalent
   "openssl/ssl.h"

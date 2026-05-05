@@ -165,7 +165,7 @@ when BORINGSS_USE_ASM:
   when defined(windows):
     import std/[macros, md5, os, pathnorm]
     const baseDir = currentSourcePath.parentDir
-    const outDir = baseDir / "libs"
+    const outDir = baseDir
     const asmFiles = [
       "./boringssl/gen/bcm/aes-gcm-avx2-x86_64-win.asm",
       "./boringssl/gen/bcm/aes-gcm-avx512-x86_64-win.asm",
