@@ -35,6 +35,11 @@ elif defined(windows):
 when defined(i386):
   {.passc: "-msse2".}
 
+when defined(windows):
+  {.passl: "-lws2_32".}
+  when defined(clang):
+    {.passl: "-lpthread".}
+
 const BORINGSS_USE_ASM {.booldefine.}: bool = true
 when BORINGSS_USE_ASM:
   when not defined(windows):
