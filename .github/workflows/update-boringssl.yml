@@ -1,0 +1,165 @@
+name: Update BoringSSL submodule
+
+on:
+  repository_dispatch:
+    types:
+      - boringssl-updated
+  workflow_dispatch:
+    inputs:
+      boringssl_sha:
+        description: "BoringSSL commit SHA to use, or main"
+        required: false
+        default: main
+
+permissions:
+  contents: read
+  pull-requests: read
+
+concurrency:
+  group: update-boringssl-submodule
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-22.04
+    env:
+      BASE_BRANCH: master
+      UPDATE_BRANCH: automation/update-boringssl-submodule
+      BORINGSSL_UPDATE_BOT_TOKEN: ${{ secrets.BORINGSSL_UPDATE_BOT_TOKEN }}
+      GH_TOKEN: ${{ secrets.BORINGSSL_UPDATE_BOT_TOKEN }}
+
+    steps:
+      - name: Check bot token
+        run: |
+          if [[ -z "${BORINGSSL_UPDATE_BOT_TOKEN}" ]]; then
+            echo "BORINGSSL_UPDATE_BOT_TOKEN is required" >&2
+            exit 1
+          fi
+
+      - name: Checkout nim-boringssl
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: recursive
+          persist-credentials: false
+
+      - name: Configure git
+        run: |
+          git config user.name "vacp2p-boringssl-updater"
+          git config user.email "vacp2p-boringssl-updater@users.noreply.github.com"
+          git remote set-url origin "https://x-access-token:${BORINGSSL_UPDATE_BOT_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git fetch --no-tags origin "+refs/heads/${BASE_BRANCH}:refs/remotes/origin/${BASE_BRANCH}"
+          git checkout -B "${UPDATE_BRANCH}" "origin/${BASE_BRANCH}"
+          git submodule update --init --recursive
+
+      - name: Setup Nim
+        uses: ./.github/actions/install_nim
+        with:
+          os: Linux
+          cpu: amd64
+          nim_ref: version-2-2
+          shell: bash
+
+      - name: Install Futhark dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install \
+            --no-install-recommends -yq libclang-dev
+
+          llvm_libdir="$(
+            find /usr/lib/llvm-* -path "*/lib/libclang.so" -printf "%h\n" \
+              | sort -V \
+              | tail -n 1
+          )"
+
+          if [[ -z "${llvm_libdir}" ]]; then
+            echo "libclang.so was not found after installing libclang-dev" >&2
+            exit 1
+          fi
+
+          echo "LIBRARY_PATH=${llvm_libdir}${LIBRARY_PATH:+:${LIBRARY_PATH}}" >> "$GITHUB_ENV"
+          echo "LD_LIBRARY_PATH=${llvm_libdir}${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}" >> "$GITHUB_ENV"
+
+      - name: Resolve BoringSSL commit
+        id: boringssl
+        run: |
+          if [[ "${{ github.event_name }}" == "repository_dispatch" ]]; then
+            target_sha="${{ github.event.client_payload.boringssl_sha }}"
+          else
+            target_sha="${{ inputs.boringssl_sha }}"
+          fi
+
+          if [[ -z "${target_sha}" || "${target_sha}" == "main" ]]; then
+            target_sha="origin/main"
+          fi
+
+          git -C boringssl fetch --no-tags origin "+refs/heads/main:refs/remotes/origin/main"
+
+          if [[ "${target_sha}" == "origin/main" ]]; then
+            resolved_sha="$(git -C boringssl rev-parse origin/main)"
+          else
+            git -C boringssl cat-file -e "${target_sha}^{commit}"
+            git -C boringssl merge-base --is-ancestor "${target_sha}" origin/main
+            resolved_sha="$(git -C boringssl rev-parse "${target_sha}")"
+          fi
+
+          git -C boringssl checkout --detach "${resolved_sha}"
+          echo "sha=${resolved_sha}" >> "$GITHUB_OUTPUT"
+          echo "short_sha=${resolved_sha:0:12}" >> "$GITHUB_OUTPUT"
+
+      - name: Regenerate bindings
+        run: ./build.sh
+
+      - name: Install dependencies and test
+        run: |
+          nimble install
+          nimble test --styleCheck:off --verbose --debug
+
+      - name: Commit update
+        id: commit
+        run: |
+          git add .gitmodules boringssl boringssl.nim
+
+          if git diff --cached --quiet; then
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+            echo "nim-boringssl is already using BoringSSL ${{ steps.boringssl.outputs.sha }}"
+            exit 0
+          fi
+
+          git commit -m "chore: update BoringSSL submodule to ${{ steps.boringssl.outputs.short_sha }}"
+          git push --force-with-lease origin HEAD:${UPDATE_BRANCH}
+          echo "has_changes=true" >> "$GITHUB_OUTPUT"
+
+      - name: Open or update PR
+        if: steps.commit.outputs.has_changes == 'true'
+        run: |
+          body_file="${RUNNER_TEMP}/boringssl-update-pr-body.md"
+          cat > "${body_file}" <<EOF
+          ## Summary
+          Updates the \`boringssl\` submodule to \`${{ steps.boringssl.outputs.sha }}\` and regenerates \`boringssl.nim\`.
+
+          ## Verification
+          - \`./build.sh\`
+          - \`nimble install\`
+          - \`nimble test --styleCheck:off --verbose --debug\`
+
+          This PR is generated after the corresponding \`vacp2p/boringssl\` upstream sync PR has been merged.
+          EOF
+
+          pr_number="$(gh pr list \
+            --base "${BASE_BRANCH}" \
+            --head "${UPDATE_BRANCH}" \
+            --json number \
+            --jq '.[0].number // empty')"
+
+          if [[ -n "${pr_number}" ]]; then
+            gh pr edit "${pr_number}" \
+              --title "chore: update BoringSSL submodule and bindings" \
+              --body-file "${body_file}"
+          else
+            gh pr create \
+              --base "${BASE_BRANCH}" \
+              --head "${UPDATE_BRANCH}" \
+              --title "chore: update BoringSSL submodule and bindings" \
+              --body-file "${body_file}"
+          fi
