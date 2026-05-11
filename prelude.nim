@@ -45,9 +45,7 @@ when BORINGSS_USE_ASM:
   when not defined(windows):
     {.compile: "./boringssl/crypto/hrss/asm/poly_rq_mul.S".}
     {.compile: "./boringssl/third_party/fiat/asm/fiat_curve25519_adx_mul.S".}
-    {.
-      compile: "./boringssl/third_party/fiat/asm/fiat_curve25519_adx_square.S"
-    .}
+    {.compile: "./boringssl/third_party/fiat/asm/fiat_curve25519_adx_square.S".}
     {.compile: "./boringssl/third_party/fiat/asm/fiat_p256_adx_mul.S".}
     {.compile: "./boringssl/third_party/fiat/asm/fiat_p256_adx_sqr.S".}
     {.compile: "./boringssl/crypto/curve25519/asm/x25519-asm-arm.S".}
@@ -192,8 +190,7 @@ when BORINGSS_USE_ASM:
       "./boringssl/gen/bcm/sha512-x86_64-win.asm",
       "./boringssl/gen/bcm/vpaes-x86-win.asm",
       "./boringssl/gen/bcm/vpaes-x86_64-win.asm",
-      "./boringssl/gen/bcm/x86-mont-win.asm",
-      "./boringssl/gen/bcm/x86_64-mont-win.asm",
+      "./boringssl/gen/bcm/x86-mont-win.asm", "./boringssl/gen/bcm/x86_64-mont-win.asm",
       "./boringssl/gen/bcm/x86_64-mont5-win.asm",
       "./boringssl/gen/crypto/md5-x86_64-win.asm",
       "./boringssl/gen/crypto/chacha20_poly1305_x86_64-win.asm",
