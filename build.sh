@@ -13,7 +13,8 @@ toCompile=(
 )
 
 # futhark is required by generate_boringssl.nim
-nimble install futhark@0.15.0
+nimble install -y futhark@0.15.0
+export PATH="${HOME}/.nimble/bin:${PATH}"
 
 nim c --maxLoopIterationsVM:100000000 generate_boringssl_ffi.nim
 
