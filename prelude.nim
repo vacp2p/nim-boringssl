@@ -209,19 +209,31 @@ when BORINGSS_USE_ASM:
           {.link: `objLit`.}
 
     static:
+      let nasmIncludeDir =
+        normalizePath(baseDir / "./boringssl/gen", dirSep = '/') & "/"
+      let nasmPrefixIncludes =
+        staticRead(
+          baseDir /
+            "./boringssl/gen/boringssl_prefix_symbols_internal_x86_64_win_asm.inc"
+        ) &
+        staticRead(
+          baseDir / "./boringssl/gen/boringssl_prefix_symbols_internal_x86_win_asm.inc"
+        )
       for asmPathRel in asmFiles:
         let asmPath = normalizePath(baseDir / asmPathRel, dirSep = '/')
         let outObj =
           normalizePath(outDir / (asmPath.splitFile.name & ".obj"), dirSep = '/')
         let hashPath = outObj & ".md5"
-        let srcHash = getMD5(staticRead(asmPath))
+        let srcHash = getMD5(staticRead(asmPath) & nasmPrefixIncludes)
         let cachedHash =
           if fileExists(hashPath):
             readFile(hashPath)
           else:
             ""
         if (not fileExists(outObj)) or (cachedHash != srcHash):
-          let cmd = "nasm -f win64 " & quoteShell(asmPath) & " -o " & quoteShell(outObj)
+          let cmd =
+            "nasm -f win64 -I" & quoteShell(nasmIncludeDir) & " " & quoteShell(asmPath) &
+            " -o " & quoteShell(outObj)
           let res = gorgeEx(cmd)
           doAssert res.exitCode == 0,
             "Failed cmd exit-code: " & $res.exitCode & " output: " & res.output
@@ -328,13 +340,17 @@ when BORINGSS_USE_ASM:
 {.compile: "./boringssl/crypto/evp/evp.cc".}
 {.compile: "./boringssl/crypto/evp/evp_asn1.cc".}
 {.compile: "./boringssl/crypto/evp/evp_ctx.cc".}
+{.compile: "./boringssl/crypto/evp/evp_kem.cc".}
 {.compile: "./boringssl/crypto/evp/p_dh.cc".}
 {.compile: "./boringssl/crypto/evp/p_dsa.cc".}
 {.compile: "./boringssl/crypto/evp/p_ec.cc".}
 {.compile: "./boringssl/crypto/evp/p_ed25519.cc".}
 {.compile: "./boringssl/crypto/evp/p_hkdf.cc".}
+{.compile: "./boringssl/crypto/evp/p_mldsa.cc".}
+{.compile: "./boringssl/crypto/evp/p_mlkem.cc".}
 {.compile: "./boringssl/crypto/evp/p_rsa.cc".}
 {.compile: "./boringssl/crypto/evp/p_x25519.cc".}
+{.compile: "./boringssl/crypto/evp/p_xwing.cc".}
 {.compile: "./boringssl/crypto/evp/pbkdf.cc".}
 {.compile: "./boringssl/crypto/evp/print.cc".}
 {.compile: "./boringssl/crypto/evp/scrypt.cc".}
