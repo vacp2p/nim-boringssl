@@ -65,6 +65,48 @@ The committed [`boringssl.nim`](boringssl.nim) only needs to be regenerated when
 
 It installs `futhark@0.15.0`, runs `generate_boringssl_ffi.nim` to emit `tmp_boringssl_ffi.nim`, and prepends `prelude.nim` to produce the final `boringssl.nim`.
 
+## Updating BoringSSL and releasing
+
+BoringSSL updates are meant to flow through automation, with manual review at the pull request boundaries. The process spans two repositories:
+
+1. [`vacp2p/boringssl`](https://github.com/vacp2p/boringssl) syncs from canonical upstream BoringSSL.
+2. This repository consumes the updated fork through the `boringssl` submodule, regenerates Nim bindings, bumps the Nimble patch version, and releases the new package version.
+
+### Fork sync
+
+The fork's [`sync-upstream.yml`](https://github.com/vacp2p/boringssl/blob/main/.github/workflows/sync-upstream.yml) workflow runs weekly and can also be started manually. It uses `.vac/scripts/sync_upstream.py` to:
+
+- resolve canonical upstream `https://boringssl.googlesource.com/boringssl` `main`;
+- cross-check the `google/boringssl` GitHub mirror;
+- verify the new upstream SHA is a fast-forward from `.vac/boringssl-upstream.json`;
+- replay the local Windows `fiat_p256` patch from `.vac/patches/fiat-p256-windows.patch`;
+- verify the ADX dispatch remains absent from `third_party/fiat/p256_64.h`;
+- open or update the `automation/boringssl-upstream-sync` PR.
+
+After that PR is reviewed and merged into the fork's `main`, the fork's [`notify-nim-boringssl.yml`](https://github.com/vacp2p/boringssl/blob/main/.github/workflows/notify-nim-boringssl.yml) workflow checks whether `.vac/boringssl-upstream.json` changed. If it did, it sends a `repository_dispatch` event named `boringssl-updated` to this repository, including the new fork commit SHA.
+
+### Binding update
+
+This repository receives that dispatch in [`update-boringssl.yml`](.github/workflows/update-boringssl.yml). The workflow can also be started manually with a `boringssl_sha` input when a specific fork commit needs to be tested.
+
+The update workflow:
+
+- checks out `master` and the `boringssl` submodule;
+- resolves the requested fork SHA, or `main` when no SHA is provided;
+- moves the submodule to that commit;
+- runs [`build.sh`](build.sh) to regenerate [`boringssl.nim`](boringssl.nim);
+- bumps the patch version in [`boringssl.nimble`](boringssl.nimble) when the submodule or generated bindings changed;
+- runs `nimble install` and `nimble test --styleCheck:off --verbose --debug`;
+- opens or updates the `automation/update-boringssl-submodule` PR.
+
+Review that PR as the package update: check the submodule SHA, generated binding diff, Nimble version bump, and CI results before merging.
+
+### Release
+
+Releases are driven by the version in [`boringssl.nimble`](boringssl.nimble). When the update PR is merged to `master`, [`release.yml`](.github/workflows/release.yml) runs on the `boringssl.nimble` change. If the version changed and tag `vX.Y.Z` does not already exist, it creates a GitHub release for that tag with generated notes.
+
+Both repositories' automation requires `BORINGSSL_UPDATE_BOT_TOKEN` for cross-repository PR and dispatch operations. The sync/update workflows also create or update failure issues when automation cannot complete, so failed runs should be handled there before retrying.
+
 ## Testing
 
 ```sh
