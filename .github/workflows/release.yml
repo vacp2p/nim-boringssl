@@ -1,0 +1,73 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - boringssl.nimble
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Release Nimble version
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Read Nimble versions
+        id: version
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          current_version="$(sed -nE 's/^version[[:space:]]*=[[:space:]]*"([^"]+)".*/\1/p' boringssl.nimble)"
+
+          previous_file="$(mktemp)"
+          if git show "${{ github.event.before }}:boringssl.nimble" > "$previous_file" 2>/dev/null; then
+            previous_version="$(sed -nE 's/^version[[:space:]]*=[[:space:]]*"([^"]+)".*/\1/p' "$previous_file")"
+          else
+            previous_version=""
+          fi
+
+          if [[ -z "$current_version" ]]; then
+            echo "Could not read current version from boringssl.nimble" >&2
+            exit 1
+          fi
+
+          {
+            echo "current=$current_version"
+            echo "previous=$previous_version"
+            echo "changed=$([[ "$current_version" != "$previous_version" ]] && echo true || echo false)"
+            echo "tag=v$current_version"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Check whether tag exists
+        if: steps.version.outputs.changed == 'true'
+        id: tag
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if git rev-parse --verify --quiet "refs/tags/${{ steps.version.outputs.tag }}" >/dev/null; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Create release
+        if: steps.version.outputs.changed == 'true' && steps.tag.outputs.exists == 'false'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ steps.version.outputs.tag }}
+        run: |
+          gh release create "$TAG" \
+            --target "${{ github.sha }}" \
+            --title "$TAG" \
+            --generate-notes
