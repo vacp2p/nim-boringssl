@@ -2120,7 +2120,7 @@ type
     ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/base.h:337:43
   struct_srtp_protection_profile_st_570426139 {.pure, inheritable, bycopy.} = object
     name*: cstring
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3683:8
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3707:8
     id*: culong
 
   SSL_CIPHER_570426141 = struct_ssl_cipher_st
@@ -2133,7 +2133,7 @@ type
     ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/base.h:341:39
   struct_ssl_early_callback_ctx_570426149 {.pure, inheritable, bycopy.} = object
     ssl*: ptr SSL_570426166
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5234:8
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5258:8
     client_hello*: ptr uint8
     client_hello_len*: csize_t
     version*: uint16
@@ -2189,7 +2189,7 @@ type
       a3: ptr uint8,
       a4: csize_t,
     ): cint {.cdecl.}
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4193:8
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4217:8
     set_write_secret*: proc(
       a0: ptr SSL_570426166,
       a1: enum_ssl_encryption_level_t_570426638,
@@ -2327,50 +2327,50 @@ type
   CRYPTO_EX_unused_570426225 = cint
     ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ex_data.h:110:13
   OPENSSL_sk_free_func_570426227 = proc(a0: pointer): void {.cdecl.}
-    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/stack.h:243:16
+    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/stack.h:242:16
   OPENSSL_sk_copy_func_570426229 = proc(a0: pointer): pointer {.cdecl.}
-    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/stack.h:248:17
+    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/stack.h:247:17
   OPENSSL_sk_cmp_func_570426231 = proc(a0: ptr pointer, a1: ptr pointer): cint {.cdecl.}
-    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/stack.h:258:15
+    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/stack.h:257:15
   OPENSSL_sk_delete_if_func_570426233 = proc(a0: pointer, a1: pointer): cint {.cdecl.}
-    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/stack.h:262:15
+    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/stack.h:261:15
   OPENSSL_sk_call_free_func_570426235 =
     proc(a0: OPENSSL_sk_free_func_570426228, a1: pointer): void {.cdecl.}
-    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/stack.h:266:16
+    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/stack.h:265:16
   OPENSSL_sk_call_copy_func_570426237 =
     proc(a0: OPENSSL_sk_copy_func_570426230, a1: pointer): pointer {.cdecl.}
-    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/stack.h:267:17
+    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/stack.h:266:17
   OPENSSL_sk_call_cmp_func_570426239 =
     proc(a0: OPENSSL_sk_cmp_func_570426232, a1: pointer, a2: pointer): cint {.cdecl.}
-    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/stack.h:268:15
+    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/stack.h:267:15
   OPENSSL_sk_call_delete_if_func_570426241 = proc(
     a0: OPENSSL_sk_delete_if_func_570426234, a1: pointer, a2: pointer
   ): cint {.cdecl.}
-    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/stack.h:270:15
+    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/stack.h:269:15
   OPENSSL_STACK_570426243 = struct_stack_st
-    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/stack.h:275:25
+    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/stack.h:274:25
   internal_STACK_570426245 = OPENSSL_STACK_570426244
-    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/stack.h:326:23
+    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/stack.h:325:23
   OPENSSL_STRING_570426247 = cstring
-    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/stack.h:548:15
+    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/stack.h:547:15
   sk_void_free_func_570426249 = proc(a0: pointer): void {.cdecl.}
-    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/stack.h:550:1
+    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/stack.h:549:1
   sk_void_copy_func_570426251 = proc(a0: pointer): pointer {.cdecl.}
-    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/stack.h:550:1
+    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/stack.h:549:1
   sk_void_cmp_func_570426253 = proc(a0: ptr pointer, a1: ptr pointer): cint {.cdecl.}
-    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/stack.h:550:1
+    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/stack.h:549:1
   sk_void_delete_if_func_570426255 = proc(a0: pointer, a1: pointer): cint {.cdecl.}
-    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/stack.h:550:1
+    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/stack.h:549:1
   sk_OPENSSL_STRING_free_func_570426257 = proc(a0: cstring): void {.cdecl.}
-    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/stack.h:551:1
+    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/stack.h:550:1
   sk_OPENSSL_STRING_copy_func_570426259 = proc(a0: cstring): cstring {.cdecl.}
-    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/stack.h:551:1
+    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/stack.h:550:1
   sk_OPENSSL_STRING_cmp_func_570426261 =
     proc(a0: ptr cstring, a1: ptr cstring): cint {.cdecl.}
-    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/stack.h:551:1
+    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/stack.h:550:1
   sk_OPENSSL_STRING_delete_if_func_570426263 =
     proc(a0: cstring, a1: pointer): cint {.cdecl.}
-    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/stack.h:551:1
+    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/stack.h:550:1
   sk_BIO_free_func_570426265 = proc(a0: ptr BIO_570425984): void {.cdecl.}
     ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bio.h:37:1
   sk_BIO_copy_func_570426267 = proc(a0: ptr BIO_570425984): ptr BIO_570425984 {.cdecl.}
@@ -2951,7 +2951,7 @@ type
   ssl_cert_compression_func_t_570426625 = proc(
     a0: ptr SSL_570426166, a1: ptr CBB_570425998, a2: ptr uint8, a3: csize_t
   ): cint {.cdecl.}
-    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3494:15
+    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3518:15
   ssl_cert_decompression_func_t_570426627 = proc(
     a0: ptr SSL_570426166,
     a1: ptr ptr CRYPTO_BUFFER_570426016,
@@ -2959,43 +2959,43 @@ type
     a3: ptr uint8,
     a4: csize_t,
   ): cint {.cdecl.}
-    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3506:15
+    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3530:15
   sk_SRTP_PROTECTION_PROFILE_free_func_570426629 =
     proc(a0: ptr SRTP_PROTECTION_PROFILE_570426138): void {.cdecl.}
-    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3688:1
+    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3712:1
   sk_SRTP_PROTECTION_PROFILE_copy_func_570426631 = proc(
     a0: ptr SRTP_PROTECTION_PROFILE_570426138
   ): ptr SRTP_PROTECTION_PROFILE_570426138 {.cdecl.}
-    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3688:1
+    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3712:1
   sk_SRTP_PROTECTION_PROFILE_cmp_func_570426633 = proc(
     a0: ptr ptr SRTP_PROTECTION_PROFILE_570426138,
     a1: ptr ptr SRTP_PROTECTION_PROFILE_570426138,
   ): cint {.cdecl.}
-    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3688:1
+    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3712:1
   sk_SRTP_PROTECTION_PROFILE_delete_if_func_570426635 =
     proc(a0: ptr SRTP_PROTECTION_PROFILE_570426138, a1: pointer): cint {.cdecl.}
-    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3688:1
+    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3712:1
   SSL_COMP_570426647 = struct_ssl_comp_st_570426650
-    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5547:28
+    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5582:28
   struct_ssl_comp_st_570426649 {.pure, inheritable, bycopy.} = object
     id*: cint
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5832:8
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5867:8
     name*: cstring
     method_field*: cstring
 
   sk_SSL_COMP_free_func_570426651 = proc(a0: ptr SSL_COMP_570426648): void {.cdecl.}
-    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5838:1
+    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5873:1
   sk_SSL_COMP_copy_func_570426653 =
     proc(a0: ptr SSL_COMP_570426648): ptr SSL_COMP_570426648 {.cdecl.}
-    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5838:1
+    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5873:1
   sk_SSL_COMP_cmp_func_570426655 =
     proc(a0: ptr ptr SSL_COMP_570426648, a1: ptr ptr SSL_COMP_570426648): cint {.cdecl.}
-    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5838:1
+    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5873:1
   sk_SSL_COMP_delete_if_func_570426657 =
     proc(a0: ptr SSL_COMP_570426648, a1: pointer): cint {.cdecl.}
-    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5838:1
+    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5873:1
   SSL_CONF_CTX_570426659 = struct_ssl_conf_ctx_st
-    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6001:32
+    ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6036:32
   struct_IO_FILE_570426663 {.pure, inheritable, bycopy.} = object
     internal_flags*: cint
       ## Generated based on /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:49:8
@@ -49524,13 +49524,26 @@ else:
       "Declaration of " & "TLSEXT_TYPE_trust_anchors" &
         " already exists, not redeclaring"
     )
+when not declared(TLSEXT_TYPE_server_padding):
+  when 4832 is static:
+    const TLSEXT_TYPE_server_padding* = 4832
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:146:9
+  else:
+    let TLSEXT_TYPE_server_padding* = 4832
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:146:9
+else:
+  static:
+    hint(
+      "Declaration of " & "TLSEXT_TYPE_server_padding" &
+        " already exists, not redeclaring"
+    )
 when not declared(TLSEXT_TYPE_tls_flags):
   when 62 is static:
     const TLSEXT_TYPE_tls_flags* = 62
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:144:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:149:9
   else:
     let TLSEXT_TYPE_tls_flags* = 62
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:144:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:149:9
 else:
   static:
     hint(
@@ -49539,10 +49552,10 @@ else:
 when not declared(TLSEXT_STATUSTYPE_nothing):
   when -1 is static:
     const TLSEXT_STATUSTYPE_nothing* = -1
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:147:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:152:9
   else:
     let TLSEXT_STATUSTYPE_nothing* = -1
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:147:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:152:9
 else:
   static:
     hint(
@@ -49552,10 +49565,10 @@ else:
 when not declared(TLSEXT_STATUSTYPE_ocsp):
   when 1 is static:
     const TLSEXT_STATUSTYPE_ocsp* = 1
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:148:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:153:9
   else:
     let TLSEXT_STATUSTYPE_ocsp* = 1
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:148:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:153:9
 else:
   static:
     hint(
@@ -49564,10 +49577,10 @@ else:
 when not declared(TLSEXT_ECPOINTFORMAT_uncompressed):
   when 0 is static:
     const TLSEXT_ECPOINTFORMAT_uncompressed* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:151:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:156:9
   else:
     let TLSEXT_ECPOINTFORMAT_uncompressed* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:151:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:156:9
 else:
   static:
     hint(
@@ -49577,10 +49590,10 @@ else:
 when not declared(TLSEXT_ECPOINTFORMAT_ansiX962_compressed_prime):
   when 1 is static:
     const TLSEXT_ECPOINTFORMAT_ansiX962_compressed_prime* = 1
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:152:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:157:9
   else:
     let TLSEXT_ECPOINTFORMAT_ansiX962_compressed_prime* = 1
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:152:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:157:9
 else:
   static:
     hint(
@@ -49590,10 +49603,10 @@ else:
 when not declared(TLSEXT_signature_anonymous):
   when 0 is static:
     const TLSEXT_signature_anonymous* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:156:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:161:9
   else:
     let TLSEXT_signature_anonymous* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:156:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:161:9
 else:
   static:
     hint(
@@ -49603,10 +49616,10 @@ else:
 when not declared(TLSEXT_signature_rsa):
   when 1 is static:
     const TLSEXT_signature_rsa* = 1
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:157:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:162:9
   else:
     let TLSEXT_signature_rsa* = 1
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:157:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:162:9
 else:
   static:
     hint(
@@ -49615,10 +49628,10 @@ else:
 when not declared(TLSEXT_signature_dsa):
   when 2 is static:
     const TLSEXT_signature_dsa* = 2
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:158:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:163:9
   else:
     let TLSEXT_signature_dsa* = 2
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:158:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:163:9
 else:
   static:
     hint(
@@ -49627,10 +49640,10 @@ else:
 when not declared(TLSEXT_signature_ecdsa):
   when 3 is static:
     const TLSEXT_signature_ecdsa* = 3
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:159:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:164:9
   else:
     let TLSEXT_signature_ecdsa* = 3
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:159:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:164:9
 else:
   static:
     hint(
@@ -49639,80 +49652,80 @@ else:
 when not declared(TLSEXT_hash_none):
   when 0 is static:
     const TLSEXT_hash_none* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:161:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:166:9
   else:
     let TLSEXT_hash_none* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:161:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:166:9
 else:
   static:
     hint("Declaration of " & "TLSEXT_hash_none" & " already exists, not redeclaring")
 when not declared(TLSEXT_hash_md5):
   when 1 is static:
     const TLSEXT_hash_md5* = 1
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:162:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:167:9
   else:
     let TLSEXT_hash_md5* = 1
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:162:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:167:9
 else:
   static:
     hint("Declaration of " & "TLSEXT_hash_md5" & " already exists, not redeclaring")
 when not declared(TLSEXT_hash_sha1):
   when 2 is static:
     const TLSEXT_hash_sha1* = 2
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:163:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:168:9
   else:
     let TLSEXT_hash_sha1* = 2
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:163:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:168:9
 else:
   static:
     hint("Declaration of " & "TLSEXT_hash_sha1" & " already exists, not redeclaring")
 when not declared(TLSEXT_hash_sha224):
   when 3 is static:
     const TLSEXT_hash_sha224* = 3
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:164:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:169:9
   else:
     let TLSEXT_hash_sha224* = 3
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:164:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:169:9
 else:
   static:
     hint("Declaration of " & "TLSEXT_hash_sha224" & " already exists, not redeclaring")
 when not declared(TLSEXT_hash_sha256):
   when 4 is static:
     const TLSEXT_hash_sha256* = 4
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:165:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:170:9
   else:
     let TLSEXT_hash_sha256* = 4
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:165:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:170:9
 else:
   static:
     hint("Declaration of " & "TLSEXT_hash_sha256" & " already exists, not redeclaring")
 when not declared(TLSEXT_hash_sha384):
   when 5 is static:
     const TLSEXT_hash_sha384* = 5
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:166:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:171:9
   else:
     let TLSEXT_hash_sha384* = 5
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:166:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:171:9
 else:
   static:
     hint("Declaration of " & "TLSEXT_hash_sha384" & " already exists, not redeclaring")
 when not declared(TLSEXT_hash_sha512):
   when 6 is static:
     const TLSEXT_hash_sha512* = 6
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:167:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:172:9
   else:
     let TLSEXT_hash_sha512* = 6
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:167:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:172:9
 else:
   static:
     hint("Declaration of " & "TLSEXT_hash_sha512" & " already exists, not redeclaring")
 when not declared(TLSEXT_cert_compression_zlib):
   when 1 is static:
     const TLSEXT_cert_compression_zlib* = 1
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:170:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:175:9
   else:
     let TLSEXT_cert_compression_zlib* = 1
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:170:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:175:9
 else:
   static:
     hint(
@@ -49722,10 +49735,10 @@ else:
 when not declared(TLSEXT_cert_compression_brotli):
   when 2 is static:
     const TLSEXT_cert_compression_brotli* = 2
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:171:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:176:9
   else:
     let TLSEXT_cert_compression_brotli* = 2
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:171:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:176:9
 else:
   static:
     hint(
@@ -49735,10 +49748,10 @@ else:
 when not declared(TLSEXT_MAXLEN_host_name):
   when 255 is static:
     const TLSEXT_MAXLEN_host_name* = 255
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:173:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:178:9
   else:
     let TLSEXT_MAXLEN_host_name* = 255
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:173:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:178:9
 else:
   static:
     hint(
@@ -49747,10 +49760,10 @@ else:
 when not declared(TLS1_CK_PSK_WITH_AES_128_CBC_SHA):
   when 50331788 is static:
     const TLS1_CK_PSK_WITH_AES_128_CBC_SHA* = 50331788
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:181:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:186:9
   else:
     let TLS1_CK_PSK_WITH_AES_128_CBC_SHA* = 50331788
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:181:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:186:9
 else:
   static:
     hint(
@@ -49760,10 +49773,10 @@ else:
 when not declared(TLS1_CK_PSK_WITH_AES_256_CBC_SHA):
   when 50331789 is static:
     const TLS1_CK_PSK_WITH_AES_256_CBC_SHA* = 50331789
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:182:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:187:9
   else:
     let TLS1_CK_PSK_WITH_AES_256_CBC_SHA* = 50331789
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:182:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:187:9
 else:
   static:
     hint(
@@ -49773,10 +49786,10 @@ else:
 when not declared(TLS1_CK_ECDHE_PSK_WITH_AES_128_CBC_SHA):
   when 50380853 is static:
     const TLS1_CK_ECDHE_PSK_WITH_AES_128_CBC_SHA* = 50380853
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:183:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:188:9
   else:
     let TLS1_CK_ECDHE_PSK_WITH_AES_128_CBC_SHA* = 50380853
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:183:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:188:9
 else:
   static:
     hint(
@@ -49786,10 +49799,10 @@ else:
 when not declared(TLS1_CK_ECDHE_PSK_WITH_AES_256_CBC_SHA):
   when 50380854 is static:
     const TLS1_CK_ECDHE_PSK_WITH_AES_256_CBC_SHA* = 50380854
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:184:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:189:9
   else:
     let TLS1_CK_ECDHE_PSK_WITH_AES_256_CBC_SHA* = 50380854
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:184:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:189:9
 else:
   static:
     hint(
@@ -49799,10 +49812,10 @@ else:
 when not declared(TLS1_CK_RSA_WITH_AES_128_SHA):
   when 50331695 is static:
     const TLS1_CK_RSA_WITH_AES_128_SHA* = 50331695
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:185:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:190:9
   else:
     let TLS1_CK_RSA_WITH_AES_128_SHA* = 50331695
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:185:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:190:9
 else:
   static:
     hint(
@@ -49812,10 +49825,10 @@ else:
 when not declared(TLS1_CK_RSA_WITH_AES_256_SHA):
   when 50331701 is static:
     const TLS1_CK_RSA_WITH_AES_256_SHA* = 50331701
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:186:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:191:9
   else:
     let TLS1_CK_RSA_WITH_AES_256_SHA* = 50331701
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:186:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:191:9
 else:
   static:
     hint(
@@ -49825,10 +49838,10 @@ else:
 when not declared(TLS1_CK_RSA_WITH_AES_128_GCM_SHA256):
   when 50331804 is static:
     const TLS1_CK_RSA_WITH_AES_128_GCM_SHA256* = 50331804
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:187:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:192:9
   else:
     let TLS1_CK_RSA_WITH_AES_128_GCM_SHA256* = 50331804
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:187:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:192:9
 else:
   static:
     hint(
@@ -49838,10 +49851,10 @@ else:
 when not declared(TLS1_CK_RSA_WITH_AES_256_GCM_SHA384):
   when 50331805 is static:
     const TLS1_CK_RSA_WITH_AES_256_GCM_SHA384* = 50331805
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:188:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:193:9
   else:
     let TLS1_CK_RSA_WITH_AES_256_GCM_SHA384* = 50331805
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:188:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:193:9
 else:
   static:
     hint(
@@ -49851,10 +49864,10 @@ else:
 when not declared(TLS1_CK_ECDHE_ECDSA_WITH_AES_128_CBC_SHA):
   when 50380809 is static:
     const TLS1_CK_ECDHE_ECDSA_WITH_AES_128_CBC_SHA* = 50380809
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:189:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:194:9
   else:
     let TLS1_CK_ECDHE_ECDSA_WITH_AES_128_CBC_SHA* = 50380809
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:189:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:194:9
 else:
   static:
     hint(
@@ -49864,10 +49877,10 @@ else:
 when not declared(TLS1_CK_ECDHE_ECDSA_WITH_AES_256_CBC_SHA):
   when 50380810 is static:
     const TLS1_CK_ECDHE_ECDSA_WITH_AES_256_CBC_SHA* = 50380810
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:190:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:195:9
   else:
     let TLS1_CK_ECDHE_ECDSA_WITH_AES_256_CBC_SHA* = 50380810
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:190:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:195:9
 else:
   static:
     hint(
@@ -49877,10 +49890,10 @@ else:
 when not declared(TLS1_CK_ECDHE_RSA_WITH_AES_128_CBC_SHA):
   when 50380819 is static:
     const TLS1_CK_ECDHE_RSA_WITH_AES_128_CBC_SHA* = 50380819
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:191:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:196:9
   else:
     let TLS1_CK_ECDHE_RSA_WITH_AES_128_CBC_SHA* = 50380819
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:191:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:196:9
 else:
   static:
     hint(
@@ -49890,10 +49903,10 @@ else:
 when not declared(TLS1_CK_ECDHE_RSA_WITH_AES_256_CBC_SHA):
   when 50380820 is static:
     const TLS1_CK_ECDHE_RSA_WITH_AES_256_CBC_SHA* = 50380820
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:192:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:197:9
   else:
     let TLS1_CK_ECDHE_RSA_WITH_AES_256_CBC_SHA* = 50380820
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:192:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:197:9
 else:
   static:
     hint(
@@ -49903,10 +49916,10 @@ else:
 when not declared(TLS1_CK_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256):
   when 50380835 is static:
     const TLS1_CK_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256* = 50380835
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:193:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:198:9
   else:
     let TLS1_CK_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256* = 50380835
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:193:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:198:9
 else:
   static:
     hint(
@@ -49916,10 +49929,10 @@ else:
 when not declared(TLS1_CK_ECDHE_RSA_WITH_AES_128_CBC_SHA256):
   when 50380839 is static:
     const TLS1_CK_ECDHE_RSA_WITH_AES_128_CBC_SHA256* = 50380839
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:194:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:199:9
   else:
     let TLS1_CK_ECDHE_RSA_WITH_AES_128_CBC_SHA256* = 50380839
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:194:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:199:9
 else:
   static:
     hint(
@@ -49929,10 +49942,10 @@ else:
 when not declared(TLS1_CK_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256):
   when 50380843 is static:
     const TLS1_CK_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256* = 50380843
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:195:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:200:9
   else:
     let TLS1_CK_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256* = 50380843
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:195:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:200:9
 else:
   static:
     hint(
@@ -49942,10 +49955,10 @@ else:
 when not declared(TLS1_CK_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384):
   when 50380844 is static:
     const TLS1_CK_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384* = 50380844
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:196:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:201:9
   else:
     let TLS1_CK_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384* = 50380844
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:196:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:201:9
 else:
   static:
     hint(
@@ -49955,10 +49968,10 @@ else:
 when not declared(TLS1_CK_ECDHE_RSA_WITH_AES_128_GCM_SHA256):
   when 50380847 is static:
     const TLS1_CK_ECDHE_RSA_WITH_AES_128_GCM_SHA256* = 50380847
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:197:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:202:9
   else:
     let TLS1_CK_ECDHE_RSA_WITH_AES_128_GCM_SHA256* = 50380847
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:197:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:202:9
 else:
   static:
     hint(
@@ -49968,10 +49981,10 @@ else:
 when not declared(TLS1_CK_ECDHE_RSA_WITH_AES_256_GCM_SHA384):
   when 50380848 is static:
     const TLS1_CK_ECDHE_RSA_WITH_AES_256_GCM_SHA384* = 50380848
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:198:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:203:9
   else:
     let TLS1_CK_ECDHE_RSA_WITH_AES_256_GCM_SHA384* = 50380848
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:198:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:203:9
 else:
   static:
     hint(
@@ -49981,10 +49994,10 @@ else:
 when not declared(TLS1_CK_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256):
   when 50384040 is static:
     const TLS1_CK_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256* = 50384040
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:199:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:204:9
   else:
     let TLS1_CK_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256* = 50384040
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:199:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:204:9
 else:
   static:
     hint(
@@ -49994,10 +50007,10 @@ else:
 when not declared(TLS1_CK_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256):
   when 50384041 is static:
     const TLS1_CK_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256* = 50384041
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:200:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:205:9
   else:
     let TLS1_CK_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256* = 50384041
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:200:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:205:9
 else:
   static:
     hint(
@@ -50007,10 +50020,10 @@ else:
 when not declared(TLS1_CK_ECDHE_PSK_WITH_CHACHA20_POLY1305_SHA256):
   when 50384044 is static:
     const TLS1_CK_ECDHE_PSK_WITH_CHACHA20_POLY1305_SHA256* = 50384044
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:201:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:206:9
   else:
     let TLS1_CK_ECDHE_PSK_WITH_CHACHA20_POLY1305_SHA256* = 50384044
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:201:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:206:9
 else:
   static:
     hint(
@@ -50020,10 +50033,10 @@ else:
 when not declared(TLS1_3_CK_AES_128_GCM_SHA256):
   when 50336513 is static:
     const TLS1_3_CK_AES_128_GCM_SHA256* = 50336513
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:202:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:207:9
   else:
     let TLS1_3_CK_AES_128_GCM_SHA256* = 50336513
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:202:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:207:9
 else:
   static:
     hint(
@@ -50033,10 +50046,10 @@ else:
 when not declared(TLS1_3_CK_AES_256_GCM_SHA384):
   when 50336514 is static:
     const TLS1_3_CK_AES_256_GCM_SHA384* = 50336514
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:203:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:208:9
   else:
     let TLS1_3_CK_AES_256_GCM_SHA384* = 50336514
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:203:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:208:9
 else:
   static:
     hint(
@@ -50046,10 +50059,10 @@ else:
 when not declared(TLS1_3_CK_CHACHA20_POLY1305_SHA256):
   when 50336515 is static:
     const TLS1_3_CK_CHACHA20_POLY1305_SHA256* = 50336515
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:204:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:209:9
   else:
     let TLS1_3_CK_CHACHA20_POLY1305_SHA256* = 50336515
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:204:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:209:9
 else:
   static:
     hint(
@@ -50059,15 +50072,15 @@ else:
 when not declared(TLS1_CK_AES_128_GCM_SHA256):
   when TLS1_3_CK_AES_128_GCM_SHA256 is typedesc:
     type TLS1_CK_AES_128_GCM_SHA256* = TLS1_3_CK_AES_128_GCM_SHA256
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:208:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:213:9
 
   else:
     when TLS1_3_CK_AES_128_GCM_SHA256 is static:
       const TLS1_CK_AES_128_GCM_SHA256* = TLS1_3_CK_AES_128_GCM_SHA256
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:208:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:213:9
     else:
       let TLS1_CK_AES_128_GCM_SHA256* = TLS1_3_CK_AES_128_GCM_SHA256
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:208:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:213:9
 else:
   static:
     hint(
@@ -50077,15 +50090,15 @@ else:
 when not declared(TLS1_CK_AES_256_GCM_SHA384):
   when TLS1_3_CK_AES_256_GCM_SHA384 is typedesc:
     type TLS1_CK_AES_256_GCM_SHA384* = TLS1_3_CK_AES_256_GCM_SHA384
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:209:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:214:9
 
   else:
     when TLS1_3_CK_AES_256_GCM_SHA384 is static:
       const TLS1_CK_AES_256_GCM_SHA384* = TLS1_3_CK_AES_256_GCM_SHA384
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:209:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:214:9
     else:
       let TLS1_CK_AES_256_GCM_SHA384* = TLS1_3_CK_AES_256_GCM_SHA384
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:209:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:214:9
 else:
   static:
     hint(
@@ -50095,15 +50108,15 @@ else:
 when not declared(TLS1_CK_CHACHA20_POLY1305_SHA256):
   when TLS1_3_CK_CHACHA20_POLY1305_SHA256 is typedesc:
     type TLS1_CK_CHACHA20_POLY1305_SHA256* = TLS1_3_CK_CHACHA20_POLY1305_SHA256
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:210:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:215:9
 
   else:
     when TLS1_3_CK_CHACHA20_POLY1305_SHA256 is static:
       const TLS1_CK_CHACHA20_POLY1305_SHA256* = TLS1_3_CK_CHACHA20_POLY1305_SHA256
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:210:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:215:9
     else:
       let TLS1_CK_CHACHA20_POLY1305_SHA256* = TLS1_3_CK_CHACHA20_POLY1305_SHA256
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:210:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:215:9
 else:
   static:
     hint(
@@ -50113,10 +50126,10 @@ else:
 when not declared(TLS1_TXT_PSK_WITH_AES_128_CBC_SHA):
   when "PSK-AES128-CBC-SHA" is static:
     const TLS1_TXT_PSK_WITH_AES_128_CBC_SHA* = "PSK-AES128-CBC-SHA"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:215:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:220:9
   else:
     let TLS1_TXT_PSK_WITH_AES_128_CBC_SHA* = "PSK-AES128-CBC-SHA"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:215:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:220:9
 else:
   static:
     hint(
@@ -50126,10 +50139,10 @@ else:
 when not declared(TLS1_TXT_PSK_WITH_AES_256_CBC_SHA):
   when "PSK-AES256-CBC-SHA" is static:
     const TLS1_TXT_PSK_WITH_AES_256_CBC_SHA* = "PSK-AES256-CBC-SHA"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:216:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:221:9
   else:
     let TLS1_TXT_PSK_WITH_AES_256_CBC_SHA* = "PSK-AES256-CBC-SHA"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:216:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:221:9
 else:
   static:
     hint(
@@ -50139,10 +50152,10 @@ else:
 when not declared(TLS1_TXT_ECDHE_PSK_WITH_AES_128_CBC_SHA):
   when "ECDHE-PSK-AES128-CBC-SHA" is static:
     const TLS1_TXT_ECDHE_PSK_WITH_AES_128_CBC_SHA* = "ECDHE-PSK-AES128-CBC-SHA"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:217:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:222:9
   else:
     let TLS1_TXT_ECDHE_PSK_WITH_AES_128_CBC_SHA* = "ECDHE-PSK-AES128-CBC-SHA"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:217:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:222:9
 else:
   static:
     hint(
@@ -50152,10 +50165,10 @@ else:
 when not declared(TLS1_TXT_ECDHE_PSK_WITH_AES_256_CBC_SHA):
   when "ECDHE-PSK-AES256-CBC-SHA" is static:
     const TLS1_TXT_ECDHE_PSK_WITH_AES_256_CBC_SHA* = "ECDHE-PSK-AES256-CBC-SHA"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:218:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:223:9
   else:
     let TLS1_TXT_ECDHE_PSK_WITH_AES_256_CBC_SHA* = "ECDHE-PSK-AES256-CBC-SHA"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:218:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:223:9
 else:
   static:
     hint(
@@ -50165,10 +50178,10 @@ else:
 when not declared(TLS1_TXT_RSA_WITH_AES_128_SHA):
   when "AES128-SHA" is static:
     const TLS1_TXT_RSA_WITH_AES_128_SHA* = "AES128-SHA"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:219:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:224:9
   else:
     let TLS1_TXT_RSA_WITH_AES_128_SHA* = "AES128-SHA"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:219:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:224:9
 else:
   static:
     hint(
@@ -50178,10 +50191,10 @@ else:
 when not declared(TLS1_TXT_RSA_WITH_AES_256_SHA):
   when "AES256-SHA" is static:
     const TLS1_TXT_RSA_WITH_AES_256_SHA* = "AES256-SHA"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:220:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:225:9
   else:
     let TLS1_TXT_RSA_WITH_AES_256_SHA* = "AES256-SHA"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:220:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:225:9
 else:
   static:
     hint(
@@ -50191,10 +50204,10 @@ else:
 when not declared(TLS1_TXT_RSA_WITH_AES_128_GCM_SHA256):
   when "AES128-GCM-SHA256" is static:
     const TLS1_TXT_RSA_WITH_AES_128_GCM_SHA256* = "AES128-GCM-SHA256"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:221:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:226:9
   else:
     let TLS1_TXT_RSA_WITH_AES_128_GCM_SHA256* = "AES128-GCM-SHA256"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:221:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:226:9
 else:
   static:
     hint(
@@ -50204,10 +50217,10 @@ else:
 when not declared(TLS1_TXT_RSA_WITH_AES_256_GCM_SHA384):
   when "AES256-GCM-SHA384" is static:
     const TLS1_TXT_RSA_WITH_AES_256_GCM_SHA384* = "AES256-GCM-SHA384"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:222:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:227:9
   else:
     let TLS1_TXT_RSA_WITH_AES_256_GCM_SHA384* = "AES256-GCM-SHA384"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:222:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:227:9
 else:
   static:
     hint(
@@ -50217,10 +50230,10 @@ else:
 when not declared(TLS1_TXT_ECDHE_ECDSA_WITH_AES_128_CBC_SHA):
   when "ECDHE-ECDSA-AES128-SHA" is static:
     const TLS1_TXT_ECDHE_ECDSA_WITH_AES_128_CBC_SHA* = "ECDHE-ECDSA-AES128-SHA"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:223:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:228:9
   else:
     let TLS1_TXT_ECDHE_ECDSA_WITH_AES_128_CBC_SHA* = "ECDHE-ECDSA-AES128-SHA"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:223:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:228:9
 else:
   static:
     hint(
@@ -50230,10 +50243,10 @@ else:
 when not declared(TLS1_TXT_ECDHE_ECDSA_WITH_AES_256_CBC_SHA):
   when "ECDHE-ECDSA-AES256-SHA" is static:
     const TLS1_TXT_ECDHE_ECDSA_WITH_AES_256_CBC_SHA* = "ECDHE-ECDSA-AES256-SHA"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:224:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:229:9
   else:
     let TLS1_TXT_ECDHE_ECDSA_WITH_AES_256_CBC_SHA* = "ECDHE-ECDSA-AES256-SHA"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:224:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:229:9
 else:
   static:
     hint(
@@ -50243,10 +50256,10 @@ else:
 when not declared(TLS1_TXT_ECDHE_RSA_WITH_AES_128_CBC_SHA):
   when "ECDHE-RSA-AES128-SHA" is static:
     const TLS1_TXT_ECDHE_RSA_WITH_AES_128_CBC_SHA* = "ECDHE-RSA-AES128-SHA"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:225:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:230:9
   else:
     let TLS1_TXT_ECDHE_RSA_WITH_AES_128_CBC_SHA* = "ECDHE-RSA-AES128-SHA"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:225:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:230:9
 else:
   static:
     hint(
@@ -50256,10 +50269,10 @@ else:
 when not declared(TLS1_TXT_ECDHE_RSA_WITH_AES_256_CBC_SHA):
   when "ECDHE-RSA-AES256-SHA" is static:
     const TLS1_TXT_ECDHE_RSA_WITH_AES_256_CBC_SHA* = "ECDHE-RSA-AES256-SHA"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:226:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:231:9
   else:
     let TLS1_TXT_ECDHE_RSA_WITH_AES_256_CBC_SHA* = "ECDHE-RSA-AES256-SHA"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:226:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:231:9
 else:
   static:
     hint(
@@ -50269,10 +50282,10 @@ else:
 when not declared(TLS1_TXT_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256):
   when "ECDHE-ECDSA-AES128-SHA256" is static:
     const TLS1_TXT_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256* = "ECDHE-ECDSA-AES128-SHA256"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:227:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:232:9
   else:
     let TLS1_TXT_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256* = "ECDHE-ECDSA-AES128-SHA256"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:227:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:232:9
 else:
   static:
     hint(
@@ -50282,10 +50295,10 @@ else:
 when not declared(TLS1_TXT_ECDHE_RSA_WITH_AES_128_CBC_SHA256):
   when "ECDHE-RSA-AES128-SHA256" is static:
     const TLS1_TXT_ECDHE_RSA_WITH_AES_128_CBC_SHA256* = "ECDHE-RSA-AES128-SHA256"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:228:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:233:9
   else:
     let TLS1_TXT_ECDHE_RSA_WITH_AES_128_CBC_SHA256* = "ECDHE-RSA-AES128-SHA256"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:228:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:233:9
 else:
   static:
     hint(
@@ -50295,10 +50308,10 @@ else:
 when not declared(TLS1_TXT_ECDHE_RSA_WITH_AES_128_GCM_SHA256):
   when "ECDHE-RSA-AES128-GCM-SHA256" is static:
     const TLS1_TXT_ECDHE_RSA_WITH_AES_128_GCM_SHA256* = "ECDHE-RSA-AES128-GCM-SHA256"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:233:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:238:9
   else:
     let TLS1_TXT_ECDHE_RSA_WITH_AES_128_GCM_SHA256* = "ECDHE-RSA-AES128-GCM-SHA256"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:233:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:238:9
 else:
   static:
     hint(
@@ -50308,10 +50321,10 @@ else:
 when not declared(TLS1_TXT_ECDHE_RSA_WITH_AES_256_GCM_SHA384):
   when "ECDHE-RSA-AES256-GCM-SHA384" is static:
     const TLS1_TXT_ECDHE_RSA_WITH_AES_256_GCM_SHA384* = "ECDHE-RSA-AES256-GCM-SHA384"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:234:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:239:9
   else:
     let TLS1_TXT_ECDHE_RSA_WITH_AES_256_GCM_SHA384* = "ECDHE-RSA-AES256-GCM-SHA384"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:234:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:239:9
 else:
   static:
     hint(
@@ -50321,10 +50334,10 @@ else:
 when not declared(TLS1_3_RFC_AES_128_GCM_SHA256):
   when "TLS_AES_128_GCM_SHA256" is static:
     const TLS1_3_RFC_AES_128_GCM_SHA256* = "TLS_AES_128_GCM_SHA256"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:241:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:246:9
   else:
     let TLS1_3_RFC_AES_128_GCM_SHA256* = "TLS_AES_128_GCM_SHA256"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:241:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:246:9
 else:
   static:
     hint(
@@ -50334,10 +50347,10 @@ else:
 when not declared(TLS1_3_RFC_AES_256_GCM_SHA384):
   when "TLS_AES_256_GCM_SHA384" is static:
     const TLS1_3_RFC_AES_256_GCM_SHA384* = "TLS_AES_256_GCM_SHA384"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:242:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:247:9
   else:
     let TLS1_3_RFC_AES_256_GCM_SHA384* = "TLS_AES_256_GCM_SHA384"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:242:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:247:9
 else:
   static:
     hint(
@@ -50347,10 +50360,10 @@ else:
 when not declared(TLS1_3_RFC_CHACHA20_POLY1305_SHA256):
   when "TLS_CHACHA20_POLY1305_SHA256" is static:
     const TLS1_3_RFC_CHACHA20_POLY1305_SHA256* = "TLS_CHACHA20_POLY1305_SHA256"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:243:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:248:9
   else:
     let TLS1_3_RFC_CHACHA20_POLY1305_SHA256* = "TLS_CHACHA20_POLY1305_SHA256"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:243:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:248:9
 else:
   static:
     hint(
@@ -50360,60 +50373,60 @@ else:
 when not declared(TLS_CT_RSA_SIGN):
   when 1 is static:
     const TLS_CT_RSA_SIGN* = 1
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:245:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:250:9
   else:
     let TLS_CT_RSA_SIGN* = 1
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:245:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:250:9
 else:
   static:
     hint("Declaration of " & "TLS_CT_RSA_SIGN" & " already exists, not redeclaring")
 when not declared(TLS_CT_DSS_SIGN):
   when 2 is static:
     const TLS_CT_DSS_SIGN* = 2
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:246:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:251:9
   else:
     let TLS_CT_DSS_SIGN* = 2
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:246:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:251:9
 else:
   static:
     hint("Declaration of " & "TLS_CT_DSS_SIGN" & " already exists, not redeclaring")
 when not declared(TLS_CT_RSA_FIXED_DH):
   when 3 is static:
     const TLS_CT_RSA_FIXED_DH* = 3
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:247:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:252:9
   else:
     let TLS_CT_RSA_FIXED_DH* = 3
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:247:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:252:9
 else:
   static:
     hint("Declaration of " & "TLS_CT_RSA_FIXED_DH" & " already exists, not redeclaring")
 when not declared(TLS_CT_DSS_FIXED_DH):
   when 4 is static:
     const TLS_CT_DSS_FIXED_DH* = 4
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:248:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:253:9
   else:
     let TLS_CT_DSS_FIXED_DH* = 4
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:248:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:253:9
 else:
   static:
     hint("Declaration of " & "TLS_CT_DSS_FIXED_DH" & " already exists, not redeclaring")
 when not declared(TLS_CT_ECDSA_SIGN):
   when 64 is static:
     const TLS_CT_ECDSA_SIGN* = 64
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:249:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:254:9
   else:
     let TLS_CT_ECDSA_SIGN* = 64
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:249:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:254:9
 else:
   static:
     hint("Declaration of " & "TLS_CT_ECDSA_SIGN" & " already exists, not redeclaring")
 when not declared(TLS_CT_RSA_FIXED_ECDH):
   when 65 is static:
     const TLS_CT_RSA_FIXED_ECDH* = 65
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:250:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:255:9
   else:
     let TLS_CT_RSA_FIXED_ECDH* = 65
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:250:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:255:9
 else:
   static:
     hint(
@@ -50422,10 +50435,10 @@ else:
 when not declared(TLS_CT_ECDSA_FIXED_ECDH):
   when 66 is static:
     const TLS_CT_ECDSA_FIXED_ECDH* = 66
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:251:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:256:9
   else:
     let TLS_CT_ECDSA_FIXED_ECDH* = 66
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:251:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/tls1.h:256:9
 else:
   static:
     hint(
@@ -51821,10 +51834,10 @@ else:
 when not declared(TLSEXT_NAMETYPE_host_name):
   when 0 is static:
     const TLSEXT_NAMETYPE_host_name* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3295:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3319:9
   else:
     let TLSEXT_NAMETYPE_host_name* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3295:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3319:9
 else:
   static:
     hint(
@@ -51834,20 +51847,20 @@ else:
 when not declared(SSL_TLSEXT_ERR_OK):
   when 0 is static:
     const SSL_TLSEXT_ERR_OK* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3329:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3353:9
   else:
     let SSL_TLSEXT_ERR_OK* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3329:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3353:9
 else:
   static:
     hint("Declaration of " & "SSL_TLSEXT_ERR_OK" & " already exists, not redeclaring")
 when not declared(SSL_TLSEXT_ERR_ALERT_WARNING):
   when 1 is static:
     const SSL_TLSEXT_ERR_ALERT_WARNING* = 1
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3330:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3354:9
   else:
     let SSL_TLSEXT_ERR_ALERT_WARNING* = 1
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3330:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3354:9
 else:
   static:
     hint(
@@ -51857,10 +51870,10 @@ else:
 when not declared(SSL_TLSEXT_ERR_ALERT_FATAL):
   when 2 is static:
     const SSL_TLSEXT_ERR_ALERT_FATAL* = 2
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3331:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3355:9
   else:
     let SSL_TLSEXT_ERR_ALERT_FATAL* = 2
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3331:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3355:9
 else:
   static:
     hint(
@@ -51870,10 +51883,10 @@ else:
 when not declared(SSL_TLSEXT_ERR_NOACK):
   when 3 is static:
     const SSL_TLSEXT_ERR_NOACK* = 3
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3332:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3356:9
   else:
     let SSL_TLSEXT_ERR_NOACK* = 3
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3332:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3356:9
 else:
   static:
     hint(
@@ -51882,10 +51895,10 @@ else:
 when not declared(OPENSSL_NPN_UNSUPPORTED):
   when 0 is static:
     const OPENSSL_NPN_UNSUPPORTED* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3637:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3661:9
   else:
     let OPENSSL_NPN_UNSUPPORTED* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3637:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3661:9
 else:
   static:
     hint(
@@ -51894,10 +51907,10 @@ else:
 when not declared(OPENSSL_NPN_NEGOTIATED):
   when 1 is static:
     const OPENSSL_NPN_NEGOTIATED* = 1
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3638:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3662:9
   else:
     let OPENSSL_NPN_NEGOTIATED* = 1
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3638:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3662:9
 else:
   static:
     hint(
@@ -51906,10 +51919,10 @@ else:
 when not declared(OPENSSL_NPN_NO_OVERLAP):
   when 2 is static:
     const OPENSSL_NPN_NO_OVERLAP* = 2
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3639:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3663:9
   else:
     let OPENSSL_NPN_NO_OVERLAP* = 2
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3639:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3663:9
 else:
   static:
     hint(
@@ -51918,10 +51931,10 @@ else:
 when not declared(SRTP_AES128_CM_SHA1_80):
   when 1 is static:
     const SRTP_AES128_CM_SHA1_80* = 1
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3691:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3715:9
   else:
     let SRTP_AES128_CM_SHA1_80* = 1
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3691:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3715:9
 else:
   static:
     hint(
@@ -51930,10 +51943,10 @@ else:
 when not declared(SRTP_AES128_CM_SHA1_32):
   when 2 is static:
     const SRTP_AES128_CM_SHA1_32* = 2
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3692:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3716:9
   else:
     let SRTP_AES128_CM_SHA1_32* = 2
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3692:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3716:9
 else:
   static:
     hint(
@@ -51942,10 +51955,10 @@ else:
 when not declared(SRTP_AES128_F8_SHA1_80):
   when 3 is static:
     const SRTP_AES128_F8_SHA1_80* = 3
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3693:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3717:9
   else:
     let SRTP_AES128_F8_SHA1_80* = 3
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3693:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3717:9
 else:
   static:
     hint(
@@ -51954,10 +51967,10 @@ else:
 when not declared(SRTP_AES128_F8_SHA1_32):
   when 4 is static:
     const SRTP_AES128_F8_SHA1_32* = 4
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3694:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3718:9
   else:
     let SRTP_AES128_F8_SHA1_32* = 4
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3694:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3718:9
 else:
   static:
     hint(
@@ -51966,30 +51979,30 @@ else:
 when not declared(SRTP_NULL_SHA1_80):
   when 5 is static:
     const SRTP_NULL_SHA1_80* = 5
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3695:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3719:9
   else:
     let SRTP_NULL_SHA1_80* = 5
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3695:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3719:9
 else:
   static:
     hint("Declaration of " & "SRTP_NULL_SHA1_80" & " already exists, not redeclaring")
 when not declared(SRTP_NULL_SHA1_32):
   when 6 is static:
     const SRTP_NULL_SHA1_32* = 6
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3696:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3720:9
   else:
     let SRTP_NULL_SHA1_32* = 6
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3696:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3720:9
 else:
   static:
     hint("Declaration of " & "SRTP_NULL_SHA1_32" & " already exists, not redeclaring")
 when not declared(SRTP_AEAD_AES_128_GCM):
   when 7 is static:
     const SRTP_AEAD_AES_128_GCM* = 7
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3697:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3721:9
   else:
     let SRTP_AEAD_AES_128_GCM* = 7
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3697:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3721:9
 else:
   static:
     hint(
@@ -51998,10 +52011,10 @@ else:
 when not declared(SRTP_AEAD_AES_256_GCM):
   when 8 is static:
     const SRTP_AEAD_AES_256_GCM* = 8
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3698:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3722:9
   else:
     let SRTP_AEAD_AES_256_GCM* = 8
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3698:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3722:9
 else:
   static:
     hint(
@@ -52010,10 +52023,10 @@ else:
 when not declared(PSK_MAX_IDENTITY_LEN):
   when 128 is static:
     const PSK_MAX_IDENTITY_LEN* = 128
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3799:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3823:9
   else:
     let PSK_MAX_IDENTITY_LEN* = 128
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3799:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3823:9
 else:
   static:
     hint(
@@ -52022,20 +52035,20 @@ else:
 when not declared(PSK_MAX_PSK_LEN):
   when 256 is static:
     const PSK_MAX_PSK_LEN* = 256
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3802:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3826:9
   else:
     let PSK_MAX_PSK_LEN* = 256
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3802:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3826:9
 else:
   static:
     hint("Declaration of " & "PSK_MAX_PSK_LEN" & " already exists, not redeclaring")
 when not declared(TLSEXT_cert_type_x509):
   when 0 is static:
     const TLSEXT_cert_type_x509* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3921:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3945:9
   else:
     let TLSEXT_cert_type_x509* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3921:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3945:9
 else:
   static:
     hint(
@@ -52044,10 +52057,10 @@ else:
 when not declared(TLSEXT_cert_type_rpk):
   when 2 is static:
     const TLSEXT_cert_type_rpk* = 2
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3922:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3946:9
   else:
     let TLSEXT_cert_type_rpk* = 2
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3922:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:3946:9
 else:
   static:
     hint(
@@ -52056,10 +52069,10 @@ else:
 when not declared(SSL_PAKE_SPAKE2PLUSV1):
   when 32150 is static:
     const SSL_PAKE_SPAKE2PLUSV1* = 32150
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4036:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4060:9
   else:
     let SSL_PAKE_SPAKE2PLUSV1* = 32150
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4036:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4060:9
 else:
   static:
     hint(
@@ -52068,10 +52081,10 @@ else:
 when not declared(SSL_AD_REASON_OFFSET):
   when 1000 is static:
     const SSL_AD_REASON_OFFSET* = 1000
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4695:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4719:9
   else:
     let SSL_AD_REASON_OFFSET* = 1000
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4695:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4719:9
 else:
   static:
     hint(
@@ -52080,30 +52093,30 @@ else:
 when not declared(SSL_AD_CLOSE_NOTIFY):
   when SSL3_AD_CLOSE_NOTIFY is typedesc:
     type SSL_AD_CLOSE_NOTIFY* = SSL3_AD_CLOSE_NOTIFY
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4698:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4722:9
 
   else:
     when SSL3_AD_CLOSE_NOTIFY is static:
       const SSL_AD_CLOSE_NOTIFY* = SSL3_AD_CLOSE_NOTIFY
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4698:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4722:9
     else:
       let SSL_AD_CLOSE_NOTIFY* = SSL3_AD_CLOSE_NOTIFY
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4698:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4722:9
 else:
   static:
     hint("Declaration of " & "SSL_AD_CLOSE_NOTIFY" & " already exists, not redeclaring")
 when not declared(SSL_AD_UNEXPECTED_MESSAGE):
   when SSL3_AD_UNEXPECTED_MESSAGE is typedesc:
     type SSL_AD_UNEXPECTED_MESSAGE* = SSL3_AD_UNEXPECTED_MESSAGE
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4699:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4723:9
 
   else:
     when SSL3_AD_UNEXPECTED_MESSAGE is static:
       const SSL_AD_UNEXPECTED_MESSAGE* = SSL3_AD_UNEXPECTED_MESSAGE
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4699:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4723:9
     else:
       let SSL_AD_UNEXPECTED_MESSAGE* = SSL3_AD_UNEXPECTED_MESSAGE
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4699:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4723:9
 else:
   static:
     hint(
@@ -52113,15 +52126,15 @@ else:
 when not declared(SSL_AD_BAD_RECORD_MAC):
   when SSL3_AD_BAD_RECORD_MAC is typedesc:
     type SSL_AD_BAD_RECORD_MAC* = SSL3_AD_BAD_RECORD_MAC
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4700:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4724:9
 
   else:
     when SSL3_AD_BAD_RECORD_MAC is static:
       const SSL_AD_BAD_RECORD_MAC* = SSL3_AD_BAD_RECORD_MAC
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4700:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4724:9
     else:
       let SSL_AD_BAD_RECORD_MAC* = SSL3_AD_BAD_RECORD_MAC
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4700:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4724:9
 else:
   static:
     hint(
@@ -52130,15 +52143,15 @@ else:
 when not declared(SSL_AD_DECRYPTION_FAILED):
   when TLS1_AD_DECRYPTION_FAILED is typedesc:
     type SSL_AD_DECRYPTION_FAILED* = TLS1_AD_DECRYPTION_FAILED
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4701:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4725:9
 
   else:
     when TLS1_AD_DECRYPTION_FAILED is static:
       const SSL_AD_DECRYPTION_FAILED* = TLS1_AD_DECRYPTION_FAILED
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4701:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4725:9
     else:
       let SSL_AD_DECRYPTION_FAILED* = TLS1_AD_DECRYPTION_FAILED
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4701:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4725:9
 else:
   static:
     hint(
@@ -52147,15 +52160,15 @@ else:
 when not declared(SSL_AD_RECORD_OVERFLOW):
   when TLS1_AD_RECORD_OVERFLOW is typedesc:
     type SSL_AD_RECORD_OVERFLOW* = TLS1_AD_RECORD_OVERFLOW
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4702:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4726:9
 
   else:
     when TLS1_AD_RECORD_OVERFLOW is static:
       const SSL_AD_RECORD_OVERFLOW* = TLS1_AD_RECORD_OVERFLOW
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4702:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4726:9
     else:
       let SSL_AD_RECORD_OVERFLOW* = TLS1_AD_RECORD_OVERFLOW
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4702:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4726:9
 else:
   static:
     hint(
@@ -52164,15 +52177,15 @@ else:
 when not declared(SSL_AD_DECOMPRESSION_FAILURE):
   when SSL3_AD_DECOMPRESSION_FAILURE is typedesc:
     type SSL_AD_DECOMPRESSION_FAILURE* = SSL3_AD_DECOMPRESSION_FAILURE
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4703:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4727:9
 
   else:
     when SSL3_AD_DECOMPRESSION_FAILURE is static:
       const SSL_AD_DECOMPRESSION_FAILURE* = SSL3_AD_DECOMPRESSION_FAILURE
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4703:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4727:9
     else:
       let SSL_AD_DECOMPRESSION_FAILURE* = SSL3_AD_DECOMPRESSION_FAILURE
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4703:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4727:9
 else:
   static:
     hint(
@@ -52182,15 +52195,15 @@ else:
 when not declared(SSL_AD_HANDSHAKE_FAILURE):
   when SSL3_AD_HANDSHAKE_FAILURE is typedesc:
     type SSL_AD_HANDSHAKE_FAILURE* = SSL3_AD_HANDSHAKE_FAILURE
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4704:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4728:9
 
   else:
     when SSL3_AD_HANDSHAKE_FAILURE is static:
       const SSL_AD_HANDSHAKE_FAILURE* = SSL3_AD_HANDSHAKE_FAILURE
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4704:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4728:9
     else:
       let SSL_AD_HANDSHAKE_FAILURE* = SSL3_AD_HANDSHAKE_FAILURE
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4704:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4728:9
 else:
   static:
     hint(
@@ -52199,15 +52212,15 @@ else:
 when not declared(SSL_AD_NO_CERTIFICATE):
   when SSL3_AD_NO_CERTIFICATE is typedesc:
     type SSL_AD_NO_CERTIFICATE* = SSL3_AD_NO_CERTIFICATE
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4705:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4729:9
 
   else:
     when SSL3_AD_NO_CERTIFICATE is static:
       const SSL_AD_NO_CERTIFICATE* = SSL3_AD_NO_CERTIFICATE
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4705:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4729:9
     else:
       let SSL_AD_NO_CERTIFICATE* = SSL3_AD_NO_CERTIFICATE
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4705:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4729:9
 else:
   static:
     hint(
@@ -52216,15 +52229,15 @@ else:
 when not declared(SSL_AD_BAD_CERTIFICATE):
   when SSL3_AD_BAD_CERTIFICATE is typedesc:
     type SSL_AD_BAD_CERTIFICATE* = SSL3_AD_BAD_CERTIFICATE
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4706:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4730:9
 
   else:
     when SSL3_AD_BAD_CERTIFICATE is static:
       const SSL_AD_BAD_CERTIFICATE* = SSL3_AD_BAD_CERTIFICATE
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4706:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4730:9
     else:
       let SSL_AD_BAD_CERTIFICATE* = SSL3_AD_BAD_CERTIFICATE
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4706:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4730:9
 else:
   static:
     hint(
@@ -52233,15 +52246,15 @@ else:
 when not declared(SSL_AD_UNSUPPORTED_CERTIFICATE):
   when SSL3_AD_UNSUPPORTED_CERTIFICATE is typedesc:
     type SSL_AD_UNSUPPORTED_CERTIFICATE* = SSL3_AD_UNSUPPORTED_CERTIFICATE
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4707:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4731:9
 
   else:
     when SSL3_AD_UNSUPPORTED_CERTIFICATE is static:
       const SSL_AD_UNSUPPORTED_CERTIFICATE* = SSL3_AD_UNSUPPORTED_CERTIFICATE
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4707:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4731:9
     else:
       let SSL_AD_UNSUPPORTED_CERTIFICATE* = SSL3_AD_UNSUPPORTED_CERTIFICATE
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4707:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4731:9
 else:
   static:
     hint(
@@ -52251,15 +52264,15 @@ else:
 when not declared(SSL_AD_CERTIFICATE_REVOKED):
   when SSL3_AD_CERTIFICATE_REVOKED is typedesc:
     type SSL_AD_CERTIFICATE_REVOKED* = SSL3_AD_CERTIFICATE_REVOKED
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4708:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4732:9
 
   else:
     when SSL3_AD_CERTIFICATE_REVOKED is static:
       const SSL_AD_CERTIFICATE_REVOKED* = SSL3_AD_CERTIFICATE_REVOKED
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4708:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4732:9
     else:
       let SSL_AD_CERTIFICATE_REVOKED* = SSL3_AD_CERTIFICATE_REVOKED
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4708:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4732:9
 else:
   static:
     hint(
@@ -52269,15 +52282,15 @@ else:
 when not declared(SSL_AD_CERTIFICATE_EXPIRED):
   when SSL3_AD_CERTIFICATE_EXPIRED is typedesc:
     type SSL_AD_CERTIFICATE_EXPIRED* = SSL3_AD_CERTIFICATE_EXPIRED
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4709:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4733:9
 
   else:
     when SSL3_AD_CERTIFICATE_EXPIRED is static:
       const SSL_AD_CERTIFICATE_EXPIRED* = SSL3_AD_CERTIFICATE_EXPIRED
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4709:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4733:9
     else:
       let SSL_AD_CERTIFICATE_EXPIRED* = SSL3_AD_CERTIFICATE_EXPIRED
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4709:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4733:9
 else:
   static:
     hint(
@@ -52287,15 +52300,15 @@ else:
 when not declared(SSL_AD_CERTIFICATE_UNKNOWN):
   when SSL3_AD_CERTIFICATE_UNKNOWN is typedesc:
     type SSL_AD_CERTIFICATE_UNKNOWN* = SSL3_AD_CERTIFICATE_UNKNOWN
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4710:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4734:9
 
   else:
     when SSL3_AD_CERTIFICATE_UNKNOWN is static:
       const SSL_AD_CERTIFICATE_UNKNOWN* = SSL3_AD_CERTIFICATE_UNKNOWN
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4710:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4734:9
     else:
       let SSL_AD_CERTIFICATE_UNKNOWN* = SSL3_AD_CERTIFICATE_UNKNOWN
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4710:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4734:9
 else:
   static:
     hint(
@@ -52305,15 +52318,15 @@ else:
 when not declared(SSL_AD_ILLEGAL_PARAMETER):
   when SSL3_AD_ILLEGAL_PARAMETER is typedesc:
     type SSL_AD_ILLEGAL_PARAMETER* = SSL3_AD_ILLEGAL_PARAMETER
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4711:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4735:9
 
   else:
     when SSL3_AD_ILLEGAL_PARAMETER is static:
       const SSL_AD_ILLEGAL_PARAMETER* = SSL3_AD_ILLEGAL_PARAMETER
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4711:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4735:9
     else:
       let SSL_AD_ILLEGAL_PARAMETER* = SSL3_AD_ILLEGAL_PARAMETER
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4711:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4735:9
 else:
   static:
     hint(
@@ -52322,30 +52335,30 @@ else:
 when not declared(SSL_AD_UNKNOWN_CA):
   when TLS1_AD_UNKNOWN_CA is typedesc:
     type SSL_AD_UNKNOWN_CA* = TLS1_AD_UNKNOWN_CA
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4712:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4736:9
 
   else:
     when TLS1_AD_UNKNOWN_CA is static:
       const SSL_AD_UNKNOWN_CA* = TLS1_AD_UNKNOWN_CA
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4712:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4736:9
     else:
       let SSL_AD_UNKNOWN_CA* = TLS1_AD_UNKNOWN_CA
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4712:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4736:9
 else:
   static:
     hint("Declaration of " & "SSL_AD_UNKNOWN_CA" & " already exists, not redeclaring")
 when not declared(SSL_AD_ACCESS_DENIED):
   when TLS1_AD_ACCESS_DENIED is typedesc:
     type SSL_AD_ACCESS_DENIED* = TLS1_AD_ACCESS_DENIED
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4713:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4737:9
 
   else:
     when TLS1_AD_ACCESS_DENIED is static:
       const SSL_AD_ACCESS_DENIED* = TLS1_AD_ACCESS_DENIED
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4713:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4737:9
     else:
       let SSL_AD_ACCESS_DENIED* = TLS1_AD_ACCESS_DENIED
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4713:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4737:9
 else:
   static:
     hint(
@@ -52354,30 +52367,30 @@ else:
 when not declared(SSL_AD_DECODE_ERROR):
   when TLS1_AD_DECODE_ERROR is typedesc:
     type SSL_AD_DECODE_ERROR* = TLS1_AD_DECODE_ERROR
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4714:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4738:9
 
   else:
     when TLS1_AD_DECODE_ERROR is static:
       const SSL_AD_DECODE_ERROR* = TLS1_AD_DECODE_ERROR
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4714:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4738:9
     else:
       let SSL_AD_DECODE_ERROR* = TLS1_AD_DECODE_ERROR
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4714:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4738:9
 else:
   static:
     hint("Declaration of " & "SSL_AD_DECODE_ERROR" & " already exists, not redeclaring")
 when not declared(SSL_AD_DECRYPT_ERROR):
   when TLS1_AD_DECRYPT_ERROR is typedesc:
     type SSL_AD_DECRYPT_ERROR* = TLS1_AD_DECRYPT_ERROR
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4715:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4739:9
 
   else:
     when TLS1_AD_DECRYPT_ERROR is static:
       const SSL_AD_DECRYPT_ERROR* = TLS1_AD_DECRYPT_ERROR
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4715:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4739:9
     else:
       let SSL_AD_DECRYPT_ERROR* = TLS1_AD_DECRYPT_ERROR
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4715:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4739:9
 else:
   static:
     hint(
@@ -52386,15 +52399,15 @@ else:
 when not declared(SSL_AD_EXPORT_RESTRICTION):
   when TLS1_AD_EXPORT_RESTRICTION is typedesc:
     type SSL_AD_EXPORT_RESTRICTION* = TLS1_AD_EXPORT_RESTRICTION
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4716:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4740:9
 
   else:
     when TLS1_AD_EXPORT_RESTRICTION is static:
       const SSL_AD_EXPORT_RESTRICTION* = TLS1_AD_EXPORT_RESTRICTION
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4716:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4740:9
     else:
       let SSL_AD_EXPORT_RESTRICTION* = TLS1_AD_EXPORT_RESTRICTION
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4716:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4740:9
 else:
   static:
     hint(
@@ -52404,15 +52417,15 @@ else:
 when not declared(SSL_AD_PROTOCOL_VERSION):
   when TLS1_AD_PROTOCOL_VERSION is typedesc:
     type SSL_AD_PROTOCOL_VERSION* = TLS1_AD_PROTOCOL_VERSION
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4717:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4741:9
 
   else:
     when TLS1_AD_PROTOCOL_VERSION is static:
       const SSL_AD_PROTOCOL_VERSION* = TLS1_AD_PROTOCOL_VERSION
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4717:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4741:9
     else:
       let SSL_AD_PROTOCOL_VERSION* = TLS1_AD_PROTOCOL_VERSION
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4717:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4741:9
 else:
   static:
     hint(
@@ -52421,15 +52434,15 @@ else:
 when not declared(SSL_AD_INSUFFICIENT_SECURITY):
   when TLS1_AD_INSUFFICIENT_SECURITY is typedesc:
     type SSL_AD_INSUFFICIENT_SECURITY* = TLS1_AD_INSUFFICIENT_SECURITY
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4718:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4742:9
 
   else:
     when TLS1_AD_INSUFFICIENT_SECURITY is static:
       const SSL_AD_INSUFFICIENT_SECURITY* = TLS1_AD_INSUFFICIENT_SECURITY
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4718:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4742:9
     else:
       let SSL_AD_INSUFFICIENT_SECURITY* = TLS1_AD_INSUFFICIENT_SECURITY
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4718:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4742:9
 else:
   static:
     hint(
@@ -52439,15 +52452,15 @@ else:
 when not declared(SSL_AD_INTERNAL_ERROR):
   when TLS1_AD_INTERNAL_ERROR is typedesc:
     type SSL_AD_INTERNAL_ERROR* = TLS1_AD_INTERNAL_ERROR
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4719:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4743:9
 
   else:
     when TLS1_AD_INTERNAL_ERROR is static:
       const SSL_AD_INTERNAL_ERROR* = TLS1_AD_INTERNAL_ERROR
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4719:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4743:9
     else:
       let SSL_AD_INTERNAL_ERROR* = TLS1_AD_INTERNAL_ERROR
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4719:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4743:9
 else:
   static:
     hint(
@@ -52456,15 +52469,15 @@ else:
 when not declared(SSL_AD_INAPPROPRIATE_FALLBACK):
   when SSL3_AD_INAPPROPRIATE_FALLBACK is typedesc:
     type SSL_AD_INAPPROPRIATE_FALLBACK* = SSL3_AD_INAPPROPRIATE_FALLBACK
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4720:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4744:9
 
   else:
     when SSL3_AD_INAPPROPRIATE_FALLBACK is static:
       const SSL_AD_INAPPROPRIATE_FALLBACK* = SSL3_AD_INAPPROPRIATE_FALLBACK
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4720:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4744:9
     else:
       let SSL_AD_INAPPROPRIATE_FALLBACK* = SSL3_AD_INAPPROPRIATE_FALLBACK
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4720:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4744:9
 else:
   static:
     hint(
@@ -52474,15 +52487,15 @@ else:
 when not declared(SSL_AD_USER_CANCELLED):
   when TLS1_AD_USER_CANCELLED is typedesc:
     type SSL_AD_USER_CANCELLED* = TLS1_AD_USER_CANCELLED
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4721:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4745:9
 
   else:
     when TLS1_AD_USER_CANCELLED is static:
       const SSL_AD_USER_CANCELLED* = TLS1_AD_USER_CANCELLED
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4721:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4745:9
     else:
       let SSL_AD_USER_CANCELLED* = TLS1_AD_USER_CANCELLED
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4721:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4745:9
 else:
   static:
     hint(
@@ -52491,15 +52504,15 @@ else:
 when not declared(SSL_AD_NO_RENEGOTIATION):
   when TLS1_AD_NO_RENEGOTIATION is typedesc:
     type SSL_AD_NO_RENEGOTIATION* = TLS1_AD_NO_RENEGOTIATION
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4722:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4746:9
 
   else:
     when TLS1_AD_NO_RENEGOTIATION is static:
       const SSL_AD_NO_RENEGOTIATION* = TLS1_AD_NO_RENEGOTIATION
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4722:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4746:9
     else:
       let SSL_AD_NO_RENEGOTIATION* = TLS1_AD_NO_RENEGOTIATION
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4722:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4746:9
 else:
   static:
     hint(
@@ -52508,15 +52521,15 @@ else:
 when not declared(SSL_AD_MISSING_EXTENSION):
   when TLS1_AD_MISSING_EXTENSION is typedesc:
     type SSL_AD_MISSING_EXTENSION* = TLS1_AD_MISSING_EXTENSION
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4723:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4747:9
 
   else:
     when TLS1_AD_MISSING_EXTENSION is static:
       const SSL_AD_MISSING_EXTENSION* = TLS1_AD_MISSING_EXTENSION
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4723:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4747:9
     else:
       let SSL_AD_MISSING_EXTENSION* = TLS1_AD_MISSING_EXTENSION
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4723:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4747:9
 else:
   static:
     hint(
@@ -52525,15 +52538,15 @@ else:
 when not declared(SSL_AD_UNSUPPORTED_EXTENSION):
   when TLS1_AD_UNSUPPORTED_EXTENSION is typedesc:
     type SSL_AD_UNSUPPORTED_EXTENSION* = TLS1_AD_UNSUPPORTED_EXTENSION
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4724:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4748:9
 
   else:
     when TLS1_AD_UNSUPPORTED_EXTENSION is static:
       const SSL_AD_UNSUPPORTED_EXTENSION* = TLS1_AD_UNSUPPORTED_EXTENSION
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4724:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4748:9
     else:
       let SSL_AD_UNSUPPORTED_EXTENSION* = TLS1_AD_UNSUPPORTED_EXTENSION
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4724:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4748:9
 else:
   static:
     hint(
@@ -52543,15 +52556,15 @@ else:
 when not declared(SSL_AD_CERTIFICATE_UNOBTAINABLE):
   when TLS1_AD_CERTIFICATE_UNOBTAINABLE is typedesc:
     type SSL_AD_CERTIFICATE_UNOBTAINABLE* = TLS1_AD_CERTIFICATE_UNOBTAINABLE
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4725:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4749:9
 
   else:
     when TLS1_AD_CERTIFICATE_UNOBTAINABLE is static:
       const SSL_AD_CERTIFICATE_UNOBTAINABLE* = TLS1_AD_CERTIFICATE_UNOBTAINABLE
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4725:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4749:9
     else:
       let SSL_AD_CERTIFICATE_UNOBTAINABLE* = TLS1_AD_CERTIFICATE_UNOBTAINABLE
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4725:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4749:9
 else:
   static:
     hint(
@@ -52561,15 +52574,15 @@ else:
 when not declared(SSL_AD_UNRECOGNIZED_NAME):
   when TLS1_AD_UNRECOGNIZED_NAME is typedesc:
     type SSL_AD_UNRECOGNIZED_NAME* = TLS1_AD_UNRECOGNIZED_NAME
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4726:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4750:9
 
   else:
     when TLS1_AD_UNRECOGNIZED_NAME is static:
       const SSL_AD_UNRECOGNIZED_NAME* = TLS1_AD_UNRECOGNIZED_NAME
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4726:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4750:9
     else:
       let SSL_AD_UNRECOGNIZED_NAME* = TLS1_AD_UNRECOGNIZED_NAME
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4726:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4750:9
 else:
   static:
     hint(
@@ -52578,15 +52591,15 @@ else:
 when not declared(SSL_AD_BAD_CERTIFICATE_HASH_VALUE):
   when TLS1_AD_BAD_CERTIFICATE_HASH_VALUE is typedesc:
     type SSL_AD_BAD_CERTIFICATE_HASH_VALUE* = TLS1_AD_BAD_CERTIFICATE_HASH_VALUE
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4729:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4753:9
 
   else:
     when TLS1_AD_BAD_CERTIFICATE_HASH_VALUE is static:
       const SSL_AD_BAD_CERTIFICATE_HASH_VALUE* = TLS1_AD_BAD_CERTIFICATE_HASH_VALUE
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4729:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4753:9
     else:
       let SSL_AD_BAD_CERTIFICATE_HASH_VALUE* = TLS1_AD_BAD_CERTIFICATE_HASH_VALUE
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4729:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4753:9
 else:
   static:
     hint(
@@ -52596,15 +52609,15 @@ else:
 when not declared(SSL_AD_UNKNOWN_PSK_IDENTITY):
   when TLS1_AD_UNKNOWN_PSK_IDENTITY is typedesc:
     type SSL_AD_UNKNOWN_PSK_IDENTITY* = TLS1_AD_UNKNOWN_PSK_IDENTITY
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4730:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4754:9
 
   else:
     when TLS1_AD_UNKNOWN_PSK_IDENTITY is static:
       const SSL_AD_UNKNOWN_PSK_IDENTITY* = TLS1_AD_UNKNOWN_PSK_IDENTITY
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4730:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4754:9
     else:
       let SSL_AD_UNKNOWN_PSK_IDENTITY* = TLS1_AD_UNKNOWN_PSK_IDENTITY
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4730:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4754:9
 else:
   static:
     hint(
@@ -52614,15 +52627,15 @@ else:
 when not declared(SSL_AD_CERTIFICATE_REQUIRED):
   when TLS1_AD_CERTIFICATE_REQUIRED is typedesc:
     type SSL_AD_CERTIFICATE_REQUIRED* = TLS1_AD_CERTIFICATE_REQUIRED
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4731:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4755:9
 
   else:
     when TLS1_AD_CERTIFICATE_REQUIRED is static:
       const SSL_AD_CERTIFICATE_REQUIRED* = TLS1_AD_CERTIFICATE_REQUIRED
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4731:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4755:9
     else:
       let SSL_AD_CERTIFICATE_REQUIRED* = TLS1_AD_CERTIFICATE_REQUIRED
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4731:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4755:9
 else:
   static:
     hint(
@@ -52632,15 +52645,15 @@ else:
 when not declared(SSL_AD_NO_APPLICATION_PROTOCOL):
   when TLS1_AD_NO_APPLICATION_PROTOCOL is typedesc:
     type SSL_AD_NO_APPLICATION_PROTOCOL* = TLS1_AD_NO_APPLICATION_PROTOCOL
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4732:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4756:9
 
   else:
     when TLS1_AD_NO_APPLICATION_PROTOCOL is static:
       const SSL_AD_NO_APPLICATION_PROTOCOL* = TLS1_AD_NO_APPLICATION_PROTOCOL
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4732:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4756:9
     else:
       let SSL_AD_NO_APPLICATION_PROTOCOL* = TLS1_AD_NO_APPLICATION_PROTOCOL
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4732:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4756:9
 else:
   static:
     hint(
@@ -52650,145 +52663,145 @@ else:
 when not declared(SSL_AD_ECH_REQUIRED):
   when TLS1_AD_ECH_REQUIRED is typedesc:
     type SSL_AD_ECH_REQUIRED* = TLS1_AD_ECH_REQUIRED
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4733:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4757:9
 
   else:
     when TLS1_AD_ECH_REQUIRED is static:
       const SSL_AD_ECH_REQUIRED* = TLS1_AD_ECH_REQUIRED
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4733:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4757:9
     else:
       let SSL_AD_ECH_REQUIRED* = TLS1_AD_ECH_REQUIRED
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4733:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:4757:9
 else:
   static:
     hint("Declaration of " & "SSL_AD_ECH_REQUIRED" & " already exists, not redeclaring")
 when not declared(SSL_ST_CONNECT):
   when 4096 is static:
     const SSL_ST_CONNECT* = 4096
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5338:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5362:9
   else:
     let SSL_ST_CONNECT* = 4096
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5338:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5362:9
 else:
   static:
     hint("Declaration of " & "SSL_ST_CONNECT" & " already exists, not redeclaring")
 when not declared(SSL_ST_ACCEPT):
   when 8192 is static:
     const SSL_ST_ACCEPT* = 8192
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5339:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5363:9
   else:
     let SSL_ST_ACCEPT* = 8192
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5339:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5363:9
 else:
   static:
     hint("Declaration of " & "SSL_ST_ACCEPT" & " already exists, not redeclaring")
 when not declared(SSL_ST_MASK):
   when 4095 is static:
     const SSL_ST_MASK* = 4095
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5340:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5364:9
   else:
     let SSL_ST_MASK* = 4095
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5340:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5364:9
 else:
   static:
     hint("Declaration of " & "SSL_ST_MASK" & " already exists, not redeclaring")
 when not declared(SSL_ST_OK):
   when 3 is static:
     const SSL_ST_OK* = 3
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5342:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5366:9
   else:
     let SSL_ST_OK* = 3
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5342:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5366:9
 else:
   static:
     hint("Declaration of " & "SSL_ST_OK" & " already exists, not redeclaring")
 when not declared(TLS_ST_OK):
   when SSL_ST_OK is typedesc:
     type TLS_ST_OK* = SSL_ST_OK
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5347:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5371:9
 
   else:
     when SSL_ST_OK is static:
       const TLS_ST_OK* = SSL_ST_OK
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5347:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5371:9
     else:
       let TLS_ST_OK* = SSL_ST_OK
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5347:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5371:9
 else:
   static:
     hint("Declaration of " & "TLS_ST_OK" & " already exists, not redeclaring")
 when not declared(TLS_ST_BEFORE):
   when SSL_ST_BEFORE is typedesc:
     type TLS_ST_BEFORE* = SSL_ST_BEFORE
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5348:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5372:9
 
   else:
     when SSL_ST_BEFORE is static:
       const TLS_ST_BEFORE* = SSL_ST_BEFORE
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5348:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5372:9
     else:
       let TLS_ST_BEFORE* = SSL_ST_BEFORE
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5348:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5372:9
 else:
   static:
     hint("Declaration of " & "TLS_ST_BEFORE" & " already exists, not redeclaring")
 when not declared(SSL_CB_LOOP):
   when 1 is static:
     const SSL_CB_LOOP* = 1
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5352:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5376:9
   else:
     let SSL_CB_LOOP* = 1
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5352:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5376:9
 else:
   static:
     hint("Declaration of " & "SSL_CB_LOOP" & " already exists, not redeclaring")
 when not declared(SSL_CB_EXIT):
   when 2 is static:
     const SSL_CB_EXIT* = 2
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5353:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5377:9
   else:
     let SSL_CB_EXIT* = 2
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5353:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5377:9
 else:
   static:
     hint("Declaration of " & "SSL_CB_EXIT" & " already exists, not redeclaring")
 when not declared(SSL_CB_READ):
   when 4 is static:
     const SSL_CB_READ* = 4
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5354:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5378:9
   else:
     let SSL_CB_READ* = 4
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5354:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5378:9
 else:
   static:
     hint("Declaration of " & "SSL_CB_READ" & " already exists, not redeclaring")
 when not declared(SSL_CB_WRITE):
   when 8 is static:
     const SSL_CB_WRITE* = 8
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5355:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5379:9
   else:
     let SSL_CB_WRITE* = 8
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5355:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5379:9
 else:
   static:
     hint("Declaration of " & "SSL_CB_WRITE" & " already exists, not redeclaring")
 when not declared(SSL_CB_ALERT):
   when 16384 is static:
     const SSL_CB_ALERT* = 16384
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5356:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5380:9
   else:
     let SSL_CB_ALERT* = 16384
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5356:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5380:9
 else:
   static:
     hint("Declaration of " & "SSL_CB_ALERT" & " already exists, not redeclaring")
 when not declared(SSL_CB_HANDSHAKE_START):
   when 16 is static:
     const SSL_CB_HANDSHAKE_START* = 16
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5363:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5387:9
   else:
     let SSL_CB_HANDSHAKE_START* = 16
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5363:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5387:9
 else:
   static:
     hint(
@@ -52797,10 +52810,10 @@ else:
 when not declared(SSL_CB_HANDSHAKE_DONE):
   when 32 is static:
     const SSL_CB_HANDSHAKE_DONE* = 32
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5364:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5388:9
   else:
     let SSL_CB_HANDSHAKE_DONE* = 32
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5364:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5388:9
 else:
   static:
     hint(
@@ -52809,20 +52822,20 @@ else:
 when not declared(SSL_SENT_SHUTDOWN):
   when 1 is static:
     const SSL_SENT_SHUTDOWN* = 1
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5422:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5446:9
   else:
     let SSL_SENT_SHUTDOWN* = 1
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5422:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5446:9
 else:
   static:
     hint("Declaration of " & "SSL_SENT_SHUTDOWN" & " already exists, not redeclaring")
 when not declared(SSL_RECEIVED_SHUTDOWN):
   when 2 is static:
     const SSL_RECEIVED_SHUTDOWN* = 2
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5423:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5447:9
   else:
     let SSL_RECEIVED_SHUTDOWN* = 2
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5423:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5447:9
 else:
   static:
     hint(
@@ -52831,15 +52844,15 @@ else:
 when not declared(SSL_MODE_HANDSHAKE_CUTTHROUGH):
   when SSL_MODE_ENABLE_FALSE_START is typedesc:
     type SSL_MODE_HANDSHAKE_CUTTHROUGH* = SSL_MODE_ENABLE_FALSE_START
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5691:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5726:9
 
   else:
     when SSL_MODE_ENABLE_FALSE_START is static:
       const SSL_MODE_HANDSHAKE_CUTTHROUGH* = SSL_MODE_ENABLE_FALSE_START
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5691:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5726:9
     else:
       let SSL_MODE_HANDSHAKE_CUTTHROUGH* = SSL_MODE_ENABLE_FALSE_START
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5691:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5726:9
 else:
   static:
     hint(
@@ -52849,20 +52862,20 @@ else:
 when not declared(SSL_MODE_AUTO_RETRY):
   when 0 is static:
     const SSL_MODE_AUTO_RETRY* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5842:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5877:9
   else:
     let SSL_MODE_AUTO_RETRY* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5842:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5877:9
 else:
   static:
     hint("Declaration of " & "SSL_MODE_AUTO_RETRY" & " already exists, not redeclaring")
 when not declared(SSL_MODE_RELEASE_BUFFERS):
   when 0 is static:
     const SSL_MODE_RELEASE_BUFFERS* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5843:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5878:9
   else:
     let SSL_MODE_RELEASE_BUFFERS* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5843:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5878:9
 else:
   static:
     hint(
@@ -52871,10 +52884,10 @@ else:
 when not declared(SSL_MODE_SEND_CLIENTHELLO_TIME):
   when 0 is static:
     const SSL_MODE_SEND_CLIENTHELLO_TIME* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5844:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5879:9
   else:
     let SSL_MODE_SEND_CLIENTHELLO_TIME* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5844:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5879:9
 else:
   static:
     hint(
@@ -52884,10 +52897,10 @@ else:
 when not declared(SSL_MODE_SEND_SERVERHELLO_TIME):
   when 0 is static:
     const SSL_MODE_SEND_SERVERHELLO_TIME* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5845:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5880:9
   else:
     let SSL_MODE_SEND_SERVERHELLO_TIME* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5845:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5880:9
 else:
   static:
     hint(
@@ -52897,20 +52910,20 @@ else:
 when not declared(SSL_OP_ALL):
   when 0 is static:
     const SSL_OP_ALL* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5846:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5881:9
   else:
     let SSL_OP_ALL* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5846:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5881:9
 else:
   static:
     hint("Declaration of " & "SSL_OP_ALL" & " already exists, not redeclaring")
 when not declared(SSL_OP_ALLOW_UNSAFE_LEGACY_RENEGOTIATION):
   when 0 is static:
     const SSL_OP_ALLOW_UNSAFE_LEGACY_RENEGOTIATION* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5847:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5882:9
   else:
     let SSL_OP_ALLOW_UNSAFE_LEGACY_RENEGOTIATION* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5847:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5882:9
 else:
   static:
     hint(
@@ -52920,10 +52933,10 @@ else:
 when not declared(SSL_OP_DONT_INSERT_EMPTY_FRAGMENTS):
   when 0 is static:
     const SSL_OP_DONT_INSERT_EMPTY_FRAGMENTS* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5848:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5883:9
   else:
     let SSL_OP_DONT_INSERT_EMPTY_FRAGMENTS* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5848:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5883:9
 else:
   static:
     hint(
@@ -52933,10 +52946,10 @@ else:
 when not declared(SSL_OP_EPHEMERAL_RSA):
   when 0 is static:
     const SSL_OP_EPHEMERAL_RSA* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5849:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5884:9
   else:
     let SSL_OP_EPHEMERAL_RSA* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5849:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5884:9
 else:
   static:
     hint(
@@ -52945,10 +52958,10 @@ else:
 when not declared(SSL_OP_LEGACY_SERVER_CONNECT):
   when 0 is static:
     const SSL_OP_LEGACY_SERVER_CONNECT* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5850:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5885:9
   else:
     let SSL_OP_LEGACY_SERVER_CONNECT* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5850:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5885:9
 else:
   static:
     hint(
@@ -52958,10 +52971,10 @@ else:
 when not declared(SSL_OP_MICROSOFT_BIG_SSLV3_BUFFER):
   when 0 is static:
     const SSL_OP_MICROSOFT_BIG_SSLV3_BUFFER* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5851:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5886:9
   else:
     let SSL_OP_MICROSOFT_BIG_SSLV3_BUFFER* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5851:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5886:9
 else:
   static:
     hint(
@@ -52971,10 +52984,10 @@ else:
 when not declared(SSL_OP_MICROSOFT_SESS_ID_BUG):
   when 0 is static:
     const SSL_OP_MICROSOFT_SESS_ID_BUG* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5852:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5887:9
   else:
     let SSL_OP_MICROSOFT_SESS_ID_BUG* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5852:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5887:9
 else:
   static:
     hint(
@@ -52984,10 +52997,10 @@ else:
 when not declared(SSL_OP_MSIE_SSLV2_RSA_PADDING):
   when 0 is static:
     const SSL_OP_MSIE_SSLV2_RSA_PADDING* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5853:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5888:9
   else:
     let SSL_OP_MSIE_SSLV2_RSA_PADDING* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5853:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5888:9
 else:
   static:
     hint(
@@ -52997,10 +53010,10 @@ else:
 when not declared(SSL_OP_NETSCAPE_CA_DN_BUG):
   when 0 is static:
     const SSL_OP_NETSCAPE_CA_DN_BUG* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5854:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5889:9
   else:
     let SSL_OP_NETSCAPE_CA_DN_BUG* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5854:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5889:9
 else:
   static:
     hint(
@@ -53010,10 +53023,10 @@ else:
 when not declared(SSL_OP_NETSCAPE_CHALLENGE_BUG):
   when 0 is static:
     const SSL_OP_NETSCAPE_CHALLENGE_BUG* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5855:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5890:9
   else:
     let SSL_OP_NETSCAPE_CHALLENGE_BUG* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5855:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5890:9
 else:
   static:
     hint(
@@ -53023,10 +53036,10 @@ else:
 when not declared(SSL_OP_NETSCAPE_DEMO_CIPHER_CHANGE_BUG):
   when 0 is static:
     const SSL_OP_NETSCAPE_DEMO_CIPHER_CHANGE_BUG* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5856:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5891:9
   else:
     let SSL_OP_NETSCAPE_DEMO_CIPHER_CHANGE_BUG* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5856:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5891:9
 else:
   static:
     hint(
@@ -53036,10 +53049,10 @@ else:
 when not declared(SSL_OP_NETSCAPE_REUSE_CIPHER_CHANGE_BUG):
   when 0 is static:
     const SSL_OP_NETSCAPE_REUSE_CIPHER_CHANGE_BUG* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5857:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5892:9
   else:
     let SSL_OP_NETSCAPE_REUSE_CIPHER_CHANGE_BUG* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5857:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5892:9
 else:
   static:
     hint(
@@ -53049,10 +53062,10 @@ else:
 when not declared(SSL_OP_NO_COMPRESSION):
   when 0 is static:
     const SSL_OP_NO_COMPRESSION* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5858:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5893:9
   else:
     let SSL_OP_NO_COMPRESSION* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5858:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5893:9
 else:
   static:
     hint(
@@ -53061,10 +53074,10 @@ else:
 when not declared(SSL_OP_NO_RENEGOTIATION):
   when 0 is static:
     const SSL_OP_NO_RENEGOTIATION* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5859:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5894:9
   else:
     let SSL_OP_NO_RENEGOTIATION* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5859:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5894:9
 else:
   static:
     hint(
@@ -53073,10 +53086,10 @@ else:
 when not declared(SSL_OP_NO_SESSION_RESUMPTION_ON_RENEGOTIATION):
   when 0 is static:
     const SSL_OP_NO_SESSION_RESUMPTION_ON_RENEGOTIATION* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5860:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5895:9
   else:
     let SSL_OP_NO_SESSION_RESUMPTION_ON_RENEGOTIATION* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5860:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5895:9
 else:
   static:
     hint(
@@ -53086,30 +53099,30 @@ else:
 when not declared(SSL_OP_NO_SSLv2):
   when 0 is static:
     const SSL_OP_NO_SSLv2* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5861:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5896:9
   else:
     let SSL_OP_NO_SSLv2* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5861:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5896:9
 else:
   static:
     hint("Declaration of " & "SSL_OP_NO_SSLv2" & " already exists, not redeclaring")
 when not declared(SSL_OP_NO_SSLv3):
   when 0 is static:
     const SSL_OP_NO_SSLv3* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5862:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5897:9
   else:
     let SSL_OP_NO_SSLv3* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5862:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5897:9
 else:
   static:
     hint("Declaration of " & "SSL_OP_NO_SSLv3" & " already exists, not redeclaring")
 when not declared(SSL_OP_PKCS1_CHECK_1):
   when 0 is static:
     const SSL_OP_PKCS1_CHECK_1* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5863:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5898:9
   else:
     let SSL_OP_PKCS1_CHECK_1* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5863:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5898:9
 else:
   static:
     hint(
@@ -53118,10 +53131,10 @@ else:
 when not declared(SSL_OP_PKCS1_CHECK_2):
   when 0 is static:
     const SSL_OP_PKCS1_CHECK_2* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5864:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5899:9
   else:
     let SSL_OP_PKCS1_CHECK_2* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5864:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5899:9
 else:
   static:
     hint(
@@ -53130,10 +53143,10 @@ else:
 when not declared(SSL_OP_SINGLE_DH_USE):
   when 0 is static:
     const SSL_OP_SINGLE_DH_USE* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5865:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5900:9
   else:
     let SSL_OP_SINGLE_DH_USE* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5865:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5900:9
 else:
   static:
     hint(
@@ -53142,10 +53155,10 @@ else:
 when not declared(SSL_OP_SINGLE_ECDH_USE):
   when 0 is static:
     const SSL_OP_SINGLE_ECDH_USE* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5866:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5901:9
   else:
     let SSL_OP_SINGLE_ECDH_USE* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5866:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5901:9
 else:
   static:
     hint(
@@ -53154,10 +53167,10 @@ else:
 when not declared(SSL_OP_SSLEAY_080_CLIENT_DH_BUG):
   when 0 is static:
     const SSL_OP_SSLEAY_080_CLIENT_DH_BUG* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5867:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5902:9
   else:
     let SSL_OP_SSLEAY_080_CLIENT_DH_BUG* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5867:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5902:9
 else:
   static:
     hint(
@@ -53167,10 +53180,10 @@ else:
 when not declared(SSL_OP_SSLREF2_REUSE_CERT_TYPE_BUG):
   when 0 is static:
     const SSL_OP_SSLREF2_REUSE_CERT_TYPE_BUG* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5868:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5903:9
   else:
     let SSL_OP_SSLREF2_REUSE_CERT_TYPE_BUG* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5868:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5903:9
 else:
   static:
     hint(
@@ -53180,10 +53193,10 @@ else:
 when not declared(SSL_OP_TLS_BLOCK_PADDING_BUG):
   when 0 is static:
     const SSL_OP_TLS_BLOCK_PADDING_BUG* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5869:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5904:9
   else:
     let SSL_OP_TLS_BLOCK_PADDING_BUG* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5869:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5904:9
 else:
   static:
     hint(
@@ -53193,20 +53206,20 @@ else:
 when not declared(SSL_OP_TLS_D5_BUG):
   when 0 is static:
     const SSL_OP_TLS_D5_BUG* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5870:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5905:9
   else:
     let SSL_OP_TLS_D5_BUG* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5870:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5905:9
 else:
   static:
     hint("Declaration of " & "SSL_OP_TLS_D5_BUG" & " already exists, not redeclaring")
 when not declared(SSL_OP_TLS_ROLLBACK_BUG):
   when 0 is static:
     const SSL_OP_TLS_ROLLBACK_BUG* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5871:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5906:9
   else:
     let SSL_OP_TLS_ROLLBACK_BUG* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5871:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5906:9
 else:
   static:
     hint(
@@ -53215,10 +53228,10 @@ else:
 when not declared(SSL_VERIFY_CLIENT_ONCE):
   when 0 is static:
     const SSL_VERIFY_CLIENT_ONCE* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5872:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5907:9
   else:
     let SSL_VERIFY_CLIENT_ONCE* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5872:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5907:9
 else:
   static:
     hint(
@@ -53227,445 +53240,445 @@ else:
 when not declared(SSL_NOTHING):
   when SSL_ERROR_NONE is typedesc:
     type SSL_NOTHING* = SSL_ERROR_NONE
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5920:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5955:9
 
   else:
     when SSL_ERROR_NONE is static:
       const SSL_NOTHING* = SSL_ERROR_NONE
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5920:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5955:9
     else:
       let SSL_NOTHING* = SSL_ERROR_NONE
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5920:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5955:9
 else:
   static:
     hint("Declaration of " & "SSL_NOTHING" & " already exists, not redeclaring")
 when not declared(SSL_WRITING):
   when SSL_ERROR_WANT_WRITE is typedesc:
     type SSL_WRITING* = SSL_ERROR_WANT_WRITE
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5921:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5956:9
 
   else:
     when SSL_ERROR_WANT_WRITE is static:
       const SSL_WRITING* = SSL_ERROR_WANT_WRITE
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5921:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5956:9
     else:
       let SSL_WRITING* = SSL_ERROR_WANT_WRITE
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5921:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5956:9
 else:
   static:
     hint("Declaration of " & "SSL_WRITING" & " already exists, not redeclaring")
 when not declared(SSL_READING):
   when SSL_ERROR_WANT_READ is typedesc:
     type SSL_READING* = SSL_ERROR_WANT_READ
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5922:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5957:9
 
   else:
     when SSL_ERROR_WANT_READ is static:
       const SSL_READING* = SSL_ERROR_WANT_READ
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5922:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5957:9
     else:
       let SSL_READING* = SSL_ERROR_WANT_READ
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5922:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5957:9
 else:
   static:
     hint("Declaration of " & "SSL_READING" & " already exists, not redeclaring")
 when not declared(SSL_TXT_MEDIUM):
   when "MEDIUM" is static:
     const SSL_TXT_MEDIUM* = "MEDIUM"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5960:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5995:9
   else:
     let SSL_TXT_MEDIUM* = "MEDIUM"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5960:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5995:9
 else:
   static:
     hint("Declaration of " & "SSL_TXT_MEDIUM" & " already exists, not redeclaring")
 when not declared(SSL_TXT_HIGH):
   when "HIGH" is static:
     const SSL_TXT_HIGH* = "HIGH"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5961:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5996:9
   else:
     let SSL_TXT_HIGH* = "HIGH"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5961:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5996:9
 else:
   static:
     hint("Declaration of " & "SSL_TXT_HIGH" & " already exists, not redeclaring")
 when not declared(SSL_TXT_FIPS):
   when "FIPS" is static:
     const SSL_TXT_FIPS* = "FIPS"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5962:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5997:9
   else:
     let SSL_TXT_FIPS* = "FIPS"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5962:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5997:9
 else:
   static:
     hint("Declaration of " & "SSL_TXT_FIPS" & " already exists, not redeclaring")
 when not declared(SSL_TXT_kRSA):
   when "kRSA" is static:
     const SSL_TXT_kRSA* = "kRSA"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5963:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5998:9
   else:
     let SSL_TXT_kRSA* = "kRSA"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5963:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5998:9
 else:
   static:
     hint("Declaration of " & "SSL_TXT_kRSA" & " already exists, not redeclaring")
 when not declared(SSL_TXT_kDHE):
   when "kDHE" is static:
     const SSL_TXT_kDHE* = "kDHE"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5964:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5999:9
   else:
     let SSL_TXT_kDHE* = "kDHE"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5964:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5999:9
 else:
   static:
     hint("Declaration of " & "SSL_TXT_kDHE" & " already exists, not redeclaring")
 when not declared(SSL_TXT_kEDH):
   when "kEDH" is static:
     const SSL_TXT_kEDH* = "kEDH"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5965:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6000:9
   else:
     let SSL_TXT_kEDH* = "kEDH"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5965:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6000:9
 else:
   static:
     hint("Declaration of " & "SSL_TXT_kEDH" & " already exists, not redeclaring")
 when not declared(SSL_TXT_kECDHE):
   when "kECDHE" is static:
     const SSL_TXT_kECDHE* = "kECDHE"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5966:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6001:9
   else:
     let SSL_TXT_kECDHE* = "kECDHE"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5966:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6001:9
 else:
   static:
     hint("Declaration of " & "SSL_TXT_kECDHE" & " already exists, not redeclaring")
 when not declared(SSL_TXT_kEECDH):
   when "kEECDH" is static:
     const SSL_TXT_kEECDH* = "kEECDH"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5967:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6002:9
   else:
     let SSL_TXT_kEECDH* = "kEECDH"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5967:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6002:9
 else:
   static:
     hint("Declaration of " & "SSL_TXT_kEECDH" & " already exists, not redeclaring")
 when not declared(SSL_TXT_kPSK):
   when "kPSK" is static:
     const SSL_TXT_kPSK* = "kPSK"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5968:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6003:9
   else:
     let SSL_TXT_kPSK* = "kPSK"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5968:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6003:9
 else:
   static:
     hint("Declaration of " & "SSL_TXT_kPSK" & " already exists, not redeclaring")
 when not declared(SSL_TXT_aRSA):
   when "aRSA" is static:
     const SSL_TXT_aRSA* = "aRSA"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5969:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6004:9
   else:
     let SSL_TXT_aRSA* = "aRSA"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5969:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6004:9
 else:
   static:
     hint("Declaration of " & "SSL_TXT_aRSA" & " already exists, not redeclaring")
 when not declared(SSL_TXT_aECDSA):
   when "aECDSA" is static:
     const SSL_TXT_aECDSA* = "aECDSA"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5970:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6005:9
   else:
     let SSL_TXT_aECDSA* = "aECDSA"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5970:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6005:9
 else:
   static:
     hint("Declaration of " & "SSL_TXT_aECDSA" & " already exists, not redeclaring")
 when not declared(SSL_TXT_aPSK):
   when "aPSK" is static:
     const SSL_TXT_aPSK* = "aPSK"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5971:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6006:9
   else:
     let SSL_TXT_aPSK* = "aPSK"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5971:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6006:9
 else:
   static:
     hint("Declaration of " & "SSL_TXT_aPSK" & " already exists, not redeclaring")
 when not declared(SSL_TXT_DH):
   when "DH" is static:
     const SSL_TXT_DH* = "DH"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5972:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6007:9
   else:
     let SSL_TXT_DH* = "DH"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5972:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6007:9
 else:
   static:
     hint("Declaration of " & "SSL_TXT_DH" & " already exists, not redeclaring")
 when not declared(SSL_TXT_DHE):
   when "DHE" is static:
     const SSL_TXT_DHE* = "DHE"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5973:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6008:9
   else:
     let SSL_TXT_DHE* = "DHE"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5973:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6008:9
 else:
   static:
     hint("Declaration of " & "SSL_TXT_DHE" & " already exists, not redeclaring")
 when not declared(SSL_TXT_EDH):
   when "EDH" is static:
     const SSL_TXT_EDH* = "EDH"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5974:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6009:9
   else:
     let SSL_TXT_EDH* = "EDH"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5974:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6009:9
 else:
   static:
     hint("Declaration of " & "SSL_TXT_EDH" & " already exists, not redeclaring")
 when not declared(SSL_TXT_RSA):
   when "RSA" is static:
     const SSL_TXT_RSA* = "RSA"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5975:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6010:9
   else:
     let SSL_TXT_RSA* = "RSA"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5975:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6010:9
 else:
   static:
     hint("Declaration of " & "SSL_TXT_RSA" & " already exists, not redeclaring")
 when not declared(SSL_TXT_ECDH):
   when "ECDH" is static:
     const SSL_TXT_ECDH* = "ECDH"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5976:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6011:9
   else:
     let SSL_TXT_ECDH* = "ECDH"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5976:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6011:9
 else:
   static:
     hint("Declaration of " & "SSL_TXT_ECDH" & " already exists, not redeclaring")
 when not declared(SSL_TXT_ECDHE):
   when "ECDHE" is static:
     const SSL_TXT_ECDHE* = "ECDHE"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5977:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6012:9
   else:
     let SSL_TXT_ECDHE* = "ECDHE"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5977:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6012:9
 else:
   static:
     hint("Declaration of " & "SSL_TXT_ECDHE" & " already exists, not redeclaring")
 when not declared(SSL_TXT_EECDH):
   when "EECDH" is static:
     const SSL_TXT_EECDH* = "EECDH"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5978:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6013:9
   else:
     let SSL_TXT_EECDH* = "EECDH"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5978:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6013:9
 else:
   static:
     hint("Declaration of " & "SSL_TXT_EECDH" & " already exists, not redeclaring")
 when not declared(SSL_TXT_ECDSA):
   when "ECDSA" is static:
     const SSL_TXT_ECDSA* = "ECDSA"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5979:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6014:9
   else:
     let SSL_TXT_ECDSA* = "ECDSA"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5979:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6014:9
 else:
   static:
     hint("Declaration of " & "SSL_TXT_ECDSA" & " already exists, not redeclaring")
 when not declared(SSL_TXT_PSK):
   when "PSK" is static:
     const SSL_TXT_PSK* = "PSK"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5980:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6015:9
   else:
     let SSL_TXT_PSK* = "PSK"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5980:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6015:9
 else:
   static:
     hint("Declaration of " & "SSL_TXT_PSK" & " already exists, not redeclaring")
 when not declared(SSL_TXT_3DES):
   when "3DES" is static:
     const SSL_TXT_3DES* = "3DES"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5981:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6016:9
   else:
     let SSL_TXT_3DES* = "3DES"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5981:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6016:9
 else:
   static:
     hint("Declaration of " & "SSL_TXT_3DES" & " already exists, not redeclaring")
 when not declared(SSL_TXT_RC4):
   when "RC4" is static:
     const SSL_TXT_RC4* = "RC4"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5982:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6017:9
   else:
     let SSL_TXT_RC4* = "RC4"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5982:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6017:9
 else:
   static:
     hint("Declaration of " & "SSL_TXT_RC4" & " already exists, not redeclaring")
 when not declared(SSL_TXT_AES128):
   when "AES128" is static:
     const SSL_TXT_AES128* = "AES128"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5983:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6018:9
   else:
     let SSL_TXT_AES128* = "AES128"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5983:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6018:9
 else:
   static:
     hint("Declaration of " & "SSL_TXT_AES128" & " already exists, not redeclaring")
 when not declared(SSL_TXT_AES256):
   when "AES256" is static:
     const SSL_TXT_AES256* = "AES256"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5984:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6019:9
   else:
     let SSL_TXT_AES256* = "AES256"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5984:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6019:9
 else:
   static:
     hint("Declaration of " & "SSL_TXT_AES256" & " already exists, not redeclaring")
 when not declared(SSL_TXT_AES):
   when "AES" is static:
     const SSL_TXT_AES* = "AES"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5985:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6020:9
   else:
     let SSL_TXT_AES* = "AES"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5985:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6020:9
 else:
   static:
     hint("Declaration of " & "SSL_TXT_AES" & " already exists, not redeclaring")
 when not declared(SSL_TXT_AES_GCM):
   when "AESGCM" is static:
     const SSL_TXT_AES_GCM* = "AESGCM"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5986:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6021:9
   else:
     let SSL_TXT_AES_GCM* = "AESGCM"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5986:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6021:9
 else:
   static:
     hint("Declaration of " & "SSL_TXT_AES_GCM" & " already exists, not redeclaring")
 when not declared(SSL_TXT_CHACHA20):
   when "CHACHA20" is static:
     const SSL_TXT_CHACHA20* = "CHACHA20"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5987:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6022:9
   else:
     let SSL_TXT_CHACHA20* = "CHACHA20"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5987:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6022:9
 else:
   static:
     hint("Declaration of " & "SSL_TXT_CHACHA20" & " already exists, not redeclaring")
 when not declared(SSL_TXT_MD5):
   when "MD5" is static:
     const SSL_TXT_MD5* = "MD5"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5988:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6023:9
   else:
     let SSL_TXT_MD5* = "MD5"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5988:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6023:9
 else:
   static:
     hint("Declaration of " & "SSL_TXT_MD5" & " already exists, not redeclaring")
 when not declared(SSL_TXT_SHA1):
   when "SHA1" is static:
     const SSL_TXT_SHA1* = "SHA1"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5989:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6024:9
   else:
     let SSL_TXT_SHA1* = "SHA1"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5989:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6024:9
 else:
   static:
     hint("Declaration of " & "SSL_TXT_SHA1" & " already exists, not redeclaring")
 when not declared(SSL_TXT_SHA):
   when "SHA" is static:
     const SSL_TXT_SHA* = "SHA"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5990:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6025:9
   else:
     let SSL_TXT_SHA* = "SHA"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5990:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6025:9
 else:
   static:
     hint("Declaration of " & "SSL_TXT_SHA" & " already exists, not redeclaring")
 when not declared(SSL_TXT_SHA256):
   when "SHA256" is static:
     const SSL_TXT_SHA256* = "SHA256"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5991:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6026:9
   else:
     let SSL_TXT_SHA256* = "SHA256"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5991:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6026:9
 else:
   static:
     hint("Declaration of " & "SSL_TXT_SHA256" & " already exists, not redeclaring")
 when not declared(SSL_TXT_SHA384):
   when "SHA384" is static:
     const SSL_TXT_SHA384* = "SHA384"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5992:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6027:9
   else:
     let SSL_TXT_SHA384* = "SHA384"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5992:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6027:9
 else:
   static:
     hint("Declaration of " & "SSL_TXT_SHA384" & " already exists, not redeclaring")
 when not declared(SSL_TXT_SSLV3):
   when "SSLv3" is static:
     const SSL_TXT_SSLV3* = "SSLv3"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5993:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6028:9
   else:
     let SSL_TXT_SSLV3* = "SSLv3"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5993:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6028:9
 else:
   static:
     hint("Declaration of " & "SSL_TXT_SSLV3" & " already exists, not redeclaring")
 when not declared(SSL_TXT_TLSV1):
   when "TLSv1" is static:
     const SSL_TXT_TLSV1* = "TLSv1"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5994:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6029:9
   else:
     let SSL_TXT_TLSV1* = "TLSv1"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5994:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6029:9
 else:
   static:
     hint("Declaration of " & "SSL_TXT_TLSV1" & " already exists, not redeclaring")
 when not declared(SSL_TXT_TLSV1_1):
   when "TLSv1.1" is static:
     const SSL_TXT_TLSV1_1* = "TLSv1.1"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5995:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6030:9
   else:
     let SSL_TXT_TLSV1_1* = "TLSv1.1"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5995:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6030:9
 else:
   static:
     hint("Declaration of " & "SSL_TXT_TLSV1_1" & " already exists, not redeclaring")
 when not declared(SSL_TXT_TLSV1_2):
   when "TLSv1.2" is static:
     const SSL_TXT_TLSV1_2* = "TLSv1.2"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5996:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6031:9
   else:
     let SSL_TXT_TLSV1_2* = "TLSv1.2"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5996:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6031:9
 else:
   static:
     hint("Declaration of " & "SSL_TXT_TLSV1_2" & " already exists, not redeclaring")
 when not declared(SSL_TXT_TLSV1_3):
   when "TLSv1.3" is static:
     const SSL_TXT_TLSV1_3* = "TLSv1.3"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5997:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6032:9
   else:
     let SSL_TXT_TLSV1_3* = "TLSv1.3"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5997:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6032:9
 else:
   static:
     hint("Declaration of " & "SSL_TXT_TLSV1_3" & " already exists, not redeclaring")
 when not declared(SSL_TXT_ALL):
   when "ALL" is static:
     const SSL_TXT_ALL* = "ALL"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5998:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6033:9
   else:
     let SSL_TXT_ALL* = "ALL"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5998:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6033:9
 else:
   static:
     hint("Declaration of " & "SSL_TXT_ALL" & " already exists, not redeclaring")
 when not declared(SSL_TXT_CMPDEF):
   when "COMPLEMENTOFDEFAULT" is static:
     const SSL_TXT_CMPDEF* = "COMPLEMENTOFDEFAULT"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5999:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6034:9
   else:
     let SSL_TXT_CMPDEF* = "COMPLEMENTOFDEFAULT"
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:5999:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6034:9
 else:
   static:
     hint("Declaration of " & "SSL_TXT_CMPDEF" & " already exists, not redeclaring")
@@ -53680,10 +53693,10 @@ else:
 when not declared(OPENSSL_INIT_NO_LOAD_SSL_STRINGS):
   when 0 is static:
     const OPENSSL_INIT_NO_LOAD_SSL_STRINGS* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6088:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6123:9
   else:
     let OPENSSL_INIT_NO_LOAD_SSL_STRINGS* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6088:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6123:9
 else:
   static:
     hint(
@@ -53693,10 +53706,10 @@ else:
 when not declared(OPENSSL_INIT_LOAD_SSL_STRINGS):
   when 0 is static:
     const OPENSSL_INIT_LOAD_SSL_STRINGS* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6089:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6124:9
   else:
     let OPENSSL_INIT_LOAD_SSL_STRINGS* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6089:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6124:9
 else:
   static:
     hint(
@@ -53706,10 +53719,10 @@ else:
 when not declared(OPENSSL_INIT_SSL_DEFAULT):
   when 0 is static:
     const OPENSSL_INIT_SSL_DEFAULT* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6090:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6125:9
   else:
     let OPENSSL_INIT_SSL_DEFAULT* = 0
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6090:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6125:9
 else:
   static:
     hint(
@@ -53718,15 +53731,15 @@ else:
 when not declared(SSL_SIGN_RSA_PSS_SHA256):
   when SSL_SIGN_RSA_PSS_RSAE_SHA256 is typedesc:
     type SSL_SIGN_RSA_PSS_SHA256* = SSL_SIGN_RSA_PSS_RSAE_SHA256
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6098:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6133:9
 
   else:
     when SSL_SIGN_RSA_PSS_RSAE_SHA256 is static:
       const SSL_SIGN_RSA_PSS_SHA256* = SSL_SIGN_RSA_PSS_RSAE_SHA256
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6098:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6133:9
     else:
       let SSL_SIGN_RSA_PSS_SHA256* = SSL_SIGN_RSA_PSS_RSAE_SHA256
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6098:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6133:9
 else:
   static:
     hint(
@@ -53735,15 +53748,15 @@ else:
 when not declared(SSL_SIGN_RSA_PSS_SHA384):
   when SSL_SIGN_RSA_PSS_RSAE_SHA384 is typedesc:
     type SSL_SIGN_RSA_PSS_SHA384* = SSL_SIGN_RSA_PSS_RSAE_SHA384
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6099:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6134:9
 
   else:
     when SSL_SIGN_RSA_PSS_RSAE_SHA384 is static:
       const SSL_SIGN_RSA_PSS_SHA384* = SSL_SIGN_RSA_PSS_RSAE_SHA384
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6099:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6134:9
     else:
       let SSL_SIGN_RSA_PSS_SHA384* = SSL_SIGN_RSA_PSS_RSAE_SHA384
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6099:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6134:9
 else:
   static:
     hint(
@@ -53752,15 +53765,15 @@ else:
 when not declared(SSL_SIGN_RSA_PSS_SHA512):
   when SSL_SIGN_RSA_PSS_RSAE_SHA512 is typedesc:
     type SSL_SIGN_RSA_PSS_SHA512* = SSL_SIGN_RSA_PSS_RSAE_SHA512
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6100:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6135:9
 
   else:
     when SSL_SIGN_RSA_PSS_RSAE_SHA512 is static:
       const SSL_SIGN_RSA_PSS_SHA512* = SSL_SIGN_RSA_PSS_RSAE_SHA512
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6100:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6135:9
     else:
       let SSL_SIGN_RSA_PSS_SHA512* = SSL_SIGN_RSA_PSS_RSAE_SHA512
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6100:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6135:9
 else:
   static:
     hint(
@@ -53769,10 +53782,10 @@ else:
 when not declared(SSL_R_TLSV1_ALERT_UNRECOGNIZED_NAME):
   when 1112 is static:
     const SSL_R_TLSV1_ALERT_UNRECOGNIZED_NAME* = 1112
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7020:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7085:9
   else:
     let SSL_R_TLSV1_ALERT_UNRECOGNIZED_NAME* = 1112
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7020:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7085:9
 else:
   static:
     hint(
@@ -53782,10 +53795,10 @@ else:
 when not declared(SSL_R_TLSV1_ALERT_CERTIFICATE_REQUIRED):
   when 1116 is static:
     const SSL_R_TLSV1_ALERT_CERTIFICATE_REQUIRED* = 1116
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7024:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7089:9
   else:
     let SSL_R_TLSV1_ALERT_CERTIFICATE_REQUIRED* = 1116
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7024:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7089:9
 else:
   static:
     hint(
@@ -53795,75 +53808,75 @@ else:
 when not declared(SSL_CURVE_SECP256R1):
   when SSL_GROUP_SECP256R1 is typedesc:
     type SSL_CURVE_SECP256R1* = SSL_GROUP_SECP256R1
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6180:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6215:9
 
   else:
     when SSL_GROUP_SECP256R1 is static:
       const SSL_CURVE_SECP256R1* = SSL_GROUP_SECP256R1
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6180:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6215:9
     else:
       let SSL_CURVE_SECP256R1* = SSL_GROUP_SECP256R1
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6180:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6215:9
 else:
   static:
     hint("Declaration of " & "SSL_CURVE_SECP256R1" & " already exists, not redeclaring")
 when not declared(SSL_CURVE_SECP384R1):
   when SSL_GROUP_SECP384R1 is typedesc:
     type SSL_CURVE_SECP384R1* = SSL_GROUP_SECP384R1
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6181:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6216:9
 
   else:
     when SSL_GROUP_SECP384R1 is static:
       const SSL_CURVE_SECP384R1* = SSL_GROUP_SECP384R1
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6181:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6216:9
     else:
       let SSL_CURVE_SECP384R1* = SSL_GROUP_SECP384R1
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6181:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6216:9
 else:
   static:
     hint("Declaration of " & "SSL_CURVE_SECP384R1" & " already exists, not redeclaring")
 when not declared(SSL_CURVE_SECP521R1):
   when SSL_GROUP_SECP521R1 is typedesc:
     type SSL_CURVE_SECP521R1* = SSL_GROUP_SECP521R1
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6182:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6217:9
 
   else:
     when SSL_GROUP_SECP521R1 is static:
       const SSL_CURVE_SECP521R1* = SSL_GROUP_SECP521R1
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6182:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6217:9
     else:
       let SSL_CURVE_SECP521R1* = SSL_GROUP_SECP521R1
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6182:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6217:9
 else:
   static:
     hint("Declaration of " & "SSL_CURVE_SECP521R1" & " already exists, not redeclaring")
 when not declared(SSL_CURVE_X25519):
   when SSL_GROUP_X25519 is typedesc:
     type SSL_CURVE_X25519* = SSL_GROUP_X25519
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6183:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6218:9
 
   else:
     when SSL_GROUP_X25519 is static:
       const SSL_CURVE_X25519* = SSL_GROUP_X25519
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6183:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6218:9
     else:
       let SSL_CURVE_X25519* = SSL_GROUP_X25519
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6183:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6218:9
 else:
   static:
     hint("Declaration of " & "SSL_CURVE_X25519" & " already exists, not redeclaring")
 when not declared(SSL_CURVE_X25519_KYBER768_DRAFT00):
   when SSL_GROUP_X25519_KYBER768_DRAFT00 is typedesc:
     type SSL_CURVE_X25519_KYBER768_DRAFT00* = SSL_GROUP_X25519_KYBER768_DRAFT00
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6184:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6219:9
 
   else:
     when SSL_GROUP_X25519_KYBER768_DRAFT00 is static:
       const SSL_CURVE_X25519_KYBER768_DRAFT00* = SSL_GROUP_X25519_KYBER768_DRAFT00
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6184:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6219:9
     else:
       let SSL_CURVE_X25519_KYBER768_DRAFT00* = SSL_GROUP_X25519_KYBER768_DRAFT00
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6184:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6219:9
 else:
   static:
     hint(
@@ -53873,25 +53886,25 @@ else:
 when not declared(TLSEXT_nid_unknown):
   when 16777216 is static:
     const TLSEXT_nid_unknown* = 16777216
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6212:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6247:9
   else:
     let TLSEXT_nid_unknown* = 16777216
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6212:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6247:9
 else:
   static:
     hint("Declaration of " & "TLSEXT_nid_unknown" & " already exists, not redeclaring")
 when not declared(DTLS_CTRL_GET_TIMEOUT):
   when doesnt_exist is typedesc:
     type DTLS_CTRL_GET_TIMEOUT* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6384:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6449:9
 
   else:
     when doesnt_exist is static:
       const DTLS_CTRL_GET_TIMEOUT* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6384:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6449:9
     else:
       let DTLS_CTRL_GET_TIMEOUT* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6384:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6449:9
 else:
   static:
     hint(
@@ -53900,15 +53913,15 @@ else:
 when not declared(DTLS_CTRL_HANDLE_TIMEOUT):
   when doesnt_exist is typedesc:
     type DTLS_CTRL_HANDLE_TIMEOUT* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6385:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6450:9
 
   else:
     when doesnt_exist is static:
       const DTLS_CTRL_HANDLE_TIMEOUT* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6385:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6450:9
     else:
       let DTLS_CTRL_HANDLE_TIMEOUT* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6385:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6450:9
 else:
   static:
     hint(
@@ -53917,60 +53930,60 @@ else:
 when not declared(SSL_CTRL_CHAIN):
   when doesnt_exist is typedesc:
     type SSL_CTRL_CHAIN* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6386:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6451:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_CHAIN* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6386:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6451:9
     else:
       let SSL_CTRL_CHAIN* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6386:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6451:9
 else:
   static:
     hint("Declaration of " & "SSL_CTRL_CHAIN" & " already exists, not redeclaring")
 when not declared(SSL_CTRL_CHAIN_CERT):
   when doesnt_exist is typedesc:
     type SSL_CTRL_CHAIN_CERT* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6387:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6452:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_CHAIN_CERT* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6387:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6452:9
     else:
       let SSL_CTRL_CHAIN_CERT* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6387:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6452:9
 else:
   static:
     hint("Declaration of " & "SSL_CTRL_CHAIN_CERT" & " already exists, not redeclaring")
 when not declared(SSL_CTRL_CHANNEL_ID):
   when doesnt_exist is typedesc:
     type SSL_CTRL_CHANNEL_ID* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6388:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6453:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_CHANNEL_ID* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6388:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6453:9
     else:
       let SSL_CTRL_CHANNEL_ID* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6388:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6453:9
 else:
   static:
     hint("Declaration of " & "SSL_CTRL_CHANNEL_ID" & " already exists, not redeclaring")
 when not declared(SSL_CTRL_CLEAR_EXTRA_CHAIN_CERTS):
   when doesnt_exist is typedesc:
     type SSL_CTRL_CLEAR_EXTRA_CHAIN_CERTS* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6389:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6454:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_CLEAR_EXTRA_CHAIN_CERTS* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6389:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6454:9
     else:
       let SSL_CTRL_CLEAR_EXTRA_CHAIN_CERTS* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6389:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6454:9
 else:
   static:
     hint(
@@ -53980,30 +53993,30 @@ else:
 when not declared(SSL_CTRL_CLEAR_MODE):
   when doesnt_exist is typedesc:
     type SSL_CTRL_CLEAR_MODE* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6390:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6455:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_CLEAR_MODE* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6390:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6455:9
     else:
       let SSL_CTRL_CLEAR_MODE* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6390:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6455:9
 else:
   static:
     hint("Declaration of " & "SSL_CTRL_CLEAR_MODE" & " already exists, not redeclaring")
 when not declared(SSL_CTRL_CLEAR_OPTIONS):
   when doesnt_exist is typedesc:
     type SSL_CTRL_CLEAR_OPTIONS* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6391:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6456:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_CLEAR_OPTIONS* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6391:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6456:9
     else:
       let SSL_CTRL_CLEAR_OPTIONS* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6391:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6456:9
 else:
   static:
     hint(
@@ -54012,15 +54025,15 @@ else:
 when not declared(SSL_CTRL_EXTRA_CHAIN_CERT):
   when doesnt_exist is typedesc:
     type SSL_CTRL_EXTRA_CHAIN_CERT* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6392:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6457:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_EXTRA_CHAIN_CERT* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6392:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6457:9
     else:
       let SSL_CTRL_EXTRA_CHAIN_CERT* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6392:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6457:9
 else:
   static:
     hint(
@@ -54030,15 +54043,15 @@ else:
 when not declared(SSL_CTRL_GET_CHAIN_CERTS):
   when doesnt_exist is typedesc:
     type SSL_CTRL_GET_CHAIN_CERTS* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6393:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6458:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_GET_CHAIN_CERTS* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6393:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6458:9
     else:
       let SSL_CTRL_GET_CHAIN_CERTS* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6393:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6458:9
 else:
   static:
     hint(
@@ -54047,15 +54060,15 @@ else:
 when not declared(SSL_CTRL_GET_CHANNEL_ID):
   when doesnt_exist is typedesc:
     type SSL_CTRL_GET_CHANNEL_ID* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6394:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6459:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_GET_CHANNEL_ID* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6394:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6459:9
     else:
       let SSL_CTRL_GET_CHANNEL_ID* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6394:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6459:9
 else:
   static:
     hint(
@@ -54064,15 +54077,15 @@ else:
 when not declared(SSL_CTRL_GET_CLIENT_CERT_TYPES):
   when doesnt_exist is typedesc:
     type SSL_CTRL_GET_CLIENT_CERT_TYPES* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6395:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6460:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_GET_CLIENT_CERT_TYPES* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6395:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6460:9
     else:
       let SSL_CTRL_GET_CLIENT_CERT_TYPES* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6395:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6460:9
 else:
   static:
     hint(
@@ -54082,15 +54095,15 @@ else:
 when not declared(SSL_CTRL_GET_EXTRA_CHAIN_CERTS):
   when doesnt_exist is typedesc:
     type SSL_CTRL_GET_EXTRA_CHAIN_CERTS* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6396:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6461:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_GET_EXTRA_CHAIN_CERTS* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6396:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6461:9
     else:
       let SSL_CTRL_GET_EXTRA_CHAIN_CERTS* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6396:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6461:9
 else:
   static:
     hint(
@@ -54100,15 +54113,15 @@ else:
 when not declared(SSL_CTRL_GET_MAX_CERT_LIST):
   when doesnt_exist is typedesc:
     type SSL_CTRL_GET_MAX_CERT_LIST* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6397:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6462:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_GET_MAX_CERT_LIST* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6397:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6462:9
     else:
       let SSL_CTRL_GET_MAX_CERT_LIST* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6397:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6462:9
 else:
   static:
     hint(
@@ -54118,15 +54131,15 @@ else:
 when not declared(SSL_CTRL_GET_NEGOTIATED_GROUP):
   when doesnt_exist is typedesc:
     type SSL_CTRL_GET_NEGOTIATED_GROUP* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6398:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6463:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_GET_NEGOTIATED_GROUP* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6398:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6463:9
     else:
       let SSL_CTRL_GET_NEGOTIATED_GROUP* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6398:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6463:9
 else:
   static:
     hint(
@@ -54136,15 +54149,15 @@ else:
 when not declared(SSL_CTRL_GET_NUM_RENEGOTIATIONS):
   when doesnt_exist is typedesc:
     type SSL_CTRL_GET_NUM_RENEGOTIATIONS* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6399:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6464:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_GET_NUM_RENEGOTIATIONS* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6399:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6464:9
     else:
       let SSL_CTRL_GET_NUM_RENEGOTIATIONS* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6399:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6464:9
 else:
   static:
     hint(
@@ -54154,15 +54167,15 @@ else:
 when not declared(SSL_CTRL_GET_READ_AHEAD):
   when doesnt_exist is typedesc:
     type SSL_CTRL_GET_READ_AHEAD* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6400:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6465:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_GET_READ_AHEAD* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6400:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6465:9
     else:
       let SSL_CTRL_GET_READ_AHEAD* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6400:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6465:9
 else:
   static:
     hint(
@@ -54171,15 +54184,15 @@ else:
 when not declared(SSL_CTRL_GET_RI_SUPPORT):
   when doesnt_exist is typedesc:
     type SSL_CTRL_GET_RI_SUPPORT* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6401:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6466:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_GET_RI_SUPPORT* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6401:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6466:9
     else:
       let SSL_CTRL_GET_RI_SUPPORT* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6401:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6466:9
 else:
   static:
     hint(
@@ -54188,15 +54201,15 @@ else:
 when not declared(SSL_CTRL_GET_SERVER_TMP_KEY):
   when doesnt_exist is typedesc:
     type SSL_CTRL_GET_SERVER_TMP_KEY* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6402:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6467:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_GET_SERVER_TMP_KEY* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6402:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6467:9
     else:
       let SSL_CTRL_GET_SERVER_TMP_KEY* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6402:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6467:9
 else:
   static:
     hint(
@@ -54206,15 +54219,15 @@ else:
 when not declared(SSL_CTRL_GET_SESSION_REUSED):
   when doesnt_exist is typedesc:
     type SSL_CTRL_GET_SESSION_REUSED* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6403:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6468:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_GET_SESSION_REUSED* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6403:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6468:9
     else:
       let SSL_CTRL_GET_SESSION_REUSED* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6403:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6468:9
 else:
   static:
     hint(
@@ -54224,15 +54237,15 @@ else:
 when not declared(SSL_CTRL_GET_SESS_CACHE_MODE):
   when doesnt_exist is typedesc:
     type SSL_CTRL_GET_SESS_CACHE_MODE* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6404:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6469:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_GET_SESS_CACHE_MODE* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6404:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6469:9
     else:
       let SSL_CTRL_GET_SESS_CACHE_MODE* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6404:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6469:9
 else:
   static:
     hint(
@@ -54242,15 +54255,15 @@ else:
 when not declared(SSL_CTRL_GET_SESS_CACHE_SIZE):
   when doesnt_exist is typedesc:
     type SSL_CTRL_GET_SESS_CACHE_SIZE* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6405:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6470:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_GET_SESS_CACHE_SIZE* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6405:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6470:9
     else:
       let SSL_CTRL_GET_SESS_CACHE_SIZE* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6405:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6470:9
 else:
   static:
     hint(
@@ -54260,15 +54273,15 @@ else:
 when not declared(SSL_CTRL_GET_TLSEXT_TICKET_KEYS):
   when doesnt_exist is typedesc:
     type SSL_CTRL_GET_TLSEXT_TICKET_KEYS* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6406:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6471:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_GET_TLSEXT_TICKET_KEYS* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6406:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6471:9
     else:
       let SSL_CTRL_GET_TLSEXT_TICKET_KEYS* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6406:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6471:9
 else:
   static:
     hint(
@@ -54278,15 +54291,15 @@ else:
 when not declared(SSL_CTRL_GET_TOTAL_RENEGOTIATIONS):
   when doesnt_exist is typedesc:
     type SSL_CTRL_GET_TOTAL_RENEGOTIATIONS* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6407:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6472:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_GET_TOTAL_RENEGOTIATIONS* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6407:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6472:9
     else:
       let SSL_CTRL_GET_TOTAL_RENEGOTIATIONS* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6407:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6472:9
 else:
   static:
     hint(
@@ -54296,30 +54309,30 @@ else:
 when not declared(SSL_CTRL_MODE):
   when doesnt_exist is typedesc:
     type SSL_CTRL_MODE* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6408:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6473:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_MODE* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6408:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6473:9
     else:
       let SSL_CTRL_MODE* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6408:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6473:9
 else:
   static:
     hint("Declaration of " & "SSL_CTRL_MODE" & " already exists, not redeclaring")
 when not declared(SSL_CTRL_NEED_TMP_RSA):
   when doesnt_exist is typedesc:
     type SSL_CTRL_NEED_TMP_RSA* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6409:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6474:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_NEED_TMP_RSA* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6409:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6474:9
     else:
       let SSL_CTRL_NEED_TMP_RSA* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6409:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6474:9
 else:
   static:
     hint(
@@ -54328,30 +54341,30 @@ else:
 when not declared(SSL_CTRL_OPTIONS):
   when doesnt_exist is typedesc:
     type SSL_CTRL_OPTIONS* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6410:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6475:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_OPTIONS* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6410:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6475:9
     else:
       let SSL_CTRL_OPTIONS* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6410:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6475:9
 else:
   static:
     hint("Declaration of " & "SSL_CTRL_OPTIONS" & " already exists, not redeclaring")
 when not declared(SSL_CTRL_SESS_NUMBER):
   when doesnt_exist is typedesc:
     type SSL_CTRL_SESS_NUMBER* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6411:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6476:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_SESS_NUMBER* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6411:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6476:9
     else:
       let SSL_CTRL_SESS_NUMBER* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6411:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6476:9
 else:
   static:
     hint(
@@ -54360,30 +54373,30 @@ else:
 when not declared(SSL_CTRL_SET_CURVES):
   when doesnt_exist is typedesc:
     type SSL_CTRL_SET_CURVES* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6412:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6477:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_SET_CURVES* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6412:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6477:9
     else:
       let SSL_CTRL_SET_CURVES* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6412:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6477:9
 else:
   static:
     hint("Declaration of " & "SSL_CTRL_SET_CURVES" & " already exists, not redeclaring")
 when not declared(SSL_CTRL_SET_CURVES_LIST):
   when doesnt_exist is typedesc:
     type SSL_CTRL_SET_CURVES_LIST* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6413:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6478:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_SET_CURVES_LIST* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6413:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6478:9
     else:
       let SSL_CTRL_SET_CURVES_LIST* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6413:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6478:9
 else:
   static:
     hint(
@@ -54392,15 +54405,15 @@ else:
 when not declared(SSL_CTRL_SET_ECDH_AUTO):
   when doesnt_exist is typedesc:
     type SSL_CTRL_SET_ECDH_AUTO* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6414:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6479:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_SET_ECDH_AUTO* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6414:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6479:9
     else:
       let SSL_CTRL_SET_ECDH_AUTO* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6414:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6479:9
 else:
   static:
     hint(
@@ -54409,30 +54422,30 @@ else:
 when not declared(SSL_CTRL_SET_GROUPS):
   when doesnt_exist is typedesc:
     type SSL_CTRL_SET_GROUPS* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6415:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6480:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_SET_GROUPS* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6415:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6480:9
     else:
       let SSL_CTRL_SET_GROUPS* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6415:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6480:9
 else:
   static:
     hint("Declaration of " & "SSL_CTRL_SET_GROUPS" & " already exists, not redeclaring")
 when not declared(SSL_CTRL_SET_GROUPS_LIST):
   when doesnt_exist is typedesc:
     type SSL_CTRL_SET_GROUPS_LIST* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6416:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6481:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_SET_GROUPS_LIST* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6416:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6481:9
     else:
       let SSL_CTRL_SET_GROUPS_LIST* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6416:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6481:9
 else:
   static:
     hint(
@@ -54441,15 +54454,15 @@ else:
 when not declared(SSL_CTRL_SET_MAX_CERT_LIST):
   when doesnt_exist is typedesc:
     type SSL_CTRL_SET_MAX_CERT_LIST* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6417:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6482:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_SET_MAX_CERT_LIST* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6417:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6482:9
     else:
       let SSL_CTRL_SET_MAX_CERT_LIST* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6417:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6482:9
 else:
   static:
     hint(
@@ -54459,15 +54472,15 @@ else:
 when not declared(SSL_CTRL_SET_MAX_SEND_FRAGMENT):
   when doesnt_exist is typedesc:
     type SSL_CTRL_SET_MAX_SEND_FRAGMENT* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6418:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6483:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_SET_MAX_SEND_FRAGMENT* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6418:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6483:9
     else:
       let SSL_CTRL_SET_MAX_SEND_FRAGMENT* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6418:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6483:9
 else:
   static:
     hint(
@@ -54477,15 +54490,15 @@ else:
 when not declared(SSL_CTRL_SET_MSG_CALLBACK):
   when doesnt_exist is typedesc:
     type SSL_CTRL_SET_MSG_CALLBACK* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6419:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6484:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_SET_MSG_CALLBACK* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6419:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6484:9
     else:
       let SSL_CTRL_SET_MSG_CALLBACK* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6419:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6484:9
 else:
   static:
     hint(
@@ -54495,15 +54508,15 @@ else:
 when not declared(SSL_CTRL_SET_MSG_CALLBACK_ARG):
   when doesnt_exist is typedesc:
     type SSL_CTRL_SET_MSG_CALLBACK_ARG* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6420:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6485:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_SET_MSG_CALLBACK_ARG* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6420:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6485:9
     else:
       let SSL_CTRL_SET_MSG_CALLBACK_ARG* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6420:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6485:9
 else:
   static:
     hint(
@@ -54513,30 +54526,30 @@ else:
 when not declared(SSL_CTRL_SET_MTU):
   when doesnt_exist is typedesc:
     type SSL_CTRL_SET_MTU* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6421:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6486:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_SET_MTU* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6421:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6486:9
     else:
       let SSL_CTRL_SET_MTU* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6421:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6486:9
 else:
   static:
     hint("Declaration of " & "SSL_CTRL_SET_MTU" & " already exists, not redeclaring")
 when not declared(SSL_CTRL_SET_READ_AHEAD):
   when doesnt_exist is typedesc:
     type SSL_CTRL_SET_READ_AHEAD* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6422:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6487:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_SET_READ_AHEAD* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6422:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6487:9
     else:
       let SSL_CTRL_SET_READ_AHEAD* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6422:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6487:9
 else:
   static:
     hint(
@@ -54545,15 +54558,15 @@ else:
 when not declared(SSL_CTRL_SET_SESS_CACHE_MODE):
   when doesnt_exist is typedesc:
     type SSL_CTRL_SET_SESS_CACHE_MODE* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6423:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6488:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_SET_SESS_CACHE_MODE* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6423:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6488:9
     else:
       let SSL_CTRL_SET_SESS_CACHE_MODE* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6423:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6488:9
 else:
   static:
     hint(
@@ -54563,15 +54576,15 @@ else:
 when not declared(SSL_CTRL_SET_SESS_CACHE_SIZE):
   when doesnt_exist is typedesc:
     type SSL_CTRL_SET_SESS_CACHE_SIZE* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6424:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6489:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_SET_SESS_CACHE_SIZE* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6424:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6489:9
     else:
       let SSL_CTRL_SET_SESS_CACHE_SIZE* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6424:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6489:9
 else:
   static:
     hint(
@@ -54581,15 +54594,15 @@ else:
 when not declared(SSL_CTRL_SET_TLSEXT_HOSTNAME):
   when doesnt_exist is typedesc:
     type SSL_CTRL_SET_TLSEXT_HOSTNAME* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6425:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6490:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_SET_TLSEXT_HOSTNAME* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6425:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6490:9
     else:
       let SSL_CTRL_SET_TLSEXT_HOSTNAME* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6425:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6490:9
 else:
   static:
     hint(
@@ -54599,15 +54612,15 @@ else:
 when not declared(SSL_CTRL_SET_TLSEXT_SERVERNAME_ARG):
   when doesnt_exist is typedesc:
     type SSL_CTRL_SET_TLSEXT_SERVERNAME_ARG* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6426:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6491:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_SET_TLSEXT_SERVERNAME_ARG* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6426:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6491:9
     else:
       let SSL_CTRL_SET_TLSEXT_SERVERNAME_ARG* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6426:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6491:9
 else:
   static:
     hint(
@@ -54617,15 +54630,15 @@ else:
 when not declared(SSL_CTRL_SET_TLSEXT_SERVERNAME_CB):
   when doesnt_exist is typedesc:
     type SSL_CTRL_SET_TLSEXT_SERVERNAME_CB* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6427:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6492:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_SET_TLSEXT_SERVERNAME_CB* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6427:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6492:9
     else:
       let SSL_CTRL_SET_TLSEXT_SERVERNAME_CB* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6427:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6492:9
 else:
   static:
     hint(
@@ -54635,15 +54648,15 @@ else:
 when not declared(SSL_CTRL_SET_TLSEXT_TICKET_KEYS):
   when doesnt_exist is typedesc:
     type SSL_CTRL_SET_TLSEXT_TICKET_KEYS* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6428:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6493:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_SET_TLSEXT_TICKET_KEYS* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6428:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6493:9
     else:
       let SSL_CTRL_SET_TLSEXT_TICKET_KEYS* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6428:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6493:9
 else:
   static:
     hint(
@@ -54653,15 +54666,15 @@ else:
 when not declared(SSL_CTRL_SET_TLSEXT_TICKET_KEY_CB):
   when doesnt_exist is typedesc:
     type SSL_CTRL_SET_TLSEXT_TICKET_KEY_CB* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6429:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6494:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_SET_TLSEXT_TICKET_KEY_CB* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6429:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6494:9
     else:
       let SSL_CTRL_SET_TLSEXT_TICKET_KEY_CB* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6429:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6494:9
 else:
   static:
     hint(
@@ -54671,30 +54684,30 @@ else:
 when not declared(SSL_CTRL_SET_TMP_DH):
   when doesnt_exist is typedesc:
     type SSL_CTRL_SET_TMP_DH* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6430:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6495:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_SET_TMP_DH* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6430:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6495:9
     else:
       let SSL_CTRL_SET_TMP_DH* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6430:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6495:9
 else:
   static:
     hint("Declaration of " & "SSL_CTRL_SET_TMP_DH" & " already exists, not redeclaring")
 when not declared(SSL_CTRL_SET_TMP_DH_CB):
   when doesnt_exist is typedesc:
     type SSL_CTRL_SET_TMP_DH_CB* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6431:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6496:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_SET_TMP_DH_CB* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6431:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6496:9
     else:
       let SSL_CTRL_SET_TMP_DH_CB* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6431:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6496:9
 else:
   static:
     hint(
@@ -54703,15 +54716,15 @@ else:
 when not declared(SSL_CTRL_SET_TMP_ECDH):
   when doesnt_exist is typedesc:
     type SSL_CTRL_SET_TMP_ECDH* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6432:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6497:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_SET_TMP_ECDH* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6432:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6497:9
     else:
       let SSL_CTRL_SET_TMP_ECDH* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6432:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6497:9
 else:
   static:
     hint(
@@ -54720,15 +54733,15 @@ else:
 when not declared(SSL_CTRL_SET_TMP_ECDH_CB):
   when doesnt_exist is typedesc:
     type SSL_CTRL_SET_TMP_ECDH_CB* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6433:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6498:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_SET_TMP_ECDH_CB* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6433:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6498:9
     else:
       let SSL_CTRL_SET_TMP_ECDH_CB* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6433:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6498:9
 else:
   static:
     hint(
@@ -54737,15 +54750,15 @@ else:
 when not declared(SSL_CTRL_SET_TMP_RSA):
   when doesnt_exist is typedesc:
     type SSL_CTRL_SET_TMP_RSA* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6434:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6499:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_SET_TMP_RSA* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6434:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6499:9
     else:
       let SSL_CTRL_SET_TMP_RSA* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6434:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6499:9
 else:
   static:
     hint(
@@ -54754,15 +54767,15 @@ else:
 when not declared(SSL_CTRL_SET_TMP_RSA_CB):
   when doesnt_exist is typedesc:
     type SSL_CTRL_SET_TMP_RSA_CB* = doesnt_exist
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6435:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6500:9
 
   else:
     when doesnt_exist is static:
       const SSL_CTRL_SET_TMP_RSA_CB* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6435:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6500:9
     else:
       let SSL_CTRL_SET_TMP_RSA_CB* = doesnt_exist
-        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6435:9
+        ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6500:9
 else:
   static:
     hint(
@@ -55402,10 +55415,10 @@ else:
 when not declared(SSL_R_APP_DATA_IN_HANDSHAKE):
   when 100 is static:
     const SSL_R_APP_DATA_IN_HANDSHAKE* = 100
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6759:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6824:9
   else:
     let SSL_R_APP_DATA_IN_HANDSHAKE* = 100
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6759:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6824:9
 else:
   static:
     hint(
@@ -55415,10 +55428,10 @@ else:
 when not declared(SSL_R_ATTEMPT_TO_REUSE_SESSION_IN_DIFFERENT_CONTEXT):
   when 101 is static:
     const SSL_R_ATTEMPT_TO_REUSE_SESSION_IN_DIFFERENT_CONTEXT* = 101
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6760:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6825:9
   else:
     let SSL_R_ATTEMPT_TO_REUSE_SESSION_IN_DIFFERENT_CONTEXT* = 101
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6760:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6825:9
 else:
   static:
     hint(
@@ -55428,20 +55441,20 @@ else:
 when not declared(SSL_R_BAD_ALERT):
   when 102 is static:
     const SSL_R_BAD_ALERT* = 102
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6761:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6826:9
   else:
     let SSL_R_BAD_ALERT* = 102
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6761:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6826:9
 else:
   static:
     hint("Declaration of " & "SSL_R_BAD_ALERT" & " already exists, not redeclaring")
 when not declared(SSL_R_BAD_CHANGE_CIPHER_SPEC):
   when 103 is static:
     const SSL_R_BAD_CHANGE_CIPHER_SPEC* = 103
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6762:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6827:9
   else:
     let SSL_R_BAD_CHANGE_CIPHER_SPEC* = 103
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6762:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6827:9
 else:
   static:
     hint(
@@ -55451,10 +55464,10 @@ else:
 when not declared(SSL_R_BAD_DATA_RETURNED_BY_CALLBACK):
   when 104 is static:
     const SSL_R_BAD_DATA_RETURNED_BY_CALLBACK* = 104
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6763:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6828:9
   else:
     let SSL_R_BAD_DATA_RETURNED_BY_CALLBACK* = 104
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6763:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6828:9
 else:
   static:
     hint(
@@ -55464,10 +55477,10 @@ else:
 when not declared(SSL_R_BAD_DH_P_LENGTH):
   when 105 is static:
     const SSL_R_BAD_DH_P_LENGTH* = 105
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6764:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6829:9
   else:
     let SSL_R_BAD_DH_P_LENGTH* = 105
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6764:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6829:9
 else:
   static:
     hint(
@@ -55476,10 +55489,10 @@ else:
 when not declared(SSL_R_BAD_DIGEST_LENGTH):
   when 106 is static:
     const SSL_R_BAD_DIGEST_LENGTH* = 106
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6765:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6830:9
   else:
     let SSL_R_BAD_DIGEST_LENGTH* = 106
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6765:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6830:9
 else:
   static:
     hint(
@@ -55488,30 +55501,30 @@ else:
 when not declared(SSL_R_BAD_ECC_CERT):
   when 107 is static:
     const SSL_R_BAD_ECC_CERT* = 107
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6766:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6831:9
   else:
     let SSL_R_BAD_ECC_CERT* = 107
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6766:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6831:9
 else:
   static:
     hint("Declaration of " & "SSL_R_BAD_ECC_CERT" & " already exists, not redeclaring")
 when not declared(SSL_R_BAD_ECPOINT):
   when 108 is static:
     const SSL_R_BAD_ECPOINT* = 108
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6767:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6832:9
   else:
     let SSL_R_BAD_ECPOINT* = 108
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6767:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6832:9
 else:
   static:
     hint("Declaration of " & "SSL_R_BAD_ECPOINT" & " already exists, not redeclaring")
 when not declared(SSL_R_BAD_HANDSHAKE_RECORD):
   when 109 is static:
     const SSL_R_BAD_HANDSHAKE_RECORD* = 109
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6768:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6833:9
   else:
     let SSL_R_BAD_HANDSHAKE_RECORD* = 109
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6768:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6833:9
 else:
   static:
     hint(
@@ -55521,10 +55534,10 @@ else:
 when not declared(SSL_R_BAD_HELLO_REQUEST):
   when 110 is static:
     const SSL_R_BAD_HELLO_REQUEST* = 110
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6769:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6834:9
   else:
     let SSL_R_BAD_HELLO_REQUEST* = 110
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6769:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6834:9
 else:
   static:
     hint(
@@ -55533,20 +55546,20 @@ else:
 when not declared(SSL_R_BAD_LENGTH):
   when 111 is static:
     const SSL_R_BAD_LENGTH* = 111
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6770:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6835:9
   else:
     let SSL_R_BAD_LENGTH* = 111
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6770:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6835:9
 else:
   static:
     hint("Declaration of " & "SSL_R_BAD_LENGTH" & " already exists, not redeclaring")
 when not declared(SSL_R_BAD_PACKET_LENGTH):
   when 112 is static:
     const SSL_R_BAD_PACKET_LENGTH* = 112
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6771:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6836:9
   else:
     let SSL_R_BAD_PACKET_LENGTH* = 112
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6771:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6836:9
 else:
   static:
     hint(
@@ -55555,10 +55568,10 @@ else:
 when not declared(SSL_R_BAD_RSA_ENCRYPT):
   when 113 is static:
     const SSL_R_BAD_RSA_ENCRYPT* = 113
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6772:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6837:9
   else:
     let SSL_R_BAD_RSA_ENCRYPT* = 113
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6772:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6837:9
 else:
   static:
     hint(
@@ -55567,20 +55580,20 @@ else:
 when not declared(SSL_R_BAD_SIGNATURE):
   when 114 is static:
     const SSL_R_BAD_SIGNATURE* = 114
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6773:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6838:9
   else:
     let SSL_R_BAD_SIGNATURE* = 114
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6773:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6838:9
 else:
   static:
     hint("Declaration of " & "SSL_R_BAD_SIGNATURE" & " already exists, not redeclaring")
 when not declared(SSL_R_BAD_SRTP_MKI_VALUE):
   when 115 is static:
     const SSL_R_BAD_SRTP_MKI_VALUE* = 115
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6774:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6839:9
   else:
     let SSL_R_BAD_SRTP_MKI_VALUE* = 115
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6774:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6839:9
 else:
   static:
     hint(
@@ -55589,10 +55602,10 @@ else:
 when not declared(SSL_R_BAD_SRTP_PROTECTION_PROFILE_LIST):
   when 116 is static:
     const SSL_R_BAD_SRTP_PROTECTION_PROFILE_LIST* = 116
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6775:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6840:9
   else:
     let SSL_R_BAD_SRTP_PROTECTION_PROFILE_LIST* = 116
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6775:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6840:9
 else:
   static:
     hint(
@@ -55602,10 +55615,10 @@ else:
 when not declared(SSL_R_BAD_SSL_FILETYPE):
   when 117 is static:
     const SSL_R_BAD_SSL_FILETYPE* = 117
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6776:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6841:9
   else:
     let SSL_R_BAD_SSL_FILETYPE* = 117
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6776:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6841:9
 else:
   static:
     hint(
@@ -55614,10 +55627,10 @@ else:
 when not declared(SSL_R_BAD_WRITE_RETRY):
   when 118 is static:
     const SSL_R_BAD_WRITE_RETRY* = 118
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6777:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6842:9
   else:
     let SSL_R_BAD_WRITE_RETRY* = 118
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6777:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6842:9
 else:
   static:
     hint(
@@ -55626,30 +55639,30 @@ else:
 when not declared(SSL_R_BIO_NOT_SET):
   when 119 is static:
     const SSL_R_BIO_NOT_SET* = 119
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6778:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6843:9
   else:
     let SSL_R_BIO_NOT_SET* = 119
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6778:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6843:9
 else:
   static:
     hint("Declaration of " & "SSL_R_BIO_NOT_SET" & " already exists, not redeclaring")
 when not declared(SSL_R_BN_LIB):
   when 120 is static:
     const SSL_R_BN_LIB* = 120
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6779:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6844:9
   else:
     let SSL_R_BN_LIB* = 120
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6779:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6844:9
 else:
   static:
     hint("Declaration of " & "SSL_R_BN_LIB" & " already exists, not redeclaring")
 when not declared(SSL_R_BUFFER_TOO_SMALL):
   when 121 is static:
     const SSL_R_BUFFER_TOO_SMALL* = 121
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6780:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6845:9
   else:
     let SSL_R_BUFFER_TOO_SMALL* = 121
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6780:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6845:9
 else:
   static:
     hint(
@@ -55658,10 +55671,10 @@ else:
 when not declared(SSL_R_CA_DN_LENGTH_MISMATCH):
   when 122 is static:
     const SSL_R_CA_DN_LENGTH_MISMATCH* = 122
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6781:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6846:9
   else:
     let SSL_R_CA_DN_LENGTH_MISMATCH* = 122
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6781:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6846:9
 else:
   static:
     hint(
@@ -55671,10 +55684,10 @@ else:
 when not declared(SSL_R_CA_DN_TOO_LONG):
   when 123 is static:
     const SSL_R_CA_DN_TOO_LONG* = 123
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6782:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6847:9
   else:
     let SSL_R_CA_DN_TOO_LONG* = 123
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6782:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6847:9
 else:
   static:
     hint(
@@ -55683,10 +55696,10 @@ else:
 when not declared(SSL_R_CCS_RECEIVED_EARLY):
   when 124 is static:
     const SSL_R_CCS_RECEIVED_EARLY* = 124
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6783:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6848:9
   else:
     let SSL_R_CCS_RECEIVED_EARLY* = 124
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6783:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6848:9
 else:
   static:
     hint(
@@ -55695,10 +55708,10 @@ else:
 when not declared(SSL_R_CERTIFICATE_VERIFY_FAILED):
   when 125 is static:
     const SSL_R_CERTIFICATE_VERIFY_FAILED* = 125
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6784:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6849:9
   else:
     let SSL_R_CERTIFICATE_VERIFY_FAILED* = 125
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6784:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6849:9
 else:
   static:
     hint(
@@ -55708,20 +55721,20 @@ else:
 when not declared(SSL_R_CERT_CB_ERROR):
   when 126 is static:
     const SSL_R_CERT_CB_ERROR* = 126
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6785:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6850:9
   else:
     let SSL_R_CERT_CB_ERROR* = 126
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6785:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6850:9
 else:
   static:
     hint("Declaration of " & "SSL_R_CERT_CB_ERROR" & " already exists, not redeclaring")
 when not declared(SSL_R_CERT_LENGTH_MISMATCH):
   when 127 is static:
     const SSL_R_CERT_LENGTH_MISMATCH* = 127
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6786:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6851:9
   else:
     let SSL_R_CERT_LENGTH_MISMATCH* = 127
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6786:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6851:9
 else:
   static:
     hint(
@@ -55731,10 +55744,10 @@ else:
 when not declared(SSL_R_CHANNEL_ID_NOT_P256):
   when 128 is static:
     const SSL_R_CHANNEL_ID_NOT_P256* = 128
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6787:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6852:9
   else:
     let SSL_R_CHANNEL_ID_NOT_P256* = 128
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6787:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6852:9
 else:
   static:
     hint(
@@ -55744,10 +55757,10 @@ else:
 when not declared(SSL_R_CHANNEL_ID_SIGNATURE_INVALID):
   when 129 is static:
     const SSL_R_CHANNEL_ID_SIGNATURE_INVALID* = 129
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6788:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6853:9
   else:
     let SSL_R_CHANNEL_ID_SIGNATURE_INVALID* = 129
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6788:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6853:9
 else:
   static:
     hint(
@@ -55757,10 +55770,10 @@ else:
 when not declared(SSL_R_CIPHER_OR_HASH_UNAVAILABLE):
   when 130 is static:
     const SSL_R_CIPHER_OR_HASH_UNAVAILABLE* = 130
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6789:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6854:9
   else:
     let SSL_R_CIPHER_OR_HASH_UNAVAILABLE* = 130
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6789:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6854:9
 else:
   static:
     hint(
@@ -55770,10 +55783,10 @@ else:
 when not declared(SSL_R_CLIENTHELLO_PARSE_FAILED):
   when 131 is static:
     const SSL_R_CLIENTHELLO_PARSE_FAILED* = 131
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6790:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6855:9
   else:
     let SSL_R_CLIENTHELLO_PARSE_FAILED* = 131
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6790:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6855:9
 else:
   static:
     hint(
@@ -55783,10 +55796,10 @@ else:
 when not declared(SSL_R_CLIENTHELLO_TLSEXT):
   when 132 is static:
     const SSL_R_CLIENTHELLO_TLSEXT* = 132
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6791:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6856:9
   else:
     let SSL_R_CLIENTHELLO_TLSEXT* = 132
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6791:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6856:9
 else:
   static:
     hint(
@@ -55795,10 +55808,10 @@ else:
 when not declared(SSL_R_CONNECTION_REJECTED):
   when 133 is static:
     const SSL_R_CONNECTION_REJECTED* = 133
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6792:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6857:9
   else:
     let SSL_R_CONNECTION_REJECTED* = 133
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6792:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6857:9
 else:
   static:
     hint(
@@ -55808,10 +55821,10 @@ else:
 when not declared(SSL_R_CONNECTION_TYPE_NOT_SET):
   when 134 is static:
     const SSL_R_CONNECTION_TYPE_NOT_SET* = 134
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6793:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6858:9
   else:
     let SSL_R_CONNECTION_TYPE_NOT_SET* = 134
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6793:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6858:9
 else:
   static:
     hint(
@@ -55821,10 +55834,10 @@ else:
 when not declared(SSL_R_CUSTOM_EXTENSION_ERROR):
   when 135 is static:
     const SSL_R_CUSTOM_EXTENSION_ERROR* = 135
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6794:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6859:9
   else:
     let SSL_R_CUSTOM_EXTENSION_ERROR* = 135
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6794:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6859:9
 else:
   static:
     hint(
@@ -55834,10 +55847,10 @@ else:
 when not declared(SSL_R_DATA_LENGTH_TOO_LONG):
   when 136 is static:
     const SSL_R_DATA_LENGTH_TOO_LONG* = 136
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6795:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6860:9
   else:
     let SSL_R_DATA_LENGTH_TOO_LONG* = 136
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6795:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6860:9
 else:
   static:
     hint(
@@ -55847,20 +55860,20 @@ else:
 when not declared(SSL_R_DECODE_ERROR):
   when 137 is static:
     const SSL_R_DECODE_ERROR* = 137
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6796:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6861:9
   else:
     let SSL_R_DECODE_ERROR* = 137
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6796:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6861:9
 else:
   static:
     hint("Declaration of " & "SSL_R_DECODE_ERROR" & " already exists, not redeclaring")
 when not declared(SSL_R_DECRYPTION_FAILED):
   when 138 is static:
     const SSL_R_DECRYPTION_FAILED* = 138
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6797:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6862:9
   else:
     let SSL_R_DECRYPTION_FAILED* = 138
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6797:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6862:9
 else:
   static:
     hint(
@@ -55869,10 +55882,10 @@ else:
 when not declared(SSL_R_DECRYPTION_FAILED_OR_BAD_RECORD_MAC):
   when 139 is static:
     const SSL_R_DECRYPTION_FAILED_OR_BAD_RECORD_MAC* = 139
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6798:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6863:9
   else:
     let SSL_R_DECRYPTION_FAILED_OR_BAD_RECORD_MAC* = 139
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6798:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6863:9
 else:
   static:
     hint(
@@ -55882,10 +55895,10 @@ else:
 when not declared(SSL_R_DH_PUBLIC_VALUE_LENGTH_IS_WRONG):
   when 140 is static:
     const SSL_R_DH_PUBLIC_VALUE_LENGTH_IS_WRONG* = 140
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6799:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6864:9
   else:
     let SSL_R_DH_PUBLIC_VALUE_LENGTH_IS_WRONG* = 140
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6799:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6864:9
 else:
   static:
     hint(
@@ -55895,20 +55908,20 @@ else:
 when not declared(SSL_R_DH_P_TOO_LONG):
   when 141 is static:
     const SSL_R_DH_P_TOO_LONG* = 141
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6800:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6865:9
   else:
     let SSL_R_DH_P_TOO_LONG* = 141
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6800:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6865:9
 else:
   static:
     hint("Declaration of " & "SSL_R_DH_P_TOO_LONG" & " already exists, not redeclaring")
 when not declared(SSL_R_DIGEST_CHECK_FAILED):
   when 142 is static:
     const SSL_R_DIGEST_CHECK_FAILED* = 142
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6801:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6866:9
   else:
     let SSL_R_DIGEST_CHECK_FAILED* = 142
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6801:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6866:9
 else:
   static:
     hint(
@@ -55918,10 +55931,10 @@ else:
 when not declared(SSL_R_DTLS_MESSAGE_TOO_BIG):
   when 143 is static:
     const SSL_R_DTLS_MESSAGE_TOO_BIG* = 143
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6802:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6867:9
   else:
     let SSL_R_DTLS_MESSAGE_TOO_BIG* = 143
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6802:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6867:9
 else:
   static:
     hint(
@@ -55931,10 +55944,10 @@ else:
 when not declared(SSL_R_ECC_CERT_NOT_FOR_SIGNING):
   when 144 is static:
     const SSL_R_ECC_CERT_NOT_FOR_SIGNING* = 144
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6803:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6868:9
   else:
     let SSL_R_ECC_CERT_NOT_FOR_SIGNING* = 144
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6803:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6868:9
 else:
   static:
     hint(
@@ -55944,10 +55957,10 @@ else:
 when not declared(SSL_R_EMS_STATE_INCONSISTENT):
   when 145 is static:
     const SSL_R_EMS_STATE_INCONSISTENT* = 145
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6804:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6869:9
   else:
     let SSL_R_EMS_STATE_INCONSISTENT* = 145
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6804:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6869:9
 else:
   static:
     hint(
@@ -55957,10 +55970,10 @@ else:
 when not declared(SSL_R_ENCRYPTED_LENGTH_TOO_LONG):
   when 146 is static:
     const SSL_R_ENCRYPTED_LENGTH_TOO_LONG* = 146
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6805:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6870:9
   else:
     let SSL_R_ENCRYPTED_LENGTH_TOO_LONG* = 146
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6805:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6870:9
 else:
   static:
     hint(
@@ -55970,10 +55983,10 @@ else:
 when not declared(SSL_R_ERROR_ADDING_EXTENSION):
   when 147 is static:
     const SSL_R_ERROR_ADDING_EXTENSION* = 147
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6806:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6871:9
   else:
     let SSL_R_ERROR_ADDING_EXTENSION* = 147
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6806:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6871:9
 else:
   static:
     hint(
@@ -55983,10 +55996,10 @@ else:
 when not declared(SSL_R_ERROR_IN_RECEIVED_CIPHER_LIST):
   when 148 is static:
     const SSL_R_ERROR_IN_RECEIVED_CIPHER_LIST* = 148
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6807:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6872:9
   else:
     let SSL_R_ERROR_IN_RECEIVED_CIPHER_LIST* = 148
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6807:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6872:9
 else:
   static:
     hint(
@@ -55996,10 +56009,10 @@ else:
 when not declared(SSL_R_ERROR_PARSING_EXTENSION):
   when 149 is static:
     const SSL_R_ERROR_PARSING_EXTENSION* = 149
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6808:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6873:9
   else:
     let SSL_R_ERROR_PARSING_EXTENSION* = 149
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6808:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6873:9
 else:
   static:
     hint(
@@ -56009,10 +56022,10 @@ else:
 when not declared(SSL_R_EXCESSIVE_MESSAGE_SIZE):
   when 150 is static:
     const SSL_R_EXCESSIVE_MESSAGE_SIZE* = 150
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6809:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6874:9
   else:
     let SSL_R_EXCESSIVE_MESSAGE_SIZE* = 150
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6809:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6874:9
 else:
   static:
     hint(
@@ -56022,10 +56035,10 @@ else:
 when not declared(SSL_R_EXTRA_DATA_IN_MESSAGE):
   when 151 is static:
     const SSL_R_EXTRA_DATA_IN_MESSAGE* = 151
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6810:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6875:9
   else:
     let SSL_R_EXTRA_DATA_IN_MESSAGE* = 151
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6810:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6875:9
 else:
   static:
     hint(
@@ -56035,10 +56048,10 @@ else:
 when not declared(SSL_R_FRAGMENT_MISMATCH):
   when 152 is static:
     const SSL_R_FRAGMENT_MISMATCH* = 152
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6811:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6876:9
   else:
     let SSL_R_FRAGMENT_MISMATCH* = 152
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6811:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6876:9
 else:
   static:
     hint(
@@ -56047,10 +56060,10 @@ else:
 when not declared(SSL_R_GOT_NEXT_PROTO_WITHOUT_EXTENSION):
   when 153 is static:
     const SSL_R_GOT_NEXT_PROTO_WITHOUT_EXTENSION* = 153
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6812:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6877:9
   else:
     let SSL_R_GOT_NEXT_PROTO_WITHOUT_EXTENSION* = 153
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6812:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6877:9
 else:
   static:
     hint(
@@ -56060,10 +56073,10 @@ else:
 when not declared(SSL_R_HANDSHAKE_FAILURE_ON_CLIENT_HELLO):
   when 154 is static:
     const SSL_R_HANDSHAKE_FAILURE_ON_CLIENT_HELLO* = 154
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6813:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6878:9
   else:
     let SSL_R_HANDSHAKE_FAILURE_ON_CLIENT_HELLO* = 154
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6813:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6878:9
 else:
   static:
     hint(
@@ -56073,10 +56086,10 @@ else:
 when not declared(SSL_R_HTTPS_PROXY_REQUEST):
   when 155 is static:
     const SSL_R_HTTPS_PROXY_REQUEST* = 155
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6814:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6879:9
   else:
     let SSL_R_HTTPS_PROXY_REQUEST* = 155
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6814:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6879:9
 else:
   static:
     hint(
@@ -56086,20 +56099,20 @@ else:
 when not declared(SSL_R_HTTP_REQUEST):
   when 156 is static:
     const SSL_R_HTTP_REQUEST* = 156
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6815:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6880:9
   else:
     let SSL_R_HTTP_REQUEST* = 156
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6815:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6880:9
 else:
   static:
     hint("Declaration of " & "SSL_R_HTTP_REQUEST" & " already exists, not redeclaring")
 when not declared(SSL_R_INAPPROPRIATE_FALLBACK):
   when 157 is static:
     const SSL_R_INAPPROPRIATE_FALLBACK* = 157
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6816:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6881:9
   else:
     let SSL_R_INAPPROPRIATE_FALLBACK* = 157
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6816:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6881:9
 else:
   static:
     hint(
@@ -56109,10 +56122,10 @@ else:
 when not declared(SSL_R_INVALID_COMMAND):
   when 158 is static:
     const SSL_R_INVALID_COMMAND* = 158
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6817:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6882:9
   else:
     let SSL_R_INVALID_COMMAND* = 158
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6817:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6882:9
 else:
   static:
     hint(
@@ -56121,10 +56134,10 @@ else:
 when not declared(SSL_R_INVALID_MESSAGE):
   when 159 is static:
     const SSL_R_INVALID_MESSAGE* = 159
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6818:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6883:9
   else:
     let SSL_R_INVALID_MESSAGE* = 159
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6818:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6883:9
 else:
   static:
     hint(
@@ -56133,10 +56146,10 @@ else:
 when not declared(SSL_R_INVALID_SSL_SESSION):
   when 160 is static:
     const SSL_R_INVALID_SSL_SESSION* = 160
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6819:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6884:9
   else:
     let SSL_R_INVALID_SSL_SESSION* = 160
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6819:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6884:9
 else:
   static:
     hint(
@@ -56146,10 +56159,10 @@ else:
 when not declared(SSL_R_INVALID_TICKET_KEYS_LENGTH):
   when 161 is static:
     const SSL_R_INVALID_TICKET_KEYS_LENGTH* = 161
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6820:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6885:9
   else:
     let SSL_R_INVALID_TICKET_KEYS_LENGTH* = 161
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6820:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6885:9
 else:
   static:
     hint(
@@ -56159,10 +56172,10 @@ else:
 when not declared(SSL_R_LENGTH_MISMATCH):
   when 162 is static:
     const SSL_R_LENGTH_MISMATCH* = 162
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6821:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6886:9
   else:
     let SSL_R_LENGTH_MISMATCH* = 162
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6821:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6886:9
 else:
   static:
     hint(
@@ -56171,10 +56184,10 @@ else:
 when not declared(SSL_R_MISSING_EXTENSION):
   when 164 is static:
     const SSL_R_MISSING_EXTENSION* = 164
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6822:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6887:9
   else:
     let SSL_R_MISSING_EXTENSION* = 164
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6822:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6887:9
 else:
   static:
     hint(
@@ -56183,10 +56196,10 @@ else:
 when not declared(SSL_R_MISSING_RSA_CERTIFICATE):
   when 165 is static:
     const SSL_R_MISSING_RSA_CERTIFICATE* = 165
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6823:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6888:9
   else:
     let SSL_R_MISSING_RSA_CERTIFICATE* = 165
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6823:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6888:9
 else:
   static:
     hint(
@@ -56196,10 +56209,10 @@ else:
 when not declared(SSL_R_MISSING_TMP_DH_KEY):
   when 166 is static:
     const SSL_R_MISSING_TMP_DH_KEY* = 166
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6824:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6889:9
   else:
     let SSL_R_MISSING_TMP_DH_KEY* = 166
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6824:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6889:9
 else:
   static:
     hint(
@@ -56208,10 +56221,10 @@ else:
 when not declared(SSL_R_MISSING_TMP_ECDH_KEY):
   when 167 is static:
     const SSL_R_MISSING_TMP_ECDH_KEY* = 167
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6825:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6890:9
   else:
     let SSL_R_MISSING_TMP_ECDH_KEY* = 167
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6825:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6890:9
 else:
   static:
     hint(
@@ -56221,10 +56234,10 @@ else:
 when not declared(SSL_R_MIXED_SPECIAL_OPERATOR_WITH_GROUPS):
   when 168 is static:
     const SSL_R_MIXED_SPECIAL_OPERATOR_WITH_GROUPS* = 168
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6826:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6891:9
   else:
     let SSL_R_MIXED_SPECIAL_OPERATOR_WITH_GROUPS* = 168
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6826:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6891:9
 else:
   static:
     hint(
@@ -56234,20 +56247,20 @@ else:
 when not declared(SSL_R_MTU_TOO_SMALL):
   when 169 is static:
     const SSL_R_MTU_TOO_SMALL* = 169
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6827:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6892:9
   else:
     let SSL_R_MTU_TOO_SMALL* = 169
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6827:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6892:9
 else:
   static:
     hint("Declaration of " & "SSL_R_MTU_TOO_SMALL" & " already exists, not redeclaring")
 when not declared(SSL_R_NEGOTIATED_BOTH_NPN_AND_ALPN):
   when 170 is static:
     const SSL_R_NEGOTIATED_BOTH_NPN_AND_ALPN* = 170
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6828:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6893:9
   else:
     let SSL_R_NEGOTIATED_BOTH_NPN_AND_ALPN* = 170
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6828:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6893:9
 else:
   static:
     hint(
@@ -56257,20 +56270,20 @@ else:
 when not declared(SSL_R_NESTED_GROUP):
   when 171 is static:
     const SSL_R_NESTED_GROUP* = 171
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6829:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6894:9
   else:
     let SSL_R_NESTED_GROUP* = 171
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6829:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6894:9
 else:
   static:
     hint("Declaration of " & "SSL_R_NESTED_GROUP" & " already exists, not redeclaring")
 when not declared(SSL_R_NO_CERTIFICATES_RETURNED):
   when 172 is static:
     const SSL_R_NO_CERTIFICATES_RETURNED* = 172
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6830:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6895:9
   else:
     let SSL_R_NO_CERTIFICATES_RETURNED* = 172
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6830:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6895:9
 else:
   static:
     hint(
@@ -56280,10 +56293,10 @@ else:
 when not declared(SSL_R_NO_CERTIFICATE_ASSIGNED):
   when 173 is static:
     const SSL_R_NO_CERTIFICATE_ASSIGNED* = 173
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6831:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6896:9
   else:
     let SSL_R_NO_CERTIFICATE_ASSIGNED* = 173
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6831:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6896:9
 else:
   static:
     hint(
@@ -56293,10 +56306,10 @@ else:
 when not declared(SSL_R_NO_CERTIFICATE_SET):
   when 174 is static:
     const SSL_R_NO_CERTIFICATE_SET* = 174
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6832:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6897:9
   else:
     let SSL_R_NO_CERTIFICATE_SET* = 174
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6832:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6897:9
 else:
   static:
     hint(
@@ -56305,10 +56318,10 @@ else:
 when not declared(SSL_R_NO_CIPHERS_AVAILABLE):
   when 175 is static:
     const SSL_R_NO_CIPHERS_AVAILABLE* = 175
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6833:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6898:9
   else:
     let SSL_R_NO_CIPHERS_AVAILABLE* = 175
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6833:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6898:9
 else:
   static:
     hint(
@@ -56318,10 +56331,10 @@ else:
 when not declared(SSL_R_NO_CIPHERS_PASSED):
   when 176 is static:
     const SSL_R_NO_CIPHERS_PASSED* = 176
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6834:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6899:9
   else:
     let SSL_R_NO_CIPHERS_PASSED* = 176
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6834:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6899:9
 else:
   static:
     hint(
@@ -56330,10 +56343,10 @@ else:
 when not declared(SSL_R_NO_CIPHER_MATCH):
   when 177 is static:
     const SSL_R_NO_CIPHER_MATCH* = 177
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6835:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6900:9
   else:
     let SSL_R_NO_CIPHER_MATCH* = 177
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6835:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6900:9
 else:
   static:
     hint(
@@ -56342,10 +56355,10 @@ else:
 when not declared(SSL_R_NO_COMPRESSION_SPECIFIED):
   when 178 is static:
     const SSL_R_NO_COMPRESSION_SPECIFIED* = 178
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6836:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6901:9
   else:
     let SSL_R_NO_COMPRESSION_SPECIFIED* = 178
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6836:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6901:9
 else:
   static:
     hint(
@@ -56355,10 +56368,10 @@ else:
 when not declared(SSL_R_NO_METHOD_SPECIFIED):
   when 179 is static:
     const SSL_R_NO_METHOD_SPECIFIED* = 179
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6837:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6902:9
   else:
     let SSL_R_NO_METHOD_SPECIFIED* = 179
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6837:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6902:9
 else:
   static:
     hint(
@@ -56368,10 +56381,10 @@ else:
 when not declared(SSL_R_NO_PRIVATE_KEY_ASSIGNED):
   when 181 is static:
     const SSL_R_NO_PRIVATE_KEY_ASSIGNED* = 181
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6838:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6903:9
   else:
     let SSL_R_NO_PRIVATE_KEY_ASSIGNED* = 181
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6838:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6903:9
 else:
   static:
     hint(
@@ -56381,10 +56394,10 @@ else:
 when not declared(SSL_R_NO_RENEGOTIATION):
   when 182 is static:
     const SSL_R_NO_RENEGOTIATION* = 182
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6839:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6904:9
   else:
     let SSL_R_NO_RENEGOTIATION* = 182
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6839:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6904:9
 else:
   static:
     hint(
@@ -56393,10 +56406,10 @@ else:
 when not declared(SSL_R_NO_REQUIRED_DIGEST):
   when 183 is static:
     const SSL_R_NO_REQUIRED_DIGEST* = 183
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6840:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6905:9
   else:
     let SSL_R_NO_REQUIRED_DIGEST* = 183
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6840:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6905:9
 else:
   static:
     hint(
@@ -56405,10 +56418,10 @@ else:
 when not declared(SSL_R_NO_SHARED_CIPHER):
   when 184 is static:
     const SSL_R_NO_SHARED_CIPHER* = 184
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6841:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6906:9
   else:
     let SSL_R_NO_SHARED_CIPHER* = 184
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6841:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6906:9
 else:
   static:
     hint(
@@ -56417,20 +56430,20 @@ else:
 when not declared(SSL_R_NULL_SSL_CTX):
   when 185 is static:
     const SSL_R_NULL_SSL_CTX* = 185
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6842:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6907:9
   else:
     let SSL_R_NULL_SSL_CTX* = 185
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6842:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6907:9
 else:
   static:
     hint("Declaration of " & "SSL_R_NULL_SSL_CTX" & " already exists, not redeclaring")
 when not declared(SSL_R_NULL_SSL_METHOD_PASSED):
   when 186 is static:
     const SSL_R_NULL_SSL_METHOD_PASSED* = 186
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6843:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6908:9
   else:
     let SSL_R_NULL_SSL_METHOD_PASSED* = 186
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6843:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6908:9
 else:
   static:
     hint(
@@ -56440,10 +56453,10 @@ else:
 when not declared(SSL_R_OLD_SESSION_CIPHER_NOT_RETURNED):
   when 187 is static:
     const SSL_R_OLD_SESSION_CIPHER_NOT_RETURNED* = 187
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6844:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6909:9
   else:
     let SSL_R_OLD_SESSION_CIPHER_NOT_RETURNED* = 187
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6844:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6909:9
 else:
   static:
     hint(
@@ -56453,10 +56466,10 @@ else:
 when not declared(SSL_R_OLD_SESSION_VERSION_NOT_RETURNED):
   when 188 is static:
     const SSL_R_OLD_SESSION_VERSION_NOT_RETURNED* = 188
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6845:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6910:9
   else:
     let SSL_R_OLD_SESSION_VERSION_NOT_RETURNED* = 188
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6845:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6910:9
 else:
   static:
     hint(
@@ -56466,10 +56479,10 @@ else:
 when not declared(SSL_R_OUTPUT_ALIASES_INPUT):
   when 189 is static:
     const SSL_R_OUTPUT_ALIASES_INPUT* = 189
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6846:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6911:9
   else:
     let SSL_R_OUTPUT_ALIASES_INPUT* = 189
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6846:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6911:9
 else:
   static:
     hint(
@@ -56479,30 +56492,30 @@ else:
 when not declared(SSL_R_PARSE_TLSEXT):
   when 190 is static:
     const SSL_R_PARSE_TLSEXT* = 190
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6847:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6912:9
   else:
     let SSL_R_PARSE_TLSEXT* = 190
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6847:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6912:9
 else:
   static:
     hint("Declaration of " & "SSL_R_PARSE_TLSEXT" & " already exists, not redeclaring")
 when not declared(SSL_R_PATH_TOO_LONG):
   when 191 is static:
     const SSL_R_PATH_TOO_LONG* = 191
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6848:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6913:9
   else:
     let SSL_R_PATH_TOO_LONG* = 191
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6848:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6913:9
 else:
   static:
     hint("Declaration of " & "SSL_R_PATH_TOO_LONG" & " already exists, not redeclaring")
 when not declared(SSL_R_PEER_DID_NOT_RETURN_A_CERTIFICATE):
   when 192 is static:
     const SSL_R_PEER_DID_NOT_RETURN_A_CERTIFICATE* = 192
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6849:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6914:9
   else:
     let SSL_R_PEER_DID_NOT_RETURN_A_CERTIFICATE* = 192
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6849:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6914:9
 else:
   static:
     hint(
@@ -56512,10 +56525,10 @@ else:
 when not declared(SSL_R_PEER_ERROR_UNSUPPORTED_CERTIFICATE_TYPE):
   when 193 is static:
     const SSL_R_PEER_ERROR_UNSUPPORTED_CERTIFICATE_TYPE* = 193
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6850:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6915:9
   else:
     let SSL_R_PEER_ERROR_UNSUPPORTED_CERTIFICATE_TYPE* = 193
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6850:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6915:9
 else:
   static:
     hint(
@@ -56525,10 +56538,10 @@ else:
 when not declared(SSL_R_PROTOCOL_IS_SHUTDOWN):
   when 194 is static:
     const SSL_R_PROTOCOL_IS_SHUTDOWN* = 194
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6851:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6916:9
   else:
     let SSL_R_PROTOCOL_IS_SHUTDOWN* = 194
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6851:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6916:9
 else:
   static:
     hint(
@@ -56538,10 +56551,10 @@ else:
 when not declared(SSL_R_PSK_IDENTITY_NOT_FOUND):
   when 195 is static:
     const SSL_R_PSK_IDENTITY_NOT_FOUND* = 195
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6852:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6917:9
   else:
     let SSL_R_PSK_IDENTITY_NOT_FOUND* = 195
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6852:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6917:9
 else:
   static:
     hint(
@@ -56551,10 +56564,10 @@ else:
 when not declared(SSL_R_PSK_NO_CLIENT_CB):
   when 196 is static:
     const SSL_R_PSK_NO_CLIENT_CB* = 196
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6853:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6918:9
   else:
     let SSL_R_PSK_NO_CLIENT_CB* = 196
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6853:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6918:9
 else:
   static:
     hint(
@@ -56563,10 +56576,10 @@ else:
 when not declared(SSL_R_PSK_NO_SERVER_CB):
   when 197 is static:
     const SSL_R_PSK_NO_SERVER_CB* = 197
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6854:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6919:9
   else:
     let SSL_R_PSK_NO_SERVER_CB* = 197
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6854:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6919:9
 else:
   static:
     hint(
@@ -56575,10 +56588,10 @@ else:
 when not declared(SSL_R_READ_TIMEOUT_EXPIRED):
   when 198 is static:
     const SSL_R_READ_TIMEOUT_EXPIRED* = 198
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6855:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6920:9
   else:
     let SSL_R_READ_TIMEOUT_EXPIRED* = 198
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6855:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6920:9
 else:
   static:
     hint(
@@ -56588,10 +56601,10 @@ else:
 when not declared(SSL_R_RECORD_LENGTH_MISMATCH):
   when 199 is static:
     const SSL_R_RECORD_LENGTH_MISMATCH* = 199
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6856:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6921:9
   else:
     let SSL_R_RECORD_LENGTH_MISMATCH* = 199
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6856:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6921:9
 else:
   static:
     hint(
@@ -56601,10 +56614,10 @@ else:
 when not declared(SSL_R_RECORD_TOO_LARGE):
   when 200 is static:
     const SSL_R_RECORD_TOO_LARGE* = 200
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6857:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6922:9
   else:
     let SSL_R_RECORD_TOO_LARGE* = 200
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6857:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6922:9
 else:
   static:
     hint(
@@ -56613,10 +56626,10 @@ else:
 when not declared(SSL_R_RENEGOTIATION_ENCODING_ERR):
   when 201 is static:
     const SSL_R_RENEGOTIATION_ENCODING_ERR* = 201
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6858:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6923:9
   else:
     let SSL_R_RENEGOTIATION_ENCODING_ERR* = 201
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6858:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6923:9
 else:
   static:
     hint(
@@ -56626,10 +56639,10 @@ else:
 when not declared(SSL_R_RENEGOTIATION_MISMATCH):
   when 202 is static:
     const SSL_R_RENEGOTIATION_MISMATCH* = 202
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6859:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6924:9
   else:
     let SSL_R_RENEGOTIATION_MISMATCH* = 202
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6859:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6924:9
 else:
   static:
     hint(
@@ -56639,10 +56652,10 @@ else:
 when not declared(SSL_R_REQUIRED_CIPHER_MISSING):
   when 203 is static:
     const SSL_R_REQUIRED_CIPHER_MISSING* = 203
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6860:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6925:9
   else:
     let SSL_R_REQUIRED_CIPHER_MISSING* = 203
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6860:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6925:9
 else:
   static:
     hint(
@@ -56652,10 +56665,10 @@ else:
 when not declared(SSL_R_RESUMED_EMS_SESSION_WITHOUT_EMS_EXTENSION):
   when 204 is static:
     const SSL_R_RESUMED_EMS_SESSION_WITHOUT_EMS_EXTENSION* = 204
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6861:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6926:9
   else:
     let SSL_R_RESUMED_EMS_SESSION_WITHOUT_EMS_EXTENSION* = 204
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6861:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6926:9
 else:
   static:
     hint(
@@ -56665,10 +56678,10 @@ else:
 when not declared(SSL_R_RESUMED_NON_EMS_SESSION_WITH_EMS_EXTENSION):
   when 205 is static:
     const SSL_R_RESUMED_NON_EMS_SESSION_WITH_EMS_EXTENSION* = 205
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6862:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6927:9
   else:
     let SSL_R_RESUMED_NON_EMS_SESSION_WITH_EMS_EXTENSION* = 205
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6862:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6927:9
 else:
   static:
     hint(
@@ -56678,10 +56691,10 @@ else:
 when not declared(SSL_R_SCSV_RECEIVED_WHEN_RENEGOTIATING):
   when 206 is static:
     const SSL_R_SCSV_RECEIVED_WHEN_RENEGOTIATING* = 206
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6863:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6928:9
   else:
     let SSL_R_SCSV_RECEIVED_WHEN_RENEGOTIATING* = 206
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6863:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6928:9
 else:
   static:
     hint(
@@ -56691,10 +56704,10 @@ else:
 when not declared(SSL_R_SERVERHELLO_TLSEXT):
   when 207 is static:
     const SSL_R_SERVERHELLO_TLSEXT* = 207
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6864:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6929:9
   else:
     let SSL_R_SERVERHELLO_TLSEXT* = 207
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6864:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6929:9
 else:
   static:
     hint(
@@ -56703,10 +56716,10 @@ else:
 when not declared(SSL_R_SESSION_ID_CONTEXT_UNINITIALIZED):
   when 208 is static:
     const SSL_R_SESSION_ID_CONTEXT_UNINITIALIZED* = 208
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6865:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6930:9
   else:
     let SSL_R_SESSION_ID_CONTEXT_UNINITIALIZED* = 208
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6865:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6930:9
 else:
   static:
     hint(
@@ -56716,10 +56729,10 @@ else:
 when not declared(SSL_R_SESSION_MAY_NOT_BE_CREATED):
   when 209 is static:
     const SSL_R_SESSION_MAY_NOT_BE_CREATED* = 209
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6866:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6931:9
   else:
     let SSL_R_SESSION_MAY_NOT_BE_CREATED* = 209
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6866:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6931:9
 else:
   static:
     hint(
@@ -56729,10 +56742,10 @@ else:
 when not declared(SSL_R_SIGNATURE_ALGORITHMS_EXTENSION_SENT_BY_SERVER):
   when 210 is static:
     const SSL_R_SIGNATURE_ALGORITHMS_EXTENSION_SENT_BY_SERVER* = 210
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6867:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6932:9
   else:
     let SSL_R_SIGNATURE_ALGORITHMS_EXTENSION_SENT_BY_SERVER* = 210
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6867:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6932:9
 else:
   static:
     hint(
@@ -56742,10 +56755,10 @@ else:
 when not declared(SSL_R_SRTP_COULD_NOT_ALLOCATE_PROFILES):
   when 211 is static:
     const SSL_R_SRTP_COULD_NOT_ALLOCATE_PROFILES* = 211
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6868:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6933:9
   else:
     let SSL_R_SRTP_COULD_NOT_ALLOCATE_PROFILES* = 211
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6868:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6933:9
 else:
   static:
     hint(
@@ -56755,10 +56768,10 @@ else:
 when not declared(SSL_R_SRTP_UNKNOWN_PROTECTION_PROFILE):
   when 212 is static:
     const SSL_R_SRTP_UNKNOWN_PROTECTION_PROFILE* = 212
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6869:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6934:9
   else:
     let SSL_R_SRTP_UNKNOWN_PROTECTION_PROFILE* = 212
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6869:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6934:9
 else:
   static:
     hint(
@@ -56768,10 +56781,10 @@ else:
 when not declared(SSL_R_SSL3_EXT_INVALID_SERVERNAME):
   when 213 is static:
     const SSL_R_SSL3_EXT_INVALID_SERVERNAME* = 213
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6870:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6935:9
   else:
     let SSL_R_SSL3_EXT_INVALID_SERVERNAME* = 213
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6870:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6935:9
 else:
   static:
     hint(
@@ -56781,10 +56794,10 @@ else:
 when not declared(SSL_R_SSL_CTX_HAS_NO_DEFAULT_SSL_VERSION):
   when 214 is static:
     const SSL_R_SSL_CTX_HAS_NO_DEFAULT_SSL_VERSION* = 214
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6871:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6936:9
   else:
     let SSL_R_SSL_CTX_HAS_NO_DEFAULT_SSL_VERSION* = 214
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6871:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6936:9
 else:
   static:
     hint(
@@ -56794,10 +56807,10 @@ else:
 when not declared(SSL_R_SSL_HANDSHAKE_FAILURE):
   when 215 is static:
     const SSL_R_SSL_HANDSHAKE_FAILURE* = 215
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6872:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6937:9
   else:
     let SSL_R_SSL_HANDSHAKE_FAILURE* = 215
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6872:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6937:9
 else:
   static:
     hint(
@@ -56807,10 +56820,10 @@ else:
 when not declared(SSL_R_SSL_SESSION_ID_CONTEXT_TOO_LONG):
   when 216 is static:
     const SSL_R_SSL_SESSION_ID_CONTEXT_TOO_LONG* = 216
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6873:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6938:9
   else:
     let SSL_R_SSL_SESSION_ID_CONTEXT_TOO_LONG* = 216
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6873:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6938:9
 else:
   static:
     hint(
@@ -56820,10 +56833,10 @@ else:
 when not declared(SSL_R_TLS_PEER_DID_NOT_RESPOND_WITH_CERTIFICATE_LIST):
   when 217 is static:
     const SSL_R_TLS_PEER_DID_NOT_RESPOND_WITH_CERTIFICATE_LIST* = 217
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6874:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6939:9
   else:
     let SSL_R_TLS_PEER_DID_NOT_RESPOND_WITH_CERTIFICATE_LIST* = 217
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6874:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6939:9
 else:
   static:
     hint(
@@ -56833,10 +56846,10 @@ else:
 when not declared(SSL_R_TLS_RSA_ENCRYPTED_VALUE_LENGTH_IS_WRONG):
   when 218 is static:
     const SSL_R_TLS_RSA_ENCRYPTED_VALUE_LENGTH_IS_WRONG* = 218
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6875:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6940:9
   else:
     let SSL_R_TLS_RSA_ENCRYPTED_VALUE_LENGTH_IS_WRONG* = 218
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6875:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6940:9
 else:
   static:
     hint(
@@ -56846,10 +56859,10 @@ else:
 when not declared(SSL_R_TOO_MANY_EMPTY_FRAGMENTS):
   when 219 is static:
     const SSL_R_TOO_MANY_EMPTY_FRAGMENTS* = 219
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6876:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6941:9
   else:
     let SSL_R_TOO_MANY_EMPTY_FRAGMENTS* = 219
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6876:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6941:9
 else:
   static:
     hint(
@@ -56859,10 +56872,10 @@ else:
 when not declared(SSL_R_TOO_MANY_WARNING_ALERTS):
   when 220 is static:
     const SSL_R_TOO_MANY_WARNING_ALERTS* = 220
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6877:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6942:9
   else:
     let SSL_R_TOO_MANY_WARNING_ALERTS* = 220
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6877:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6942:9
 else:
   static:
     hint(
@@ -56872,10 +56885,10 @@ else:
 when not declared(SSL_R_UNABLE_TO_FIND_ECDH_PARAMETERS):
   when 221 is static:
     const SSL_R_UNABLE_TO_FIND_ECDH_PARAMETERS* = 221
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6878:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6943:9
   else:
     let SSL_R_UNABLE_TO_FIND_ECDH_PARAMETERS* = 221
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6878:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6943:9
 else:
   static:
     hint(
@@ -56885,10 +56898,10 @@ else:
 when not declared(SSL_R_UNEXPECTED_EXTENSION):
   when 222 is static:
     const SSL_R_UNEXPECTED_EXTENSION* = 222
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6879:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6944:9
   else:
     let SSL_R_UNEXPECTED_EXTENSION* = 222
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6879:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6944:9
 else:
   static:
     hint(
@@ -56898,10 +56911,10 @@ else:
 when not declared(SSL_R_UNEXPECTED_MESSAGE):
   when 223 is static:
     const SSL_R_UNEXPECTED_MESSAGE* = 223
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6880:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6945:9
   else:
     let SSL_R_UNEXPECTED_MESSAGE* = 223
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6880:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6945:9
 else:
   static:
     hint(
@@ -56910,10 +56923,10 @@ else:
 when not declared(SSL_R_UNEXPECTED_OPERATOR_IN_GROUP):
   when 224 is static:
     const SSL_R_UNEXPECTED_OPERATOR_IN_GROUP* = 224
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6881:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6946:9
   else:
     let SSL_R_UNEXPECTED_OPERATOR_IN_GROUP* = 224
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6881:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6946:9
 else:
   static:
     hint(
@@ -56923,10 +56936,10 @@ else:
 when not declared(SSL_R_UNEXPECTED_RECORD):
   when 225 is static:
     const SSL_R_UNEXPECTED_RECORD* = 225
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6882:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6947:9
   else:
     let SSL_R_UNEXPECTED_RECORD* = 225
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6882:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6947:9
 else:
   static:
     hint(
@@ -56935,20 +56948,20 @@ else:
 when not declared(SSL_R_UNINITIALIZED):
   when 226 is static:
     const SSL_R_UNINITIALIZED* = 226
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6883:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6948:9
   else:
     let SSL_R_UNINITIALIZED* = 226
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6883:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6948:9
 else:
   static:
     hint("Declaration of " & "SSL_R_UNINITIALIZED" & " already exists, not redeclaring")
 when not declared(SSL_R_UNKNOWN_ALERT_TYPE):
   when 227 is static:
     const SSL_R_UNKNOWN_ALERT_TYPE* = 227
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6884:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6949:9
   else:
     let SSL_R_UNKNOWN_ALERT_TYPE* = 227
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6884:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6949:9
 else:
   static:
     hint(
@@ -56957,10 +56970,10 @@ else:
 when not declared(SSL_R_UNKNOWN_CERTIFICATE_TYPE):
   when 228 is static:
     const SSL_R_UNKNOWN_CERTIFICATE_TYPE* = 228
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6885:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6950:9
   else:
     let SSL_R_UNKNOWN_CERTIFICATE_TYPE* = 228
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6885:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6950:9
 else:
   static:
     hint(
@@ -56970,10 +56983,10 @@ else:
 when not declared(SSL_R_UNKNOWN_CIPHER_RETURNED):
   when 229 is static:
     const SSL_R_UNKNOWN_CIPHER_RETURNED* = 229
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6886:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6951:9
   else:
     let SSL_R_UNKNOWN_CIPHER_RETURNED* = 229
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6886:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6951:9
 else:
   static:
     hint(
@@ -56983,10 +56996,10 @@ else:
 when not declared(SSL_R_UNKNOWN_CIPHER_TYPE):
   when 230 is static:
     const SSL_R_UNKNOWN_CIPHER_TYPE* = 230
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6887:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6952:9
   else:
     let SSL_R_UNKNOWN_CIPHER_TYPE* = 230
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6887:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6952:9
 else:
   static:
     hint(
@@ -56996,10 +57009,10 @@ else:
 when not declared(SSL_R_UNKNOWN_DIGEST):
   when 231 is static:
     const SSL_R_UNKNOWN_DIGEST* = 231
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6888:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6953:9
   else:
     let SSL_R_UNKNOWN_DIGEST* = 231
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6888:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6953:9
 else:
   static:
     hint(
@@ -57008,10 +57021,10 @@ else:
 when not declared(SSL_R_UNKNOWN_KEY_EXCHANGE_TYPE):
   when 232 is static:
     const SSL_R_UNKNOWN_KEY_EXCHANGE_TYPE* = 232
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6889:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6954:9
   else:
     let SSL_R_UNKNOWN_KEY_EXCHANGE_TYPE* = 232
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6889:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6954:9
 else:
   static:
     hint(
@@ -57021,10 +57034,10 @@ else:
 when not declared(SSL_R_UNKNOWN_PROTOCOL):
   when 233 is static:
     const SSL_R_UNKNOWN_PROTOCOL* = 233
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6890:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6955:9
   else:
     let SSL_R_UNKNOWN_PROTOCOL* = 233
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6890:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6955:9
 else:
   static:
     hint(
@@ -57033,10 +57046,10 @@ else:
 when not declared(SSL_R_UNKNOWN_SSL_VERSION):
   when 234 is static:
     const SSL_R_UNKNOWN_SSL_VERSION* = 234
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6891:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6956:9
   else:
     let SSL_R_UNKNOWN_SSL_VERSION* = 234
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6891:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6956:9
 else:
   static:
     hint(
@@ -57046,20 +57059,20 @@ else:
 when not declared(SSL_R_UNKNOWN_STATE):
   when 235 is static:
     const SSL_R_UNKNOWN_STATE* = 235
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6892:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6957:9
   else:
     let SSL_R_UNKNOWN_STATE* = 235
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6892:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6957:9
 else:
   static:
     hint("Declaration of " & "SSL_R_UNKNOWN_STATE" & " already exists, not redeclaring")
 when not declared(SSL_R_UNSAFE_LEGACY_RENEGOTIATION_DISABLED):
   when 236 is static:
     const SSL_R_UNSAFE_LEGACY_RENEGOTIATION_DISABLED* = 236
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6893:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6958:9
   else:
     let SSL_R_UNSAFE_LEGACY_RENEGOTIATION_DISABLED* = 236
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6893:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6958:9
 else:
   static:
     hint(
@@ -57069,10 +57082,10 @@ else:
 when not declared(SSL_R_UNSUPPORTED_CIPHER):
   when 237 is static:
     const SSL_R_UNSUPPORTED_CIPHER* = 237
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6894:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6959:9
   else:
     let SSL_R_UNSUPPORTED_CIPHER* = 237
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6894:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6959:9
 else:
   static:
     hint(
@@ -57081,10 +57094,10 @@ else:
 when not declared(SSL_R_UNSUPPORTED_COMPRESSION_ALGORITHM):
   when 238 is static:
     const SSL_R_UNSUPPORTED_COMPRESSION_ALGORITHM* = 238
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6895:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6960:9
   else:
     let SSL_R_UNSUPPORTED_COMPRESSION_ALGORITHM* = 238
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6895:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6960:9
 else:
   static:
     hint(
@@ -57094,10 +57107,10 @@ else:
 when not declared(SSL_R_UNSUPPORTED_ELLIPTIC_CURVE):
   when 239 is static:
     const SSL_R_UNSUPPORTED_ELLIPTIC_CURVE* = 239
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6896:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6961:9
   else:
     let SSL_R_UNSUPPORTED_ELLIPTIC_CURVE* = 239
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6896:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6961:9
 else:
   static:
     hint(
@@ -57107,10 +57120,10 @@ else:
 when not declared(SSL_R_UNSUPPORTED_PROTOCOL):
   when 240 is static:
     const SSL_R_UNSUPPORTED_PROTOCOL* = 240
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6897:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6962:9
   else:
     let SSL_R_UNSUPPORTED_PROTOCOL* = 240
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6897:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6962:9
 else:
   static:
     hint(
@@ -57120,10 +57133,10 @@ else:
 when not declared(SSL_R_WRONG_CERTIFICATE_TYPE):
   when 241 is static:
     const SSL_R_WRONG_CERTIFICATE_TYPE* = 241
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6898:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6963:9
   else:
     let SSL_R_WRONG_CERTIFICATE_TYPE* = 241
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6898:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6963:9
 else:
   static:
     hint(
@@ -57133,10 +57146,10 @@ else:
 when not declared(SSL_R_WRONG_CIPHER_RETURNED):
   when 242 is static:
     const SSL_R_WRONG_CIPHER_RETURNED* = 242
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6899:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6964:9
   else:
     let SSL_R_WRONG_CIPHER_RETURNED* = 242
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6899:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6964:9
 else:
   static:
     hint(
@@ -57146,20 +57159,20 @@ else:
 when not declared(SSL_R_WRONG_CURVE):
   when 243 is static:
     const SSL_R_WRONG_CURVE* = 243
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6900:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6965:9
   else:
     let SSL_R_WRONG_CURVE* = 243
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6900:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6965:9
 else:
   static:
     hint("Declaration of " & "SSL_R_WRONG_CURVE" & " already exists, not redeclaring")
 when not declared(SSL_R_WRONG_MESSAGE_TYPE):
   when 244 is static:
     const SSL_R_WRONG_MESSAGE_TYPE* = 244
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6901:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6966:9
   else:
     let SSL_R_WRONG_MESSAGE_TYPE* = 244
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6901:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6966:9
 else:
   static:
     hint(
@@ -57168,10 +57181,10 @@ else:
 when not declared(SSL_R_WRONG_SIGNATURE_TYPE):
   when 245 is static:
     const SSL_R_WRONG_SIGNATURE_TYPE* = 245
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6902:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6967:9
   else:
     let SSL_R_WRONG_SIGNATURE_TYPE* = 245
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6902:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6967:9
 else:
   static:
     hint(
@@ -57181,10 +57194,10 @@ else:
 when not declared(SSL_R_WRONG_SSL_VERSION):
   when 246 is static:
     const SSL_R_WRONG_SSL_VERSION* = 246
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6903:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6968:9
   else:
     let SSL_R_WRONG_SSL_VERSION* = 246
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6903:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6968:9
 else:
   static:
     hint(
@@ -57193,10 +57206,10 @@ else:
 when not declared(SSL_R_WRONG_VERSION_NUMBER):
   when 247 is static:
     const SSL_R_WRONG_VERSION_NUMBER* = 247
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6904:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6969:9
   else:
     let SSL_R_WRONG_VERSION_NUMBER* = 247
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6904:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6969:9
 else:
   static:
     hint(
@@ -57206,20 +57219,20 @@ else:
 when not declared(SSL_R_X509_LIB):
   when 248 is static:
     const SSL_R_X509_LIB* = 248
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6905:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6970:9
   else:
     let SSL_R_X509_LIB* = 248
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6905:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6970:9
 else:
   static:
     hint("Declaration of " & "SSL_R_X509_LIB" & " already exists, not redeclaring")
 when not declared(SSL_R_X509_VERIFICATION_SETUP_PROBLEMS):
   when 249 is static:
     const SSL_R_X509_VERIFICATION_SETUP_PROBLEMS* = 249
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6906:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6971:9
   else:
     let SSL_R_X509_VERIFICATION_SETUP_PROBLEMS* = 249
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6906:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6971:9
 else:
   static:
     hint(
@@ -57229,10 +57242,10 @@ else:
 when not declared(SSL_R_SHUTDOWN_WHILE_IN_INIT):
   when 250 is static:
     const SSL_R_SHUTDOWN_WHILE_IN_INIT* = 250
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6907:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6972:9
   else:
     let SSL_R_SHUTDOWN_WHILE_IN_INIT* = 250
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6907:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6972:9
 else:
   static:
     hint(
@@ -57242,10 +57255,10 @@ else:
 when not declared(SSL_R_INVALID_OUTER_RECORD_TYPE):
   when 251 is static:
     const SSL_R_INVALID_OUTER_RECORD_TYPE* = 251
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6908:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6973:9
   else:
     let SSL_R_INVALID_OUTER_RECORD_TYPE* = 251
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6908:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6973:9
 else:
   static:
     hint(
@@ -57255,10 +57268,10 @@ else:
 when not declared(SSL_R_UNSUPPORTED_PROTOCOL_FOR_CUSTOM_KEY):
   when 252 is static:
     const SSL_R_UNSUPPORTED_PROTOCOL_FOR_CUSTOM_KEY* = 252
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6909:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6974:9
   else:
     let SSL_R_UNSUPPORTED_PROTOCOL_FOR_CUSTOM_KEY* = 252
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6909:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6974:9
 else:
   static:
     hint(
@@ -57268,10 +57281,10 @@ else:
 when not declared(SSL_R_NO_COMMON_SIGNATURE_ALGORITHMS):
   when 253 is static:
     const SSL_R_NO_COMMON_SIGNATURE_ALGORITHMS* = 253
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6910:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6975:9
   else:
     let SSL_R_NO_COMMON_SIGNATURE_ALGORITHMS* = 253
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6910:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6975:9
 else:
   static:
     hint(
@@ -57281,10 +57294,10 @@ else:
 when not declared(SSL_R_DOWNGRADE_DETECTED):
   when 254 is static:
     const SSL_R_DOWNGRADE_DETECTED* = 254
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6911:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6976:9
   else:
     let SSL_R_DOWNGRADE_DETECTED* = 254
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6911:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6976:9
 else:
   static:
     hint(
@@ -57293,10 +57306,10 @@ else:
 when not declared(SSL_R_EXCESS_HANDSHAKE_DATA):
   when 255 is static:
     const SSL_R_EXCESS_HANDSHAKE_DATA* = 255
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6912:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6977:9
   else:
     let SSL_R_EXCESS_HANDSHAKE_DATA* = 255
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6912:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6977:9
 else:
   static:
     hint(
@@ -57306,10 +57319,10 @@ else:
 when not declared(SSL_R_INVALID_COMPRESSION_LIST):
   when 256 is static:
     const SSL_R_INVALID_COMPRESSION_LIST* = 256
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6913:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6978:9
   else:
     let SSL_R_INVALID_COMPRESSION_LIST* = 256
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6913:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6978:9
 else:
   static:
     hint(
@@ -57319,10 +57332,10 @@ else:
 when not declared(SSL_R_DUPLICATE_EXTENSION):
   when 257 is static:
     const SSL_R_DUPLICATE_EXTENSION* = 257
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6914:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6979:9
   else:
     let SSL_R_DUPLICATE_EXTENSION* = 257
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6914:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6979:9
 else:
   static:
     hint(
@@ -57332,10 +57345,10 @@ else:
 when not declared(SSL_R_MISSING_KEY_SHARE):
   when 258 is static:
     const SSL_R_MISSING_KEY_SHARE* = 258
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6915:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6980:9
   else:
     let SSL_R_MISSING_KEY_SHARE* = 258
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6915:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6980:9
 else:
   static:
     hint(
@@ -57344,10 +57357,10 @@ else:
 when not declared(SSL_R_INVALID_ALPN_PROTOCOL):
   when 259 is static:
     const SSL_R_INVALID_ALPN_PROTOCOL* = 259
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6916:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6981:9
   else:
     let SSL_R_INVALID_ALPN_PROTOCOL* = 259
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6916:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6981:9
 else:
   static:
     hint(
@@ -57357,10 +57370,10 @@ else:
 when not declared(SSL_R_TOO_MANY_KEY_UPDATES):
   when 260 is static:
     const SSL_R_TOO_MANY_KEY_UPDATES* = 260
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6917:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6982:9
   else:
     let SSL_R_TOO_MANY_KEY_UPDATES* = 260
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6917:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6982:9
 else:
   static:
     hint(
@@ -57370,10 +57383,10 @@ else:
 when not declared(SSL_R_BLOCK_CIPHER_PAD_IS_WRONG):
   when 261 is static:
     const SSL_R_BLOCK_CIPHER_PAD_IS_WRONG* = 261
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6918:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6983:9
   else:
     let SSL_R_BLOCK_CIPHER_PAD_IS_WRONG* = 261
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6918:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6983:9
 else:
   static:
     hint(
@@ -57383,10 +57396,10 @@ else:
 when not declared(SSL_R_NO_CIPHERS_SPECIFIED):
   when 262 is static:
     const SSL_R_NO_CIPHERS_SPECIFIED* = 262
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6919:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6984:9
   else:
     let SSL_R_NO_CIPHERS_SPECIFIED* = 262
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6919:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6984:9
 else:
   static:
     hint(
@@ -57396,10 +57409,10 @@ else:
 when not declared(SSL_R_RENEGOTIATION_EMS_MISMATCH):
   when 263 is static:
     const SSL_R_RENEGOTIATION_EMS_MISMATCH* = 263
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6920:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6985:9
   else:
     let SSL_R_RENEGOTIATION_EMS_MISMATCH* = 263
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6920:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6985:9
 else:
   static:
     hint(
@@ -57409,10 +57422,10 @@ else:
 when not declared(SSL_R_DUPLICATE_KEY_SHARE):
   when 264 is static:
     const SSL_R_DUPLICATE_KEY_SHARE* = 264
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6921:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6986:9
   else:
     let SSL_R_DUPLICATE_KEY_SHARE* = 264
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6921:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6986:9
 else:
   static:
     hint(
@@ -57422,10 +57435,10 @@ else:
 when not declared(SSL_R_NO_GROUPS_SPECIFIED):
   when 265 is static:
     const SSL_R_NO_GROUPS_SPECIFIED* = 265
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6922:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6987:9
   else:
     let SSL_R_NO_GROUPS_SPECIFIED* = 265
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6922:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6987:9
 else:
   static:
     hint(
@@ -57435,10 +57448,10 @@ else:
 when not declared(SSL_R_NO_SHARED_GROUP):
   when 266 is static:
     const SSL_R_NO_SHARED_GROUP* = 266
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6923:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6988:9
   else:
     let SSL_R_NO_SHARED_GROUP* = 266
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6923:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6988:9
 else:
   static:
     hint(
@@ -57447,10 +57460,10 @@ else:
 when not declared(SSL_R_PRE_SHARED_KEY_MUST_BE_LAST):
   when 267 is static:
     const SSL_R_PRE_SHARED_KEY_MUST_BE_LAST* = 267
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6924:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6989:9
   else:
     let SSL_R_PRE_SHARED_KEY_MUST_BE_LAST* = 267
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6924:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6989:9
 else:
   static:
     hint(
@@ -57460,10 +57473,10 @@ else:
 when not declared(SSL_R_OLD_SESSION_PRF_HASH_MISMATCH):
   when 268 is static:
     const SSL_R_OLD_SESSION_PRF_HASH_MISMATCH* = 268
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6925:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6990:9
   else:
     let SSL_R_OLD_SESSION_PRF_HASH_MISMATCH* = 268
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6925:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6990:9
 else:
   static:
     hint(
@@ -57473,10 +57486,10 @@ else:
 when not declared(SSL_R_INVALID_SCT_LIST):
   when 269 is static:
     const SSL_R_INVALID_SCT_LIST* = 269
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6926:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6991:9
   else:
     let SSL_R_INVALID_SCT_LIST* = 269
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6926:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6991:9
 else:
   static:
     hint(
@@ -57485,10 +57498,10 @@ else:
 when not declared(SSL_R_TOO_MUCH_SKIPPED_EARLY_DATA):
   when 270 is static:
     const SSL_R_TOO_MUCH_SKIPPED_EARLY_DATA* = 270
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6927:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6992:9
   else:
     let SSL_R_TOO_MUCH_SKIPPED_EARLY_DATA* = 270
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6927:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6992:9
 else:
   static:
     hint(
@@ -57498,10 +57511,10 @@ else:
 when not declared(SSL_R_PSK_IDENTITY_BINDER_COUNT_MISMATCH):
   when 271 is static:
     const SSL_R_PSK_IDENTITY_BINDER_COUNT_MISMATCH* = 271
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6928:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6993:9
   else:
     let SSL_R_PSK_IDENTITY_BINDER_COUNT_MISMATCH* = 271
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6928:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6993:9
 else:
   static:
     hint(
@@ -57511,10 +57524,10 @@ else:
 when not declared(SSL_R_CANNOT_PARSE_LEAF_CERT):
   when 272 is static:
     const SSL_R_CANNOT_PARSE_LEAF_CERT* = 272
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6929:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6994:9
   else:
     let SSL_R_CANNOT_PARSE_LEAF_CERT* = 272
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6929:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6994:9
 else:
   static:
     hint(
@@ -57524,10 +57537,10 @@ else:
 when not declared(SSL_R_SERVER_CERT_CHANGED):
   when 273 is static:
     const SSL_R_SERVER_CERT_CHANGED* = 273
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6930:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6995:9
   else:
     let SSL_R_SERVER_CERT_CHANGED* = 273
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6930:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6995:9
 else:
   static:
     hint(
@@ -57537,10 +57550,10 @@ else:
 when not declared(SSL_R_CERTIFICATE_AND_PRIVATE_KEY_MISMATCH):
   when 274 is static:
     const SSL_R_CERTIFICATE_AND_PRIVATE_KEY_MISMATCH* = 274
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6931:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6996:9
   else:
     let SSL_R_CERTIFICATE_AND_PRIVATE_KEY_MISMATCH* = 274
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6931:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6996:9
 else:
   static:
     hint(
@@ -57550,10 +57563,10 @@ else:
 when not declared(SSL_R_CANNOT_HAVE_BOTH_PRIVKEY_AND_METHOD):
   when 275 is static:
     const SSL_R_CANNOT_HAVE_BOTH_PRIVKEY_AND_METHOD* = 275
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6932:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6997:9
   else:
     let SSL_R_CANNOT_HAVE_BOTH_PRIVKEY_AND_METHOD* = 275
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6932:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6997:9
 else:
   static:
     hint(
@@ -57563,10 +57576,10 @@ else:
 when not declared(SSL_R_TICKET_ENCRYPTION_FAILED):
   when 276 is static:
     const SSL_R_TICKET_ENCRYPTION_FAILED* = 276
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6933:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6998:9
   else:
     let SSL_R_TICKET_ENCRYPTION_FAILED* = 276
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6933:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6998:9
 else:
   static:
     hint(
@@ -57576,10 +57589,10 @@ else:
 when not declared(SSL_R_ALPN_MISMATCH_ON_EARLY_DATA):
   when 277 is static:
     const SSL_R_ALPN_MISMATCH_ON_EARLY_DATA* = 277
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6934:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6999:9
   else:
     let SSL_R_ALPN_MISMATCH_ON_EARLY_DATA* = 277
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6934:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6999:9
 else:
   static:
     hint(
@@ -57589,10 +57602,10 @@ else:
 when not declared(SSL_R_WRONG_VERSION_ON_EARLY_DATA):
   when 278 is static:
     const SSL_R_WRONG_VERSION_ON_EARLY_DATA* = 278
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6935:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7000:9
   else:
     let SSL_R_WRONG_VERSION_ON_EARLY_DATA* = 278
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6935:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7000:9
 else:
   static:
     hint(
@@ -57602,10 +57615,10 @@ else:
 when not declared(SSL_R_UNEXPECTED_EXTENSION_ON_EARLY_DATA):
   when 279 is static:
     const SSL_R_UNEXPECTED_EXTENSION_ON_EARLY_DATA* = 279
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6936:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7001:9
   else:
     let SSL_R_UNEXPECTED_EXTENSION_ON_EARLY_DATA* = 279
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6936:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7001:9
 else:
   static:
     hint(
@@ -57615,10 +57628,10 @@ else:
 when not declared(SSL_R_NO_SUPPORTED_VERSIONS_ENABLED):
   when 280 is static:
     const SSL_R_NO_SUPPORTED_VERSIONS_ENABLED* = 280
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6937:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7002:9
   else:
     let SSL_R_NO_SUPPORTED_VERSIONS_ENABLED* = 280
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6937:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7002:9
 else:
   static:
     hint(
@@ -57628,10 +57641,10 @@ else:
 when not declared(SSL_R_EMPTY_HELLO_RETRY_REQUEST):
   when 282 is static:
     const SSL_R_EMPTY_HELLO_RETRY_REQUEST* = 282
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6938:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7003:9
   else:
     let SSL_R_EMPTY_HELLO_RETRY_REQUEST* = 282
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6938:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7003:9
 else:
   static:
     hint(
@@ -57641,10 +57654,10 @@ else:
 when not declared(SSL_R_EARLY_DATA_NOT_IN_USE):
   when 283 is static:
     const SSL_R_EARLY_DATA_NOT_IN_USE* = 283
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6939:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7004:9
   else:
     let SSL_R_EARLY_DATA_NOT_IN_USE* = 283
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6939:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7004:9
 else:
   static:
     hint(
@@ -57654,10 +57667,10 @@ else:
 when not declared(SSL_R_HANDSHAKE_NOT_COMPLETE):
   when 284 is static:
     const SSL_R_HANDSHAKE_NOT_COMPLETE* = 284
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6940:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7005:9
   else:
     let SSL_R_HANDSHAKE_NOT_COMPLETE* = 284
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6940:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7005:9
 else:
   static:
     hint(
@@ -57667,10 +57680,10 @@ else:
 when not declared(SSL_R_NEGOTIATED_TB_WITHOUT_EMS_OR_RI):
   when 285 is static:
     const SSL_R_NEGOTIATED_TB_WITHOUT_EMS_OR_RI* = 285
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6941:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7006:9
   else:
     let SSL_R_NEGOTIATED_TB_WITHOUT_EMS_OR_RI* = 285
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6941:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7006:9
 else:
   static:
     hint(
@@ -57680,10 +57693,10 @@ else:
 when not declared(SSL_R_SERVER_ECHOED_INVALID_SESSION_ID):
   when 286 is static:
     const SSL_R_SERVER_ECHOED_INVALID_SESSION_ID* = 286
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6942:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7007:9
   else:
     let SSL_R_SERVER_ECHOED_INVALID_SESSION_ID* = 286
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6942:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7007:9
 else:
   static:
     hint(
@@ -57693,10 +57706,10 @@ else:
 when not declared(SSL_R_PRIVATE_KEY_OPERATION_FAILED):
   when 287 is static:
     const SSL_R_PRIVATE_KEY_OPERATION_FAILED* = 287
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6943:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7008:9
   else:
     let SSL_R_PRIVATE_KEY_OPERATION_FAILED* = 287
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6943:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7008:9
 else:
   static:
     hint(
@@ -57706,10 +57719,10 @@ else:
 when not declared(SSL_R_SECOND_SERVERHELLO_VERSION_MISMATCH):
   when 288 is static:
     const SSL_R_SECOND_SERVERHELLO_VERSION_MISMATCH* = 288
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6944:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7009:9
   else:
     let SSL_R_SECOND_SERVERHELLO_VERSION_MISMATCH* = 288
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6944:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7009:9
 else:
   static:
     hint(
@@ -57719,20 +57732,20 @@ else:
 when not declared(SSL_R_OCSP_CB_ERROR):
   when 289 is static:
     const SSL_R_OCSP_CB_ERROR* = 289
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6945:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7010:9
   else:
     let SSL_R_OCSP_CB_ERROR* = 289
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6945:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7010:9
 else:
   static:
     hint("Declaration of " & "SSL_R_OCSP_CB_ERROR" & " already exists, not redeclaring")
 when not declared(SSL_R_SSL_SESSION_ID_TOO_LONG):
   when 290 is static:
     const SSL_R_SSL_SESSION_ID_TOO_LONG* = 290
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6946:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7011:9
   else:
     let SSL_R_SSL_SESSION_ID_TOO_LONG* = 290
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6946:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7011:9
 else:
   static:
     hint(
@@ -57742,10 +57755,10 @@ else:
 when not declared(SSL_R_APPLICATION_DATA_ON_SHUTDOWN):
   when 291 is static:
     const SSL_R_APPLICATION_DATA_ON_SHUTDOWN* = 291
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6947:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7012:9
   else:
     let SSL_R_APPLICATION_DATA_ON_SHUTDOWN* = 291
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6947:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7012:9
 else:
   static:
     hint(
@@ -57755,10 +57768,10 @@ else:
 when not declared(SSL_R_CERT_DECOMPRESSION_FAILED):
   when 292 is static:
     const SSL_R_CERT_DECOMPRESSION_FAILED* = 292
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6948:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7013:9
   else:
     let SSL_R_CERT_DECOMPRESSION_FAILED* = 292
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6948:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7013:9
 else:
   static:
     hint(
@@ -57768,10 +57781,10 @@ else:
 when not declared(SSL_R_UNCOMPRESSED_CERT_TOO_LARGE):
   when 293 is static:
     const SSL_R_UNCOMPRESSED_CERT_TOO_LARGE* = 293
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6949:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7014:9
   else:
     let SSL_R_UNCOMPRESSED_CERT_TOO_LARGE* = 293
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6949:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7014:9
 else:
   static:
     hint(
@@ -57781,10 +57794,10 @@ else:
 when not declared(SSL_R_UNKNOWN_CERT_COMPRESSION_ALG):
   when 294 is static:
     const SSL_R_UNKNOWN_CERT_COMPRESSION_ALG* = 294
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6950:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7015:9
   else:
     let SSL_R_UNKNOWN_CERT_COMPRESSION_ALG* = 294
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6950:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7015:9
 else:
   static:
     hint(
@@ -57794,10 +57807,10 @@ else:
 when not declared(SSL_R_INVALID_SIGNATURE_ALGORITHM):
   when 295 is static:
     const SSL_R_INVALID_SIGNATURE_ALGORITHM* = 295
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6951:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7016:9
   else:
     let SSL_R_INVALID_SIGNATURE_ALGORITHM* = 295
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6951:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7016:9
 else:
   static:
     hint(
@@ -57807,10 +57820,10 @@ else:
 when not declared(SSL_R_DUPLICATE_SIGNATURE_ALGORITHM):
   when 296 is static:
     const SSL_R_DUPLICATE_SIGNATURE_ALGORITHM* = 296
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6952:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7017:9
   else:
     let SSL_R_DUPLICATE_SIGNATURE_ALGORITHM* = 296
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6952:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7017:9
 else:
   static:
     hint(
@@ -57820,10 +57833,10 @@ else:
 when not declared(SSL_R_TLS13_DOWNGRADE):
   when 297 is static:
     const SSL_R_TLS13_DOWNGRADE* = 297
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6953:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7018:9
   else:
     let SSL_R_TLS13_DOWNGRADE* = 297
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6953:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7018:9
 else:
   static:
     hint(
@@ -57832,10 +57845,10 @@ else:
 when not declared(SSL_R_QUIC_INTERNAL_ERROR):
   when 298 is static:
     const SSL_R_QUIC_INTERNAL_ERROR* = 298
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6954:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7019:9
   else:
     let SSL_R_QUIC_INTERNAL_ERROR* = 298
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6954:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7019:9
 else:
   static:
     hint(
@@ -57845,10 +57858,10 @@ else:
 when not declared(SSL_R_WRONG_ENCRYPTION_LEVEL_RECEIVED):
   when 299 is static:
     const SSL_R_WRONG_ENCRYPTION_LEVEL_RECEIVED* = 299
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6955:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7020:9
   else:
     let SSL_R_WRONG_ENCRYPTION_LEVEL_RECEIVED* = 299
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6955:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7020:9
 else:
   static:
     hint(
@@ -57858,10 +57871,10 @@ else:
 when not declared(SSL_R_TOO_MUCH_READ_EARLY_DATA):
   when 300 is static:
     const SSL_R_TOO_MUCH_READ_EARLY_DATA* = 300
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6956:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7021:9
   else:
     let SSL_R_TOO_MUCH_READ_EARLY_DATA* = 300
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6956:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7021:9
 else:
   static:
     hint(
@@ -57871,10 +57884,10 @@ else:
 when not declared(SSL_R_INVALID_DELEGATED_CREDENTIAL):
   when 301 is static:
     const SSL_R_INVALID_DELEGATED_CREDENTIAL* = 301
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6957:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7022:9
   else:
     let SSL_R_INVALID_DELEGATED_CREDENTIAL* = 301
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6957:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7022:9
 else:
   static:
     hint(
@@ -57884,10 +57897,10 @@ else:
 when not declared(SSL_R_KEY_USAGE_BIT_INCORRECT):
   when 302 is static:
     const SSL_R_KEY_USAGE_BIT_INCORRECT* = 302
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6958:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7023:9
   else:
     let SSL_R_KEY_USAGE_BIT_INCORRECT* = 302
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6958:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7023:9
 else:
   static:
     hint(
@@ -57897,10 +57910,10 @@ else:
 when not declared(SSL_R_INCONSISTENT_CLIENT_HELLO):
   when 303 is static:
     const SSL_R_INCONSISTENT_CLIENT_HELLO* = 303
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6959:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7024:9
   else:
     let SSL_R_INCONSISTENT_CLIENT_HELLO* = 303
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6959:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7024:9
 else:
   static:
     hint(
@@ -57910,10 +57923,10 @@ else:
 when not declared(SSL_R_CIPHER_MISMATCH_ON_EARLY_DATA):
   when 304 is static:
     const SSL_R_CIPHER_MISMATCH_ON_EARLY_DATA* = 304
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6960:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7025:9
   else:
     let SSL_R_CIPHER_MISMATCH_ON_EARLY_DATA* = 304
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6960:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7025:9
 else:
   static:
     hint(
@@ -57923,10 +57936,10 @@ else:
 when not declared(SSL_R_QUIC_TRANSPORT_PARAMETERS_MISCONFIGURED):
   when 305 is static:
     const SSL_R_QUIC_TRANSPORT_PARAMETERS_MISCONFIGURED* = 305
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6961:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7026:9
   else:
     let SSL_R_QUIC_TRANSPORT_PARAMETERS_MISCONFIGURED* = 305
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6961:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7026:9
 else:
   static:
     hint(
@@ -57936,10 +57949,10 @@ else:
 when not declared(SSL_R_UNEXPECTED_COMPATIBILITY_MODE):
   when 306 is static:
     const SSL_R_UNEXPECTED_COMPATIBILITY_MODE* = 306
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6962:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7027:9
   else:
     let SSL_R_UNEXPECTED_COMPATIBILITY_MODE* = 306
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6962:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7027:9
 else:
   static:
     hint(
@@ -57949,10 +57962,10 @@ else:
 when not declared(SSL_R_NO_APPLICATION_PROTOCOL):
   when 307 is static:
     const SSL_R_NO_APPLICATION_PROTOCOL* = 307
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6963:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7028:9
   else:
     let SSL_R_NO_APPLICATION_PROTOCOL* = 307
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6963:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7028:9
 else:
   static:
     hint(
@@ -57962,10 +57975,10 @@ else:
 when not declared(SSL_R_NEGOTIATED_ALPS_WITHOUT_ALPN):
   when 308 is static:
     const SSL_R_NEGOTIATED_ALPS_WITHOUT_ALPN* = 308
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6964:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7029:9
   else:
     let SSL_R_NEGOTIATED_ALPS_WITHOUT_ALPN* = 308
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6964:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7029:9
 else:
   static:
     hint(
@@ -57975,10 +57988,10 @@ else:
 when not declared(SSL_R_ALPS_MISMATCH_ON_EARLY_DATA):
   when 309 is static:
     const SSL_R_ALPS_MISMATCH_ON_EARLY_DATA* = 309
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6965:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7030:9
   else:
     let SSL_R_ALPS_MISMATCH_ON_EARLY_DATA* = 309
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6965:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7030:9
 else:
   static:
     hint(
@@ -57988,10 +58001,10 @@ else:
 when not declared(SSL_R_ECH_SERVER_CONFIG_AND_PRIVATE_KEY_MISMATCH):
   when 310 is static:
     const SSL_R_ECH_SERVER_CONFIG_AND_PRIVATE_KEY_MISMATCH* = 310
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6966:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7031:9
   else:
     let SSL_R_ECH_SERVER_CONFIG_AND_PRIVATE_KEY_MISMATCH* = 310
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6966:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7031:9
 else:
   static:
     hint(
@@ -58001,10 +58014,10 @@ else:
 when not declared(SSL_R_ECH_SERVER_CONFIG_UNSUPPORTED_EXTENSION):
   when 311 is static:
     const SSL_R_ECH_SERVER_CONFIG_UNSUPPORTED_EXTENSION* = 311
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6967:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7032:9
   else:
     let SSL_R_ECH_SERVER_CONFIG_UNSUPPORTED_EXTENSION* = 311
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6967:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7032:9
 else:
   static:
     hint(
@@ -58014,10 +58027,10 @@ else:
 when not declared(SSL_R_UNSUPPORTED_ECH_SERVER_CONFIG):
   when 312 is static:
     const SSL_R_UNSUPPORTED_ECH_SERVER_CONFIG* = 312
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6968:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7033:9
   else:
     let SSL_R_UNSUPPORTED_ECH_SERVER_CONFIG* = 312
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6968:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7033:9
 else:
   static:
     hint(
@@ -58027,10 +58040,10 @@ else:
 when not declared(SSL_R_ECH_SERVER_WOULD_HAVE_NO_RETRY_CONFIGS):
   when 313 is static:
     const SSL_R_ECH_SERVER_WOULD_HAVE_NO_RETRY_CONFIGS* = 313
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6969:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7034:9
   else:
     let SSL_R_ECH_SERVER_WOULD_HAVE_NO_RETRY_CONFIGS* = 313
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6969:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7034:9
 else:
   static:
     hint(
@@ -58040,10 +58053,10 @@ else:
 when not declared(SSL_R_INVALID_CLIENT_HELLO_INNER):
   when 314 is static:
     const SSL_R_INVALID_CLIENT_HELLO_INNER* = 314
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6970:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7035:9
   else:
     let SSL_R_INVALID_CLIENT_HELLO_INNER* = 314
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6970:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7035:9
 else:
   static:
     hint(
@@ -58053,10 +58066,10 @@ else:
 when not declared(SSL_R_INVALID_ALPN_PROTOCOL_LIST):
   when 315 is static:
     const SSL_R_INVALID_ALPN_PROTOCOL_LIST* = 315
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6971:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7036:9
   else:
     let SSL_R_INVALID_ALPN_PROTOCOL_LIST* = 315
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6971:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7036:9
 else:
   static:
     hint(
@@ -58066,10 +58079,10 @@ else:
 when not declared(SSL_R_COULD_NOT_PARSE_HINTS):
   when 316 is static:
     const SSL_R_COULD_NOT_PARSE_HINTS* = 316
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6972:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7037:9
   else:
     let SSL_R_COULD_NOT_PARSE_HINTS* = 316
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6972:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7037:9
 else:
   static:
     hint(
@@ -58079,10 +58092,10 @@ else:
 when not declared(SSL_R_INVALID_ECH_PUBLIC_NAME):
   when 317 is static:
     const SSL_R_INVALID_ECH_PUBLIC_NAME* = 317
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6973:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7038:9
   else:
     let SSL_R_INVALID_ECH_PUBLIC_NAME* = 317
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6973:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7038:9
 else:
   static:
     hint(
@@ -58092,10 +58105,10 @@ else:
 when not declared(SSL_R_INVALID_ECH_CONFIG_LIST):
   when 318 is static:
     const SSL_R_INVALID_ECH_CONFIG_LIST* = 318
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6974:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7039:9
   else:
     let SSL_R_INVALID_ECH_CONFIG_LIST* = 318
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6974:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7039:9
 else:
   static:
     hint(
@@ -58105,20 +58118,20 @@ else:
 when not declared(SSL_R_ECH_REJECTED):
   when 319 is static:
     const SSL_R_ECH_REJECTED* = 319
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6975:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7040:9
   else:
     let SSL_R_ECH_REJECTED* = 319
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6975:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7040:9
 else:
   static:
     hint("Declaration of " & "SSL_R_ECH_REJECTED" & " already exists, not redeclaring")
 when not declared(SSL_R_INVALID_OUTER_EXTENSION):
   when 320 is static:
     const SSL_R_INVALID_OUTER_EXTENSION* = 320
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6976:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7041:9
   else:
     let SSL_R_INVALID_OUTER_EXTENSION* = 320
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6976:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7041:9
 else:
   static:
     hint(
@@ -58128,10 +58141,10 @@ else:
 when not declared(SSL_R_INCONSISTENT_ECH_NEGOTIATION):
   when 321 is static:
     const SSL_R_INCONSISTENT_ECH_NEGOTIATION* = 321
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6977:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7042:9
   else:
     let SSL_R_INCONSISTENT_ECH_NEGOTIATION* = 321
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6977:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7042:9
 else:
   static:
     hint(
@@ -58141,10 +58154,10 @@ else:
 when not declared(SSL_R_INVALID_ALPS_CODEPOINT):
   when 322 is static:
     const SSL_R_INVALID_ALPS_CODEPOINT* = 322
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6978:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7043:9
   else:
     let SSL_R_INVALID_ALPS_CODEPOINT* = 322
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6978:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7043:9
 else:
   static:
     hint(
@@ -58154,10 +58167,10 @@ else:
 when not declared(SSL_R_NO_MATCHING_ISSUER):
   when 323 is static:
     const SSL_R_NO_MATCHING_ISSUER* = 323
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6979:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7044:9
   else:
     let SSL_R_NO_MATCHING_ISSUER* = 323
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6979:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7044:9
 else:
   static:
     hint(
@@ -58166,10 +58179,10 @@ else:
 when not declared(SSL_R_INVALID_SPAKE2PLUSV1_VALUE):
   when 324 is static:
     const SSL_R_INVALID_SPAKE2PLUSV1_VALUE* = 324
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6980:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7045:9
   else:
     let SSL_R_INVALID_SPAKE2PLUSV1_VALUE* = 324
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6980:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7045:9
 else:
   static:
     hint(
@@ -58179,10 +58192,10 @@ else:
 when not declared(SSL_R_PAKE_EXHAUSTED):
   when 325 is static:
     const SSL_R_PAKE_EXHAUSTED* = 325
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6981:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7046:9
   else:
     let SSL_R_PAKE_EXHAUSTED* = 325
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6981:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7046:9
 else:
   static:
     hint(
@@ -58191,10 +58204,10 @@ else:
 when not declared(SSL_R_PEER_PAKE_MISMATCH):
   when 326 is static:
     const SSL_R_PEER_PAKE_MISMATCH* = 326
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6982:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7047:9
   else:
     let SSL_R_PEER_PAKE_MISMATCH* = 326
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6982:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7047:9
 else:
   static:
     hint(
@@ -58203,10 +58216,10 @@ else:
 when not declared(SSL_R_UNSUPPORTED_CREDENTIAL_LIST):
   when 327 is static:
     const SSL_R_UNSUPPORTED_CREDENTIAL_LIST* = 327
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6983:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7048:9
   else:
     let SSL_R_UNSUPPORTED_CREDENTIAL_LIST* = 327
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6983:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7048:9
 else:
   static:
     hint(
@@ -58216,10 +58229,10 @@ else:
 when not declared(SSL_R_INVALID_TRUST_ANCHOR_LIST):
   when 328 is static:
     const SSL_R_INVALID_TRUST_ANCHOR_LIST* = 328
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6984:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7049:9
   else:
     let SSL_R_INVALID_TRUST_ANCHOR_LIST* = 328
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6984:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7049:9
 else:
   static:
     hint(
@@ -58229,10 +58242,10 @@ else:
 when not declared(SSL_R_INVALID_CERTIFICATE_PROPERTY_LIST):
   when 329 is static:
     const SSL_R_INVALID_CERTIFICATE_PROPERTY_LIST* = 329
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6985:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7050:9
   else:
     let SSL_R_INVALID_CERTIFICATE_PROPERTY_LIST* = 329
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6985:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7050:9
 else:
   static:
     hint(
@@ -58242,10 +58255,10 @@ else:
 when not declared(SSL_R_DUPLICATE_GROUP):
   when 330 is static:
     const SSL_R_DUPLICATE_GROUP* = 330
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6986:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7051:9
   else:
     let SSL_R_DUPLICATE_GROUP* = 330
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6986:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7051:9
 else:
   static:
     hint(
@@ -58254,10 +58267,10 @@ else:
 when not declared(SSL_R_INVALID_PSK_FOR_CONNECTION):
   when 331 is static:
     const SSL_R_INVALID_PSK_FOR_CONNECTION* = 331
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6987:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7052:9
   else:
     let SSL_R_INVALID_PSK_FOR_CONNECTION* = 331
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6987:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7052:9
 else:
   static:
     hint(
@@ -58267,10 +58280,10 @@ else:
 when not declared(SSL_R_NO_SUPPORTED_PSK_MODE):
   when 332 is static:
     const SSL_R_NO_SUPPORTED_PSK_MODE* = 332
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6988:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7053:9
   else:
     let SSL_R_NO_SUPPORTED_PSK_MODE* = 332
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6988:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7053:9
 else:
   static:
     hint(
@@ -58280,10 +58293,10 @@ else:
 when not declared(SSL_R_INVALID_CERT_TYPES_LIST):
   when 333 is static:
     const SSL_R_INVALID_CERT_TYPES_LIST* = 333
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6989:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7054:9
   else:
     let SSL_R_INVALID_CERT_TYPES_LIST* = 333
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6989:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7054:9
 else:
   static:
     hint(
@@ -58293,10 +58306,10 @@ else:
 when not declared(SSL_R_UNSUPPORTED_CERTIFICATE):
   when 334 is static:
     const SSL_R_UNSUPPORTED_CERTIFICATE* = 334
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6990:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7055:9
   else:
     let SSL_R_UNSUPPORTED_CERTIFICATE* = 334
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6990:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7055:9
 else:
   static:
     hint(
@@ -58306,20 +58319,20 @@ else:
 when not declared(SSL_R_MISSING_KEY):
   when 335 is static:
     const SSL_R_MISSING_KEY* = 335
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6991:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7056:9
   else:
     let SSL_R_MISSING_KEY* = 335
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6991:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7056:9
 else:
   static:
     hint("Declaration of " & "SSL_R_MISSING_KEY" & " already exists, not redeclaring")
 when not declared(SSL_R_INVALID_RAW_PUBLIC_KEY):
   when 336 is static:
     const SSL_R_INVALID_RAW_PUBLIC_KEY* = 336
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6992:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7057:9
   else:
     let SSL_R_INVALID_RAW_PUBLIC_KEY* = 336
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6992:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7057:9
 else:
   static:
     hint(
@@ -58329,10 +58342,10 @@ else:
 when not declared(SSL_R_SSLV3_ALERT_CLOSE_NOTIFY):
   when 1000 is static:
     const SSL_R_SSLV3_ALERT_CLOSE_NOTIFY* = 1000
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6993:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7058:9
   else:
     let SSL_R_SSLV3_ALERT_CLOSE_NOTIFY* = 1000
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6993:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7058:9
 else:
   static:
     hint(
@@ -58342,10 +58355,10 @@ else:
 when not declared(SSL_R_SSLV3_ALERT_UNEXPECTED_MESSAGE):
   when 1010 is static:
     const SSL_R_SSLV3_ALERT_UNEXPECTED_MESSAGE* = 1010
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6994:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7059:9
   else:
     let SSL_R_SSLV3_ALERT_UNEXPECTED_MESSAGE* = 1010
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6994:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7059:9
 else:
   static:
     hint(
@@ -58355,10 +58368,10 @@ else:
 when not declared(SSL_R_SSLV3_ALERT_BAD_RECORD_MAC):
   when 1020 is static:
     const SSL_R_SSLV3_ALERT_BAD_RECORD_MAC* = 1020
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6995:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7060:9
   else:
     let SSL_R_SSLV3_ALERT_BAD_RECORD_MAC* = 1020
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6995:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7060:9
 else:
   static:
     hint(
@@ -58368,10 +58381,10 @@ else:
 when not declared(SSL_R_TLSV1_ALERT_DECRYPTION_FAILED):
   when 1021 is static:
     const SSL_R_TLSV1_ALERT_DECRYPTION_FAILED* = 1021
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6996:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7061:9
   else:
     let SSL_R_TLSV1_ALERT_DECRYPTION_FAILED* = 1021
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6996:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7061:9
 else:
   static:
     hint(
@@ -58381,10 +58394,10 @@ else:
 when not declared(SSL_R_TLSV1_ALERT_RECORD_OVERFLOW):
   when 1022 is static:
     const SSL_R_TLSV1_ALERT_RECORD_OVERFLOW* = 1022
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6997:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7062:9
   else:
     let SSL_R_TLSV1_ALERT_RECORD_OVERFLOW* = 1022
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6997:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7062:9
 else:
   static:
     hint(
@@ -58394,10 +58407,10 @@ else:
 when not declared(SSL_R_SSLV3_ALERT_DECOMPRESSION_FAILURE):
   when 1030 is static:
     const SSL_R_SSLV3_ALERT_DECOMPRESSION_FAILURE* = 1030
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6998:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7063:9
   else:
     let SSL_R_SSLV3_ALERT_DECOMPRESSION_FAILURE* = 1030
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6998:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7063:9
 else:
   static:
     hint(
@@ -58407,10 +58420,10 @@ else:
 when not declared(SSL_R_SSLV3_ALERT_HANDSHAKE_FAILURE):
   when 1040 is static:
     const SSL_R_SSLV3_ALERT_HANDSHAKE_FAILURE* = 1040
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6999:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7064:9
   else:
     let SSL_R_SSLV3_ALERT_HANDSHAKE_FAILURE* = 1040
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:6999:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7064:9
 else:
   static:
     hint(
@@ -58420,10 +58433,10 @@ else:
 when not declared(SSL_R_SSLV3_ALERT_NO_CERTIFICATE):
   when 1041 is static:
     const SSL_R_SSLV3_ALERT_NO_CERTIFICATE* = 1041
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7000:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7065:9
   else:
     let SSL_R_SSLV3_ALERT_NO_CERTIFICATE* = 1041
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7000:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7065:9
 else:
   static:
     hint(
@@ -58433,10 +58446,10 @@ else:
 when not declared(SSL_R_SSLV3_ALERT_BAD_CERTIFICATE):
   when 1042 is static:
     const SSL_R_SSLV3_ALERT_BAD_CERTIFICATE* = 1042
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7001:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7066:9
   else:
     let SSL_R_SSLV3_ALERT_BAD_CERTIFICATE* = 1042
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7001:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7066:9
 else:
   static:
     hint(
@@ -58446,10 +58459,10 @@ else:
 when not declared(SSL_R_SSLV3_ALERT_UNSUPPORTED_CERTIFICATE):
   when 1043 is static:
     const SSL_R_SSLV3_ALERT_UNSUPPORTED_CERTIFICATE* = 1043
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7002:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7067:9
   else:
     let SSL_R_SSLV3_ALERT_UNSUPPORTED_CERTIFICATE* = 1043
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7002:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7067:9
 else:
   static:
     hint(
@@ -58459,10 +58472,10 @@ else:
 when not declared(SSL_R_SSLV3_ALERT_CERTIFICATE_REVOKED):
   when 1044 is static:
     const SSL_R_SSLV3_ALERT_CERTIFICATE_REVOKED* = 1044
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7003:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7068:9
   else:
     let SSL_R_SSLV3_ALERT_CERTIFICATE_REVOKED* = 1044
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7003:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7068:9
 else:
   static:
     hint(
@@ -58472,10 +58485,10 @@ else:
 when not declared(SSL_R_SSLV3_ALERT_CERTIFICATE_EXPIRED):
   when 1045 is static:
     const SSL_R_SSLV3_ALERT_CERTIFICATE_EXPIRED* = 1045
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7004:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7069:9
   else:
     let SSL_R_SSLV3_ALERT_CERTIFICATE_EXPIRED* = 1045
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7004:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7069:9
 else:
   static:
     hint(
@@ -58485,10 +58498,10 @@ else:
 when not declared(SSL_R_SSLV3_ALERT_CERTIFICATE_UNKNOWN):
   when 1046 is static:
     const SSL_R_SSLV3_ALERT_CERTIFICATE_UNKNOWN* = 1046
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7005:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7070:9
   else:
     let SSL_R_SSLV3_ALERT_CERTIFICATE_UNKNOWN* = 1046
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7005:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7070:9
 else:
   static:
     hint(
@@ -58498,10 +58511,10 @@ else:
 when not declared(SSL_R_SSLV3_ALERT_ILLEGAL_PARAMETER):
   when 1047 is static:
     const SSL_R_SSLV3_ALERT_ILLEGAL_PARAMETER* = 1047
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7006:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7071:9
   else:
     let SSL_R_SSLV3_ALERT_ILLEGAL_PARAMETER* = 1047
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7006:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7071:9
 else:
   static:
     hint(
@@ -58511,10 +58524,10 @@ else:
 when not declared(SSL_R_TLSV1_ALERT_UNKNOWN_CA):
   when 1048 is static:
     const SSL_R_TLSV1_ALERT_UNKNOWN_CA* = 1048
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7007:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7072:9
   else:
     let SSL_R_TLSV1_ALERT_UNKNOWN_CA* = 1048
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7007:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7072:9
 else:
   static:
     hint(
@@ -58524,10 +58537,10 @@ else:
 when not declared(SSL_R_TLSV1_ALERT_ACCESS_DENIED):
   when 1049 is static:
     const SSL_R_TLSV1_ALERT_ACCESS_DENIED* = 1049
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7008:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7073:9
   else:
     let SSL_R_TLSV1_ALERT_ACCESS_DENIED* = 1049
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7008:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7073:9
 else:
   static:
     hint(
@@ -58537,10 +58550,10 @@ else:
 when not declared(SSL_R_TLSV1_ALERT_DECODE_ERROR):
   when 1050 is static:
     const SSL_R_TLSV1_ALERT_DECODE_ERROR* = 1050
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7009:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7074:9
   else:
     let SSL_R_TLSV1_ALERT_DECODE_ERROR* = 1050
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7009:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7074:9
 else:
   static:
     hint(
@@ -58550,10 +58563,10 @@ else:
 when not declared(SSL_R_TLSV1_ALERT_DECRYPT_ERROR):
   when 1051 is static:
     const SSL_R_TLSV1_ALERT_DECRYPT_ERROR* = 1051
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7010:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7075:9
   else:
     let SSL_R_TLSV1_ALERT_DECRYPT_ERROR* = 1051
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7010:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7075:9
 else:
   static:
     hint(
@@ -58563,10 +58576,10 @@ else:
 when not declared(SSL_R_TLSV1_ALERT_EXPORT_RESTRICTION):
   when 1060 is static:
     const SSL_R_TLSV1_ALERT_EXPORT_RESTRICTION* = 1060
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7011:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7076:9
   else:
     let SSL_R_TLSV1_ALERT_EXPORT_RESTRICTION* = 1060
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7011:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7076:9
 else:
   static:
     hint(
@@ -58576,10 +58589,10 @@ else:
 when not declared(SSL_R_TLSV1_ALERT_PROTOCOL_VERSION):
   when 1070 is static:
     const SSL_R_TLSV1_ALERT_PROTOCOL_VERSION* = 1070
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7012:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7077:9
   else:
     let SSL_R_TLSV1_ALERT_PROTOCOL_VERSION* = 1070
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7012:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7077:9
 else:
   static:
     hint(
@@ -58589,10 +58602,10 @@ else:
 when not declared(SSL_R_TLSV1_ALERT_INSUFFICIENT_SECURITY):
   when 1071 is static:
     const SSL_R_TLSV1_ALERT_INSUFFICIENT_SECURITY* = 1071
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7013:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7078:9
   else:
     let SSL_R_TLSV1_ALERT_INSUFFICIENT_SECURITY* = 1071
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7013:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7078:9
 else:
   static:
     hint(
@@ -58602,10 +58615,10 @@ else:
 when not declared(SSL_R_TLSV1_ALERT_INTERNAL_ERROR):
   when 1080 is static:
     const SSL_R_TLSV1_ALERT_INTERNAL_ERROR* = 1080
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7014:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7079:9
   else:
     let SSL_R_TLSV1_ALERT_INTERNAL_ERROR* = 1080
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7014:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7079:9
 else:
   static:
     hint(
@@ -58615,10 +58628,10 @@ else:
 when not declared(SSL_R_TLSV1_ALERT_INAPPROPRIATE_FALLBACK):
   when 1086 is static:
     const SSL_R_TLSV1_ALERT_INAPPROPRIATE_FALLBACK* = 1086
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7015:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7080:9
   else:
     let SSL_R_TLSV1_ALERT_INAPPROPRIATE_FALLBACK* = 1086
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7015:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7080:9
 else:
   static:
     hint(
@@ -58628,10 +58641,10 @@ else:
 when not declared(SSL_R_TLSV1_ALERT_USER_CANCELLED):
   when 1090 is static:
     const SSL_R_TLSV1_ALERT_USER_CANCELLED* = 1090
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7016:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7081:9
   else:
     let SSL_R_TLSV1_ALERT_USER_CANCELLED* = 1090
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7016:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7081:9
 else:
   static:
     hint(
@@ -58641,10 +58654,10 @@ else:
 when not declared(SSL_R_TLSV1_ALERT_NO_RENEGOTIATION):
   when 1100 is static:
     const SSL_R_TLSV1_ALERT_NO_RENEGOTIATION* = 1100
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7017:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7082:9
   else:
     let SSL_R_TLSV1_ALERT_NO_RENEGOTIATION* = 1100
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7017:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7082:9
 else:
   static:
     hint(
@@ -58654,10 +58667,10 @@ else:
 when not declared(SSL_R_TLSV1_ALERT_UNSUPPORTED_EXTENSION):
   when 1110 is static:
     const SSL_R_TLSV1_ALERT_UNSUPPORTED_EXTENSION* = 1110
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7018:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7083:9
   else:
     let SSL_R_TLSV1_ALERT_UNSUPPORTED_EXTENSION* = 1110
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7018:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7083:9
 else:
   static:
     hint(
@@ -58667,10 +58680,10 @@ else:
 when not declared(SSL_R_TLSV1_ALERT_CERTIFICATE_UNOBTAINABLE):
   when 1111 is static:
     const SSL_R_TLSV1_ALERT_CERTIFICATE_UNOBTAINABLE* = 1111
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7019:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7084:9
   else:
     let SSL_R_TLSV1_ALERT_CERTIFICATE_UNOBTAINABLE* = 1111
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7019:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7084:9
 else:
   static:
     hint(
@@ -58680,10 +58693,10 @@ else:
 when not declared(SSL_R_TLSV1_ALERT_BAD_CERTIFICATE_STATUS_RESPONSE):
   when 1113 is static:
     const SSL_R_TLSV1_ALERT_BAD_CERTIFICATE_STATUS_RESPONSE* = 1113
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7021:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7086:9
   else:
     let SSL_R_TLSV1_ALERT_BAD_CERTIFICATE_STATUS_RESPONSE* = 1113
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7021:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7086:9
 else:
   static:
     hint(
@@ -58693,10 +58706,10 @@ else:
 when not declared(SSL_R_TLSV1_ALERT_BAD_CERTIFICATE_HASH_VALUE):
   when 1114 is static:
     const SSL_R_TLSV1_ALERT_BAD_CERTIFICATE_HASH_VALUE* = 1114
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7022:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7087:9
   else:
     let SSL_R_TLSV1_ALERT_BAD_CERTIFICATE_HASH_VALUE* = 1114
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7022:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7087:9
 else:
   static:
     hint(
@@ -58706,10 +58719,10 @@ else:
 when not declared(SSL_R_TLSV1_ALERT_UNKNOWN_PSK_IDENTITY):
   when 1115 is static:
     const SSL_R_TLSV1_ALERT_UNKNOWN_PSK_IDENTITY* = 1115
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7023:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7088:9
   else:
     let SSL_R_TLSV1_ALERT_UNKNOWN_PSK_IDENTITY* = 1115
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7023:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7088:9
 else:
   static:
     hint(
@@ -58719,10 +58732,10 @@ else:
 when not declared(SSL_R_TLSV1_ALERT_NO_APPLICATION_PROTOCOL):
   when 1120 is static:
     const SSL_R_TLSV1_ALERT_NO_APPLICATION_PROTOCOL* = 1120
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7025:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7090:9
   else:
     let SSL_R_TLSV1_ALERT_NO_APPLICATION_PROTOCOL* = 1120
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7025:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7090:9
 else:
   static:
     hint(
@@ -58732,10 +58745,10 @@ else:
 when not declared(SSL_R_TLSV1_ALERT_ECH_REQUIRED):
   when 1121 is static:
     const SSL_R_TLSV1_ALERT_ECH_REQUIRED* = 1121
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7026:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7091:9
   else:
     let SSL_R_TLSV1_ALERT_ECH_REQUIRED* = 1121
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7026:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/ssl.h:7091:9
 else:
   static:
     hint(
@@ -81767,6 +81780,28 @@ else:
       "Declaration of " & "SSL_get0_peer_available_trust_anchors" &
         " already exists, not redeclaring"
     )
+when not declared(SSL_CTX_set1_available_trust_anchors):
+  proc SSL_CTX_set1_available_trust_anchors*(
+    ctx: ptr SSL_CTX_570426146, ids: ptr uint8, ids_len: csize_t
+  ): cint {.cdecl, importc: "SSL_CTX_set1_available_trust_anchors".}
+
+else:
+  static:
+    hint(
+      "Declaration of " & "SSL_CTX_set1_available_trust_anchors" &
+        " already exists, not redeclaring"
+    )
+when not declared(SSL_set1_available_trust_anchors):
+  proc SSL_set1_available_trust_anchors*(
+    ssl: ptr SSL_570426166, ids: ptr uint8, ids_len: csize_t
+  ): cint {.cdecl, importc: "SSL_set1_available_trust_anchors".}
+
+else:
+  static:
+    hint(
+      "Declaration of " & "SSL_set1_available_trust_anchors" &
+        " already exists, not redeclaring"
+    )
 when not declared(SSL_get_servername):
   proc SSL_get_servername*(
     ssl: ptr SSL_570426166, type_arg: cint
@@ -83401,6 +83436,17 @@ else:
     hint(
       "Declaration of " & "SSL_get_server_random" & " already exists, not redeclaring"
     )
+when not declared(SSL_get_signature_algorithm_used):
+  proc SSL_get_signature_algorithm_used*(
+    ssl: ptr SSL_570426166
+  ): uint16 {.cdecl, importc: "SSL_get_signature_algorithm_used".}
+
+else:
+  static:
+    hint(
+      "Declaration of " & "SSL_get_signature_algorithm_used" &
+        " already exists, not redeclaring"
+    )
 when not declared(SSL_get_pending_cipher):
   proc SSL_get_pending_cipher*(
     ssl: ptr SSL_570426166
@@ -84539,6 +84585,39 @@ else:
   static:
     hint(
       "Declaration of " & "SSL_get_compliance_policy" &
+        " already exists, not redeclaring"
+    )
+when not declared(SSL_set_server_padding_request):
+  proc SSL_set_server_padding_request*(
+    ssl: ptr SSL_570426166, num_bytes: uint16
+  ): void {.cdecl, importc: "SSL_set_server_padding_request".}
+
+else:
+  static:
+    hint(
+      "Declaration of " & "SSL_set_server_padding_request" &
+        " already exists, not redeclaring"
+    )
+when not declared(SSL_set_server_padding_enabled):
+  proc SSL_set_server_padding_enabled*(
+    ssl: ptr SSL_570426166, enabled: cint
+  ): void {.cdecl, importc: "SSL_set_server_padding_enabled".}
+
+else:
+  static:
+    hint(
+      "Declaration of " & "SSL_set_server_padding_enabled" &
+        " already exists, not redeclaring"
+    )
+when not declared(SSL_server_sent_requested_padding):
+  proc SSL_server_sent_requested_padding*(
+    ssl: ptr SSL_570426166
+  ): cint {.cdecl, importc: "SSL_server_sent_requested_padding".}
+
+else:
+  static:
+    hint(
+      "Declaration of " & "SSL_server_sent_requested_padding" &
         " already exists, not redeclaring"
     )
 when not declared(RAND_bytes):
