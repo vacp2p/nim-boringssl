@@ -1836,7 +1836,7 @@ type
 
   struct_cbb_st_570425999 {.pure, inheritable, bycopy.} = object
     child*: ptr CBB_570425998
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:484:8
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:488:8
     is_child*: cschar
     u*: struct_cbb_st_u_t
 
@@ -2523,7 +2523,7 @@ type
 
   struct_cbb_buffer_st_570426363 {.pure, inheritable, bycopy.} = object
     buf*: ptr uint8
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:458:8
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:462:8
     len*: csize_t
     cap*: csize_t
     can_resize* {.bitsize: 1'i64.}: cuint
@@ -2531,7 +2531,7 @@ type
 
   struct_cbb_child_st_570426365 {.pure, inheritable, bycopy.} = object
     base*: ptr struct_cbb_buffer_st_570426364
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:472:8
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:476:8
     offset*: csize_t
     pending_len_len*: uint8
     pending_is_asn1* {.bitsize: 1'i64.}: cuint
@@ -10225,11 +10225,11 @@ else:
       "Declaration of " & "SSLEAY_VERSION_NUMBER" & " already exists, not redeclaring"
     )
 when not declared(BORINGSSL_API_VERSION):
-  when 40 is static:
-    const BORINGSSL_API_VERSION* = 40
+  when 41 is static:
+    const BORINGSSL_API_VERSION* = 41
       ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/base.h:76:9
   else:
-    let BORINGSSL_API_VERSION* = 40
+    let BORINGSSL_API_VERSION* = 41
       ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/base.h:76:9
 else:
   static:
@@ -42430,50 +42430,50 @@ else:
 when not declared(CBS_ASN1_TAG_SHIFT):
   when 24 is static:
     const CBS_ASN1_TAG_SHIFT* = 24
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:208:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:212:9
   else:
     let CBS_ASN1_TAG_SHIFT* = 24
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:208:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:212:9
 else:
   static:
     hint("Declaration of " & "CBS_ASN1_TAG_SHIFT" & " already exists, not redeclaring")
 when not declared(CBS_ASN1_BOOLEAN):
   when cast[cuint](1'i64) is static:
     const CBS_ASN1_BOOLEAN* = cast[cuint](1'i64)
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:229:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:233:9
   else:
     let CBS_ASN1_BOOLEAN* = cast[cuint](1'i64)
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:229:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:233:9
 else:
   static:
     hint("Declaration of " & "CBS_ASN1_BOOLEAN" & " already exists, not redeclaring")
 when not declared(CBS_ASN1_INTEGER):
   when cast[cuint](2'i64) is static:
     const CBS_ASN1_INTEGER* = cast[cuint](2'i64)
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:230:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:234:9
   else:
     let CBS_ASN1_INTEGER* = cast[cuint](2'i64)
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:230:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:234:9
 else:
   static:
     hint("Declaration of " & "CBS_ASN1_INTEGER" & " already exists, not redeclaring")
 when not declared(CBS_ASN1_BITSTRING):
   when cast[cuint](3'i64) is static:
     const CBS_ASN1_BITSTRING* = cast[cuint](3'i64)
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:231:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:235:9
   else:
     let CBS_ASN1_BITSTRING* = cast[cuint](3'i64)
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:231:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:235:9
 else:
   static:
     hint("Declaration of " & "CBS_ASN1_BITSTRING" & " already exists, not redeclaring")
 when not declared(CBS_ASN1_OCTETSTRING):
   when cast[cuint](4'i64) is static:
     const CBS_ASN1_OCTETSTRING* = cast[cuint](4'i64)
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:232:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:236:9
   else:
     let CBS_ASN1_OCTETSTRING* = cast[cuint](4'i64)
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:232:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:236:9
 else:
   static:
     hint(
@@ -42482,50 +42482,50 @@ else:
 when not declared(CBS_ASN1_NULL):
   when cast[cuint](5'i64) is static:
     const CBS_ASN1_NULL* = cast[cuint](5'i64)
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:233:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:237:9
   else:
     let CBS_ASN1_NULL* = cast[cuint](5'i64)
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:233:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:237:9
 else:
   static:
     hint("Declaration of " & "CBS_ASN1_NULL" & " already exists, not redeclaring")
 when not declared(CBS_ASN1_OBJECT):
   when cast[cuint](6'i64) is static:
     const CBS_ASN1_OBJECT* = cast[cuint](6'i64)
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:234:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:238:9
   else:
     let CBS_ASN1_OBJECT* = cast[cuint](6'i64)
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:234:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:238:9
 else:
   static:
     hint("Declaration of " & "CBS_ASN1_OBJECT" & " already exists, not redeclaring")
 when not declared(CBS_ASN1_ENUMERATED):
   when cast[cuint](10'i64) is static:
     const CBS_ASN1_ENUMERATED* = cast[cuint](10'i64)
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:235:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:239:9
   else:
     let CBS_ASN1_ENUMERATED* = cast[cuint](10'i64)
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:235:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:239:9
 else:
   static:
     hint("Declaration of " & "CBS_ASN1_ENUMERATED" & " already exists, not redeclaring")
 when not declared(CBS_ASN1_UTF8STRING):
   when cast[cuint](12'i64) is static:
     const CBS_ASN1_UTF8STRING* = cast[cuint](12'i64)
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:236:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:240:9
   else:
     let CBS_ASN1_UTF8STRING* = cast[cuint](12'i64)
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:236:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:240:9
 else:
   static:
     hint("Declaration of " & "CBS_ASN1_UTF8STRING" & " already exists, not redeclaring")
 when not declared(CBS_ASN1_NUMERICSTRING):
   when cast[cuint](18'i64) is static:
     const CBS_ASN1_NUMERICSTRING* = cast[cuint](18'i64)
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:239:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:243:9
   else:
     let CBS_ASN1_NUMERICSTRING* = cast[cuint](18'i64)
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:239:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:243:9
 else:
   static:
     hint(
@@ -42534,10 +42534,10 @@ else:
 when not declared(CBS_ASN1_PRINTABLESTRING):
   when cast[cuint](19'i64) is static:
     const CBS_ASN1_PRINTABLESTRING* = cast[cuint](19'i64)
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:240:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:244:9
   else:
     let CBS_ASN1_PRINTABLESTRING* = cast[cuint](19'i64)
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:240:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:244:9
 else:
   static:
     hint(
@@ -42546,20 +42546,20 @@ else:
 when not declared(CBS_ASN1_T61STRING):
   when cast[cuint](20'i64) is static:
     const CBS_ASN1_T61STRING* = cast[cuint](20'i64)
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:241:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:245:9
   else:
     let CBS_ASN1_T61STRING* = cast[cuint](20'i64)
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:241:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:245:9
 else:
   static:
     hint("Declaration of " & "CBS_ASN1_T61STRING" & " already exists, not redeclaring")
 when not declared(CBS_ASN1_VIDEOTEXSTRING):
   when cast[cuint](21'i64) is static:
     const CBS_ASN1_VIDEOTEXSTRING* = cast[cuint](21'i64)
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:242:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:246:9
   else:
     let CBS_ASN1_VIDEOTEXSTRING* = cast[cuint](21'i64)
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:242:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:246:9
 else:
   static:
     hint(
@@ -42568,30 +42568,30 @@ else:
 when not declared(CBS_ASN1_IA5STRING):
   when cast[cuint](22'i64) is static:
     const CBS_ASN1_IA5STRING* = cast[cuint](22'i64)
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:243:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:247:9
   else:
     let CBS_ASN1_IA5STRING* = cast[cuint](22'i64)
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:243:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:247:9
 else:
   static:
     hint("Declaration of " & "CBS_ASN1_IA5STRING" & " already exists, not redeclaring")
 when not declared(CBS_ASN1_UTCTIME):
   when cast[cuint](23'i64) is static:
     const CBS_ASN1_UTCTIME* = cast[cuint](23'i64)
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:244:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:248:9
   else:
     let CBS_ASN1_UTCTIME* = cast[cuint](23'i64)
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:244:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:248:9
 else:
   static:
     hint("Declaration of " & "CBS_ASN1_UTCTIME" & " already exists, not redeclaring")
 when not declared(CBS_ASN1_GENERALIZEDTIME):
   when cast[cuint](24'i64) is static:
     const CBS_ASN1_GENERALIZEDTIME* = cast[cuint](24'i64)
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:245:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:249:9
   else:
     let CBS_ASN1_GENERALIZEDTIME* = cast[cuint](24'i64)
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:245:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:249:9
 else:
   static:
     hint(
@@ -42600,10 +42600,10 @@ else:
 when not declared(CBS_ASN1_GRAPHICSTRING):
   when cast[cuint](25'i64) is static:
     const CBS_ASN1_GRAPHICSTRING* = cast[cuint](25'i64)
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:246:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:250:9
   else:
     let CBS_ASN1_GRAPHICSTRING* = cast[cuint](25'i64)
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:246:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:250:9
 else:
   static:
     hint(
@@ -42612,10 +42612,10 @@ else:
 when not declared(CBS_ASN1_VISIBLESTRING):
   when cast[cuint](26'i64) is static:
     const CBS_ASN1_VISIBLESTRING* = cast[cuint](26'i64)
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:247:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:251:9
   else:
     let CBS_ASN1_VISIBLESTRING* = cast[cuint](26'i64)
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:247:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:251:9
 else:
   static:
     hint(
@@ -42624,10 +42624,10 @@ else:
 when not declared(CBS_ASN1_GENERALSTRING):
   when cast[cuint](27'i64) is static:
     const CBS_ASN1_GENERALSTRING* = cast[cuint](27'i64)
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:248:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:252:9
   else:
     let CBS_ASN1_GENERALSTRING* = cast[cuint](27'i64)
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:248:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:252:9
 else:
   static:
     hint(
@@ -42636,10 +42636,10 @@ else:
 when not declared(CBS_ASN1_UNIVERSALSTRING):
   when cast[cuint](28'i64) is static:
     const CBS_ASN1_UNIVERSALSTRING* = cast[cuint](28'i64)
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:249:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:253:9
   else:
     let CBS_ASN1_UNIVERSALSTRING* = cast[cuint](28'i64)
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:249:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:253:9
 else:
   static:
     hint(
@@ -42648,10 +42648,10 @@ else:
 when not declared(CBS_ASN1_BMPSTRING):
   when cast[cuint](30'i64) is static:
     const CBS_ASN1_BMPSTRING* = cast[cuint](30'i64)
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:250:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:254:9
   else:
     let CBS_ASN1_BMPSTRING* = cast[cuint](30'i64)
-      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:250:9
+      ## Generated based on /home/runner/work/nim-boringssl/nim-boringssl/boringssl/include/openssl/bytestring.h:254:9
 else:
   static:
     hint("Declaration of " & "CBS_ASN1_BMPSTRING" & " already exists, not redeclaring")
@@ -69325,6 +69325,14 @@ when not declared(CBS_get_u32le):
 else:
   static:
     hint("Declaration of " & "CBS_get_u32le" & " already exists, not redeclaring")
+when not declared(CBS_get_u48):
+  proc CBS_get_u48*(
+    cbs: ptr CBS_570426002, out_arg: ptr uint64
+  ): cint {.cdecl, importc: "CBS_get_u48".}
+
+else:
+  static:
+    hint("Declaration of " & "CBS_get_u48" & " already exists, not redeclaring")
 when not declared(CBS_get_u64):
   proc CBS_get_u64*(
     cbs: ptr CBS_570426002, out_arg: ptr uint64
