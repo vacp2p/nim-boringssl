@@ -1,5 +1,5 @@
 packageName = "boringssl"
-version = "0.0.7"
+version = "0.0.8"
 author = "Status Research & Development GmbH"
 description = "Nim ffi bindings for boringssl"
 license = "MIT"
