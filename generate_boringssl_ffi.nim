@@ -12,8 +12,7 @@ proc normalizeOpirImpl(opirOutput: JsonNode): JsonNode =
   for node in opirOutput:
     # The prelude owns ptrdiff_t through <stddef.h>. Dropping Futhark's
     # typedef avoids a host-sized clong fallback during cross compilation.
-    if node{"kind"}.getStr("") == "typedef" and
-        node{"name"}.getStr("") == "ptrdiff_t":
+    if node{"kind"}.getStr("") == "typedef" and node{"name"}.getStr("") == "ptrdiff_t":
       continue
 
     # enums are generated manually to avoid issue described in
