@@ -19,7 +19,7 @@ export PATH="${HOME}/.nimble/bin:${PATH}"
 
 rm -f boringssl.nim
 
-nim c --maxLoopIterationsVM:100000000 generate_boringssl_ffi.nim
+nim c -d:nodeclguards --maxLoopIterationsVM:100000000 generate_boringssl_ffi.nim
 
 cat "${root}/prelude.nim" > boringssl.nim
 
