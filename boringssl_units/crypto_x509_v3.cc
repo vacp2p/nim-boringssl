@@ -1,0 +1,27 @@
+// SPDX-License-Identifier: Apache-2.0 OR MIT
+// Copyright (c) Status Research & Development GmbH
+
+// Unity build chunk for BoringSSL sources. Keep in sync with prelude.nim.
+#include "../boringssl/crypto/x509/v3_akey.cc"
+#include "../boringssl/crypto/x509/v3_akeya.cc"
+#include "../boringssl/crypto/x509/v3_alt.cc"
+#include "../boringssl/crypto/x509/v3_bcons.cc"
+#include "../boringssl/crypto/x509/v3_bitst.cc"
+#include "../boringssl/crypto/x509/v3_conf.cc"
+#include "../boringssl/crypto/x509/v3_cpols.cc"
+#include "../boringssl/crypto/x509/v3_crld.cc"
+#include "../boringssl/crypto/x509/v3_enum.cc"
+#include "../boringssl/crypto/x509/v3_extku.cc"
+#include "../boringssl/crypto/x509/v3_genn.cc"
+#include "../boringssl/crypto/x509/v3_ia5.cc"
+#include "../boringssl/crypto/x509/v3_info.cc"
+#include "../boringssl/crypto/x509/v3_int.cc"
+#include "../boringssl/crypto/x509/v3_ncons.cc"
+#include "../boringssl/crypto/x509/v3_ocsp.cc"
+#include "../boringssl/crypto/x509/v3_pcons.cc"
+#include "../boringssl/crypto/x509/v3_pmaps.cc"
+#include "../boringssl/crypto/x509/v3_prn.cc"
+#include "../boringssl/crypto/x509/v3_purp.cc"
+#include "../boringssl/crypto/x509/v3_skey.cc"
+#include "../boringssl/crypto/x509/v3_utl.cc"
+#include "../boringssl/crypto/x509/v3_lib.cc"
