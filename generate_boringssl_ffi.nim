@@ -38,7 +38,7 @@ proc normalizeOpirImpl(opirOutput: JsonNode): JsonNode =
     rewriteEnumAliases(node, enumNames)
 
     if node{"kind"}.getStr("") == "typedef" and node{"name"}.getStr("") == "ossl_ssize_t":
-      node["type"] = %* {"kind": "base", "value": "ptrdiff_t"}
+      node["type"] = %*{"kind": "base", "value": "ptrdiff_t"}
 
     # enums are generated manually to avoid issue described in
     # https://github.com/PMunch/futhark/issues/152
