@@ -5,15 +5,40 @@ import futhark
 import std/json
 from os import parentDir, `/`
 
-type ptrdiff_t* {.importc: "ptrdiff_t", header: "<stddef.h>".} = int
+include boringssl_types
+
+proc rewriteEnumAliases(node: JsonNode, enumNames: openArray[string]) =
+  case node.kind
+  of JObject:
+    if node{"kind"}.getStr("") == "alias" and node{"value"}.getStr("") in enumNames:
+      node["kind"] = %"base"
+      return
+
+    for _, value in node.pairs:
+      rewriteEnumAliases(value, enumNames)
+  of JArray:
+    for value in node.items:
+      rewriteEnumAliases(value, enumNames)
+  else:
+    discard
 
 proc normalizeOpirImpl(opirOutput: JsonNode): JsonNode =
+  var enumNames: seq[string]
+  for node in opirOutput.items:
+    if node{"kind"}.getStr("") == "enum" and node.hasKey("name") and node["name"].kind == JString:
+      enumNames.add node{"name"}.getStr("")
+
   var resp = newJArray()
-  for node in opirOutput:
+  for node in opirOutput.items:
     # The prelude owns ptrdiff_t through <stddef.h>. Dropping Futhark's
     # typedef avoids a host-sized clong fallback during cross compilation.
     if node{"kind"}.getStr("") == "typedef" and node{"name"}.getStr("") == "ptrdiff_t":
       continue
+
+    rewriteEnumAliases(node, enumNames)
+
+    if node{"kind"}.getStr("") == "typedef" and node{"name"}.getStr("") == "ossl_ssize_t":
+      node["type"] = %* {"kind": "base", "value": "ptrdiff_t"}
 
     # enums are generated manually to avoid issue described in
     # https://github.com/PMunch/futhark/issues/152
