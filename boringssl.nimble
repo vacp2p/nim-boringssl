@@ -1,9 +1,9 @@
 packageName = "boringssl"
-version = "0.0.9"
+version = "0.0.10"
 author = "Status Research & Development GmbH"
 description = "Nim ffi bindings for boringssl"
 license = "MIT"
-installDirs = @["boringssl"]
+installDirs = @["boringssl", "boringssl_units"]
 installFiles = @["boringssl.nim", "boringssl_types.nim"]
 
 requires "nim >= 2.0.0"

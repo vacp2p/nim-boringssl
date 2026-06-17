@@ -1,0 +1,25 @@
+// SPDX-License-Identifier: Apache-2.0 OR MIT
+// Copyright (c) Status Research & Development GmbH
+
+// Unity build chunk for BoringSSL sources. Keep in sync with prelude.nim.
+#include "../boringssl/ssl/encrypted_client_hello.cc"
+#include "../boringssl/ssl/extensions.cc"
+#include "../boringssl/ssl/handoff.cc"
+#include "../boringssl/ssl/s3_both.cc"
+#include "../boringssl/ssl/s3_lib.cc"
+#include "../boringssl/ssl/s3_pkt.cc"
+#include "../boringssl/ssl/ssl_aead_ctx.cc"
+#include "../boringssl/ssl/ssl_asn1.cc"
+#include "../boringssl/ssl/ssl_buffer.cc"
+#include "../boringssl/ssl/ssl_cert.cc"
+#include "../boringssl/ssl/ssl_file.cc"
+#include "../boringssl/ssl/ssl_key_share.cc"
+#include "../boringssl/ssl/ssl_lib.cc"
+#include "../boringssl/ssl/ssl_privkey.cc"
+#include "../boringssl/ssl/ssl_stat.cc"
+#include "../boringssl/ssl/ssl_transcript.cc"
+#include "../boringssl/ssl/ssl_versions.cc"
+#include "../boringssl/ssl/ssl_x509.cc"
+#include "../boringssl/ssl/t1_enc.cc"
+#include "../boringssl/ssl/tls_method.cc"
+#include "../boringssl/ssl/tls_record.cc"

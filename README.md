@@ -38,7 +38,7 @@ import boringssl
 
 The bindings expose BoringSSL's C API; refer to the headers under [`boringssl/include/openssl/`](boringssl/include/openssl/) for the available symbols.
 
-[`boringssl.nim`](boringssl.nim) is a generated file. It is the concatenation of [`prelude.nim`](prelude.nim) — which carries the build glue (`{.compile:.}` directives for the C/assembly sources, compiler flags, platform guards) — and `tmp_boringssl_ffi.nim`, the raw FFI bindings produced by [futhark](https://github.com/PMunch/futhark) from the BoringSSL headers. See [Regenerating bindings](#regenerating-bindings) below.
+[`boringssl.nim`](boringssl.nim) is a generated file. It is the concatenation of [`prelude.nim`](prelude.nim) — which carries the build glue (`{.compile:.}` directives for the C/assembly sources, compiler flags, platform guards) — and `tmp_boringssl_ffi.nim`, the raw FFI bindings produced by [futhark](https://github.com/PMunch/futhark) from the BoringSSL headers. Most compatible C++ sources are compiled through unity chunks under [`boringssl_units/`](boringssl_units/) to reduce compiler invocations. See [Regenerating bindings](#regenerating-bindings) below.
 
 BoringSSL is a C++ library, so [`config.nims`](config.nims) overrides the linker to `g++` (Linux), `clang++` (macOS) for downstream builds. Windows uses the default `clang` toolchain.
 
