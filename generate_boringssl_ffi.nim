@@ -25,7 +25,8 @@ proc rewriteEnumAliases(node: JsonNode, enumNames: openArray[string]) =
 proc normalizeOpirImpl(opirOutput: JsonNode): JsonNode =
   var enumNames: seq[string]
   for node in opirOutput.items:
-    if node{"kind"}.getStr("") == "enum" and node.hasKey("name") and node["name"].kind == JString:
+    if node{"kind"}.getStr("") == "enum" and node.hasKey("name") and
+        node["name"].kind == JString:
       enumNames.add node{"name"}.getStr("")
 
   var resp = newJArray()
