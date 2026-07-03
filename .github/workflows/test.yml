@@ -64,6 +64,10 @@ jobs:
         with:
           submodules: "recursive"
 
+      - name: Enable Git long paths (Windows)
+        if: runner.os == 'Windows'
+        run: git config --global core.longpaths true
+
       - name: Install llvm-mingw dependency (Windows)
         if: runner.os == 'Windows'
         run: |
@@ -127,20 +131,19 @@ jobs:
         uses: actions/checkout@v6
         with:
           repository: vacp2p/nim-libp2p
-          path: downstream/nim-libp2p
+          path: lp2p
 
       - name: Checkout nim-lsquic
         uses: actions/checkout@v6
         with:
           repository: vacp2p/nim-lsquic
-          path: downstream/nim-lsquic
+          path: lsq
           submodules: "recursive"
 
       - name: Run nim-libp2p certificate compatibility check
         env:
           BORINGSSL_REPO: ${{ github.event.pull_request.head.repo.full_name || github.repository }}
           BORINGSSL_COMMIT: ${{ github.event.pull_request.head.sha || github.sha }}
-          DOWNSTREAM_ROOT: ${{ github.workspace }}/downstream
         run: |
           export NIMFLAGS="${NIMFLAGS:-} --mm:${{ matrix.nim.memory_management }}"
 
@@ -208,7 +211,7 @@ jobs:
           }
 
           run_libp2p() {
-            cd "${DOWNSTREAM_ROOT}/nim-libp2p" &&
+            cd "${{ github.workspace }}/lp2p" &&
               update_boringssl_dependency libp2p.nimble &&
               update_boringssl_pin .pinned &&
               nimble install_pinned &&
@@ -227,7 +230,6 @@ jobs:
         env:
           BORINGSSL_REPO: ${{ github.event.pull_request.head.repo.full_name || github.repository }}
           BORINGSSL_COMMIT: ${{ github.event.pull_request.head.sha || github.sha }}
-          DOWNSTREAM_ROOT: ${{ github.workspace }}/downstream
         run: |
           export NIMFLAGS="${NIMFLAGS:-} --mm:${{ matrix.nim.memory_management }}"
 
@@ -269,7 +271,7 @@ jobs:
           }
 
           run_lsquic() {
-            cd "${DOWNSTREAM_ROOT}/nim-lsquic" &&
+            cd "${{ github.workspace }}/lsq" &&
               update_boringssl_dependency lsquic.nimble &&
               nimble --nimbleDir:"${RUNNER_TEMP}/nimble-lsquic" --localdeps --accept install &&
               nimble --nimbleDir:"${RUNNER_TEMP}/nimble-lsquic" --localdeps test
