@@ -64,18 +64,12 @@ jobs:
         with:
           submodules: "recursive"
 
-      - name: Restore llvm-mingw (Windows) from cache
+      - name: Enable Git long paths (Windows)
         if: runner.os == 'Windows'
-        id: windows-mingw-cache
-        uses: actions/cache@v4
-        with:
-          path: external/mingw-${{ matrix.platform.cpu }}
-          key: 'mingw-llvm-17-${{ matrix.platform.cpu }}'
+        run: git config --global core.longpaths true
 
       - name: Install llvm-mingw dependency (Windows)
-        if: >
-          steps.windows-mingw-cache.outputs.cache-hit != 'true' &&
-          runner.os == 'Windows'
+        if: runner.os == 'Windows'
         run: |
           mkdir -p external
           MINGW_BASE="https://github.com/mstorsjo/llvm-mingw/releases/download/20230905"
@@ -84,7 +78,7 @@ jobs:
           7z x -y "external/mingw-${{ matrix.platform.cpu }}.zip" -oexternal/mingw-${{ matrix.platform.cpu }}/
           mv external/mingw-${{ matrix.platform.cpu }}/**/* ./external/mingw-${{ matrix.platform.cpu }}
 
-      - name: Path to cached dependencies (Windows)
+      - name: Add llvm-mingw to path (Windows)
         if: >
           runner.os == 'Windows'
         run: |
@@ -106,18 +100,7 @@ jobs:
           shell: ${{ matrix.shell }}
           nim_ref: ${{ matrix.nim.ref }}
 
-      - name: Restore deps from cache
-        id: deps-cache
-        uses: actions/cache@v3
-        with:
-          path: nimbledeps
-          # Using nim.ref as a simple way to differentiate between nimble using the "pkgs" or "pkgs2" directories.
-          # The change happened on Nimble v0.14.0. Also forcing the deps to be reinstalled on each os and cpu.
-          key: nimbledeps-${{ matrix.nim.ref }}-${{ matrix.builder }}-${{ matrix.platform.cpu }}-${{ hashFiles('.pinned') }} # hashFiles returns a different value on windows
-
-
       - name: Install deps
-        if: ${{ steps.deps-cache.outputs.cache-hit != 'true' }}
         run: |
           nimble install
 
@@ -143,3 +126,160 @@ jobs:
           fi
 
           nimble test --styleCheck:off --verbose --debug
+
+      - name: Checkout nim-libp2p
+        uses: actions/checkout@v6
+        with:
+          repository: vacp2p/nim-libp2p
+          path: lp2p
+
+      - name: Checkout nim-lsquic
+        uses: actions/checkout@v6
+        with:
+          repository: vacp2p/nim-lsquic
+          path: lsq
+          submodules: "recursive"
+
+      - name: Run nim-libp2p certificate compatibility check
+        env:
+          BORINGSSL_REPO: ${{ github.event.pull_request.head.repo.full_name || github.repository }}
+          BORINGSSL_COMMIT: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: |
+          export NIMFLAGS="${NIMFLAGS:-} --mm:${{ matrix.nim.memory_management }}"
+
+          if [[ '${{ runner.os }}' == 'Windows' ]]; then
+            export NIMFLAGS="${NIMFLAGS} --cc:clang"
+          fi
+
+          BORINGSSL_DEP="https://github.com/${BORINGSSL_REPO}.git#${BORINGSSL_COMMIT}"
+          echo "Testing nim-libp2p against ${BORINGSSL_DEP}"
+
+          update_boringssl_dependency() {
+            local nimble_file="$1"
+            local tmp_file="${nimble_file}.tmp"
+            local repo_dep_re='"https://github\.com/vacp2p/nim-boringssl(\.git)?(#[^"]+|[[:space:]][^"]*)?"'
+            local package_dep_re='"boringssl([[:space:]][^"]*)?"'
+            local line updated=0
+
+            : > "$tmp_file"
+            while IFS= read -r line || [[ -n "$line" ]]; do
+              if [[ $updated -eq 0 && $line =~ $repo_dep_re ]]; then
+                line="${line/${BASH_REMATCH[0]}/\"${BORINGSSL_DEP}\"}"
+                updated=1
+              elif [[ $updated -eq 0 && $line =~ $package_dep_re ]]; then
+                line="${line/${BASH_REMATCH[0]}/\"${BORINGSSL_DEP}\"}"
+                updated=1
+              fi
+
+              printf '%s\n' "$line" >> "$tmp_file"
+            done < "$nimble_file"
+
+            if [[ $updated -eq 0 ]]; then
+              rm -f "$tmp_file"
+              echo "Could not find a nim-boringssl dependency in ${nimble_file}" >&2
+              return 1
+            fi
+
+            mv "$tmp_file" "$nimble_file"
+            echo "Updated ${nimble_file} to depend on ${BORINGSSL_DEP}"
+          }
+
+          update_boringssl_pin() {
+            local pin_file="$1"
+            local tmp_file="${pin_file}.tmp"
+            local pin_dep="boringssl;https://github.com/${BORINGSSL_REPO}@#${BORINGSSL_COMMIT}"
+            local line updated=0
+
+            : > "$tmp_file"
+            while IFS= read -r line || [[ -n "$line" ]]; do
+              if [[ $updated -eq 0 && $line == boringssl\;* ]]; then
+                line="$pin_dep"
+                updated=1
+              fi
+
+              printf '%s\n' "$line" >> "$tmp_file"
+            done < "$pin_file"
+
+            if [[ $updated -eq 0 ]]; then
+              rm -f "$tmp_file"
+              echo "Could not find a boringssl pin in ${pin_file}" >&2
+              return 1
+            fi
+
+            mv "$tmp_file" "$pin_file"
+            echo "Updated ${pin_file} to depend on ${pin_dep}"
+          }
+
+          run_libp2p() {
+            cd "${{ github.workspace }}/lp2p" &&
+              update_boringssl_dependency libp2p.nimble &&
+              update_boringssl_pin .pinned &&
+              nimble install_pinned &&
+              "${MAKE_CMD:-make}" nimble.paths nat_libs &&
+              "${MAKE_CMD:-make}" TEST_JOBS=1 test tests/libp2p/transports/tls/test_certificate.nim
+          }
+
+          if run_libp2p; then
+            echo "nim-libp2p downstream compatibility check passed"
+          else
+            echo "::error title=Breaking downstream change::nim-libp2p failed to compile or pass the certificate test against ${BORINGSSL_DEP}; this PR is a breaking change."
+            exit 1
+          fi
+
+      - name: Run nim-lsquic compatibility check
+        env:
+          BORINGSSL_REPO: ${{ github.event.pull_request.head.repo.full_name || github.repository }}
+          BORINGSSL_COMMIT: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: |
+          export NIMFLAGS="${NIMFLAGS:-} --mm:${{ matrix.nim.memory_management }}"
+
+          if [[ '${{ runner.os }}' == 'Windows' ]]; then
+            export NIMFLAGS="${NIMFLAGS} --cc:clang"
+          fi
+
+          BORINGSSL_DEP="https://github.com/${BORINGSSL_REPO}.git#${BORINGSSL_COMMIT}"
+          echo "Testing nim-lsquic against ${BORINGSSL_DEP}"
+
+          update_boringssl_dependency() {
+            local nimble_file="$1"
+            local tmp_file="${nimble_file}.tmp"
+            local repo_dep_re='"https://github\.com/vacp2p/nim-boringssl(\.git)?(#[^"]+|[[:space:]][^"]*)?"'
+            local package_dep_re='"boringssl([[:space:]][^"]*)?"'
+            local line updated=0
+
+            : > "$tmp_file"
+            while IFS= read -r line || [[ -n "$line" ]]; do
+              if [[ $updated -eq 0 && $line =~ $repo_dep_re ]]; then
+                line="${line/${BASH_REMATCH[0]}/\"${BORINGSSL_DEP}\"}"
+                updated=1
+              elif [[ $updated -eq 0 && $line =~ $package_dep_re ]]; then
+                line="${line/${BASH_REMATCH[0]}/\"${BORINGSSL_DEP}\"}"
+                updated=1
+              fi
+
+              printf '%s\n' "$line" >> "$tmp_file"
+            done < "$nimble_file"
+
+            if [[ $updated -eq 0 ]]; then
+              rm -f "$tmp_file"
+              echo "Could not find a nim-boringssl dependency in ${nimble_file}" >&2
+              return 1
+            fi
+
+            mv "$tmp_file" "$nimble_file"
+            echo "Updated ${nimble_file} to depend on ${BORINGSSL_DEP}"
+          }
+
+          run_lsquic() {
+            cd "${{ github.workspace }}/lsq" &&
+              update_boringssl_dependency lsquic.nimble &&
+              nimble --nimbleDir:"${RUNNER_TEMP}/nimble-lsquic" --localdeps --accept install &&
+              nimble --nimbleDir:"${RUNNER_TEMP}/nimble-lsquic" --localdeps test
+          }
+
+          if run_lsquic; then
+            echo "nim-lsquic downstream compatibility check passed"
+          else
+            echo "::error title=Breaking downstream change::nim-lsquic failed to compile or pass tests against ${BORINGSSL_DEP}; this PR is a breaking change."
+            exit 1
+          fi
