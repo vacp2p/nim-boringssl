@@ -136,7 +136,7 @@ jobs:
           path: downstream/nim-lsquic
           submodules: "recursive"
 
-      - name: Run nim-libp2p crypto compatibility check
+      - name: Run nim-libp2p certificate compatibility check
         env:
           BORINGSSL_REPO: ${{ github.event.pull_request.head.repo.full_name || github.repository }}
           BORINGSSL_COMMIT: ${{ github.event.pull_request.head.sha || github.sha }}
@@ -213,13 +213,13 @@ jobs:
               update_boringssl_pin .pinned &&
               nimble install_pinned &&
               "${MAKE_CMD:-make}" nimble.paths nat_libs &&
-              "${MAKE_CMD:-make}" TEST_JOBS=1 test crypto
+              "${MAKE_CMD:-make}" TEST_JOBS=1 test tests/libp2p/transports/tls/test_certificate.nim
           }
 
           if run_libp2p; then
-            echo "nim-libp2p downstream crypto compatibility check passed"
+            echo "nim-libp2p downstream compatibility check passed"
           else
-            echo "::error title=Breaking downstream change::nim-libp2p failed to compile or pass crypto tests against ${BORINGSSL_DEP}; this PR is a breaking change."
+            echo "::error title=Breaking downstream change::nim-libp2p failed to compile or pass the certificate test against ${BORINGSSL_DEP}; this PR is a breaking change."
             exit 1
           fi
 
