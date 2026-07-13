@@ -213,8 +213,7 @@ when BORINGSS_USE_ASM:
         normalizePath(baseDir / "./boringssl/gen", dirSep = '/') & "/"
       let nasmPrefixIncludes =
         staticRead(
-          baseDir &
-            "/boringssl/gen/boringssl_prefix_symbols_internal_x86_64_win_asm.inc"
+          baseDir & "/boringssl/gen/boringssl_prefix_symbols_internal_x86_64_win_asm.inc"
         ) &
         staticRead(
           baseDir & "/boringssl/gen/boringssl_prefix_symbols_internal_x86_win_asm.inc"
