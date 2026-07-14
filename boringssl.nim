@@ -168,8 +168,8 @@ when BORINGSS_USE_ASM:
     {.compile: "./boringssl/gen/bcm/x86_64-mont5-linux.S".}
 
   when defined(windows):
-    import std/[macros, md5, os, pathnorm]
-    const baseDir = currentSourcePath.parentDir
+    import std/[macros, md5, pathnorm]
+    const baseDir = srcPath
     const outDir = baseDir
     const asmFiles = [
       "./boringssl/gen/bcm/aes-gcm-avx2-x86_64-win.asm",
@@ -213,11 +213,10 @@ when BORINGSS_USE_ASM:
         normalizePath(baseDir / "./boringssl/gen", dirSep = '/') & "/"
       let nasmPrefixIncludes =
         staticRead(
-          baseDir /
-            "./boringssl/gen/boringssl_prefix_symbols_internal_x86_64_win_asm.inc"
+          baseDir & "/boringssl/gen/boringssl_prefix_symbols_internal_x86_64_win_asm.inc"
         ) &
         staticRead(
-          baseDir / "./boringssl/gen/boringssl_prefix_symbols_internal_x86_win_asm.inc"
+          baseDir & "/boringssl/gen/boringssl_prefix_symbols_internal_x86_win_asm.inc"
         )
       for asmPathRel in asmFiles:
         let asmPath = normalizePath(baseDir / asmPathRel, dirSep = '/')
