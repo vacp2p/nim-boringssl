@@ -215,7 +215,7 @@ jobs:
               update_boringssl_dependency libp2p.nimble &&
               update_boringssl_pin .pinned &&
               nimble install_pinned &&
-              "${MAKE_CMD:-make}" nimble.paths nat_libs &&
+              "${MAKE_CMD:-make}" nimble.paths &&
               "${MAKE_CMD:-make}" TEST_JOBS=1 test tests/libp2p/transports/tls/test_certificate.nim
           }
 
