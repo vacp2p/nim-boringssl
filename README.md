@@ -46,7 +46,7 @@ BoringSSL is a C++ library, so [`config.nims`](config.nims) overrides the linker
 
 | Define | Default | Effect |
 |--------|---------|--------|
-| `-d:BORINGSS_USE_ASM=false` | `true` | Disable optimised assembly sources (portable C only) |
+| `-d:BORINGSSL_USE_ASM=false` | `true` | Disable optimised assembly sources (portable C only) |
 | `-d:fast` | off | Used by the test task; enables faster builds |
 
 ### Platform notes
@@ -111,6 +111,7 @@ Both repositories' automation requires `BORINGSSL_UPDATE_BOT_TOKEN` for cross-re
 
 ```sh
 nimble test          # debug build
+nimble test_no_asm   # portable C build
 nimble test_release  # -d:release build
 ```
 

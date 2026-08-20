@@ -40,8 +40,11 @@ when defined(windows):
   when defined(clang):
     {.passl: "-lpthread".}
 
-const BORINGSS_USE_ASM {.booldefine.}: bool = true
-when BORINGSS_USE_ASM:
+const BORINGSSL_USE_ASM {.booldefine.}: bool = true
+when not BORINGSSL_USE_ASM:
+  {.passc: "-DOPENSSL_NO_ASM".}
+
+when BORINGSSL_USE_ASM:
   when not defined(windows):
     {.compile: "./boringssl/crypto/hrss/asm/poly_rq_mul.S".}
     {.compile: "./boringssl/third_party/fiat/asm/fiat_curve25519_adx_mul.S".}

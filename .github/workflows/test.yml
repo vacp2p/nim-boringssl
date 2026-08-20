@@ -127,6 +127,11 @@ jobs:
 
           nimble test --styleCheck:off --verbose --debug
 
+      - name: Run tests without assembly
+        if: matrix.platform.os == 'linux' && matrix.platform.cpu == 'amd64' && matrix.nim.memory_management == 'refc'
+        run: |
+          nimble test_no_asm --styleCheck:off --verbose --debug
+
       - name: Checkout nim-libp2p
         uses: actions/checkout@v6
         with:
