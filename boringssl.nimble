@@ -1,5 +1,5 @@
 packageName = "boringssl"
-version = "0.0.10"
+version = "0.0.11"
 author = "Status Research & Development GmbH"
 description = "Nim ffi bindings for boringssl"
 license = "MIT"
@@ -23,6 +23,10 @@ task test, "Run tests":
 
   exec nimc & " tests/test_all.nim"
   exec "./tests/test_all --output-level=VERBOSE"
+
+task test_no_asm, "Run tests without BoringSSL assembly":
+  flags = flags & " -d:BORINGSSL_USE_ASM=false "
+  testTask()
 
 task test_release, "Run tests - release":
   flags = flags & " -d:release "

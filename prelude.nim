@@ -49,8 +49,11 @@ when defined(windows):
 # (see logos-messaging/logos-delivery#4085).
 const boringsslPerFileFlags = when defined(windows): "" else: "-fvisibility=hidden"
 
-const BORINGSS_USE_ASM {.booldefine.}: bool = true
-when BORINGSS_USE_ASM:
+const BORINGSSL_USE_ASM {.booldefine.}: bool = true
+when not BORINGSSL_USE_ASM:
+  {.passc: "-DOPENSSL_NO_ASM".}
+
+when BORINGSSL_USE_ASM:
   when not defined(windows):
     {.compile("./boringssl/crypto/hrss/asm/poly_rq_mul.S", boringsslPerFileFlags).}
     {.
