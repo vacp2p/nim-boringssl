@@ -364,7 +364,6 @@ when BORINGSSL_USE_ASM:
 .}
 {.compile("./boringssl/crypto/hpke/hpke.cc", boringsslPerFileFlags).}
 {.compile("./boringssl/crypto/hrss/hrss.cc", boringsslPerFileFlags).}
-{.compile("./boringssl/crypto/kyber/kyber.cc", boringsslPerFileFlags).}
 {.compile("./boringssl/crypto/lhash/lhash.cc", boringsslPerFileFlags).}
 {.compile("./boringssl/crypto/md4/md4.cc", boringsslPerFileFlags).}
 {.compile("./boringssl/crypto/md5/md5.cc", boringsslPerFileFlags).}

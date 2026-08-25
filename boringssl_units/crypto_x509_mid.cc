@@ -9,6 +9,7 @@
 #include "../boringssl/crypto/x509/x509_def.cc"
 #include "../boringssl/crypto/x509/x509_ext.cc"
 #include "../boringssl/crypto/x509/x509_lu.cc"
+#include "../boringssl/crypto/x509/x509_mtc.cc"
 #include "../boringssl/crypto/x509/x509_obj.cc"
 #include "../boringssl/crypto/x509/x509_req.cc"
 #include "../boringssl/crypto/x509/x509_set.cc"
