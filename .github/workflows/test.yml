@@ -21,8 +21,6 @@ jobs:
         platform:
           - os: linux
             cpu: amd64
-          - os: linux
-            cpu: i386
           - os: linux-gcc-14
             cpu: amd64
           - os: macos-14
