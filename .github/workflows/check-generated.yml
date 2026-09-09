@@ -1,0 +1,38 @@
+name: Check generated bindings
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: check-generated-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  check-generated:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Check generated changes include a source change
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          # Compare the entire PR, including source edits in earlier commits.
+          base=$(git merge-base "$BASE_SHA" "$HEAD_SHA")
+          if git diff --quiet "$base" "$HEAD_SHA" -- boringssl.nim; then
+            exit 0
+          fi
+
+          if git diff --quiet "$base" "$HEAD_SHA" -- \
+            prelude.nim generate_boringssl_ffi.nim boringssl_types.nim boringssl build.sh; then
+            echo "::error file=boringssl.nim::Changes to boringssl.nim must be accompanied by a change to prelude.nim, generate_boringssl_ffi.nim, boringssl_types.nim, the boringssl submodule, or build.sh in the same PR."
+            exit 1
+          fi
