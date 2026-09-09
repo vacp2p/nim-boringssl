@@ -7,12 +7,13 @@ on:
 jobs:
   lint:
     name: lint
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 2  # In PR, has extra merge commit: ^1 = PR, ^2 = base
+          submodules: recursive
 
       - name: Check NPH formatting
         uses: arnetheduck/nph-action@v1
@@ -26,3 +27,39 @@ jobs:
         uses: apache/skywalking-eyes/header@v0.8.0
         with:
           config: .github/.licenserc.yaml
+
+      - name: Setup Nim
+        uses: ./.github/actions/install_nim
+        with:
+          os: Linux
+          cpu: amd64
+          nim_ref: version-2-2
+          shell: bash
+
+      - name: Install Futhark dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install \
+            --no-install-recommends -yq libclang-dev
+
+          llvm_libdir="$(
+            find /usr/lib/llvm-* -path "*/lib/libclang.so" -printf "%h\n" \
+              | sort -V \
+              | tail -n 1
+          )"
+
+          if [[ -z "${llvm_libdir}" ]]; then
+            echo "libclang.so was not found after installing libclang-dev" >&2
+            exit 1
+          fi
+
+          echo "LIBRARY_PATH=${llvm_libdir}${LIBRARY_PATH:+:${LIBRARY_PATH}}" >> "$GITHUB_ENV"
+          echo "LD_LIBRARY_PATH=${llvm_libdir}${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}" >> "$GITHUB_ENV"
+
+      - name: Check generated bindings are up to date
+        run: |
+          ./build.sh
+          if ! git diff --exit-code -- boringssl.nim; then
+            echo "::error::boringssl.nim is out of date. Run ./build.sh and commit the generated bindings."
+            exit 1
+          fi
