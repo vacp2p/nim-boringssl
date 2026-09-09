@@ -57,13 +57,15 @@ BoringSSL is a C++ library, so [`config.nims`](config.nims) overrides the linker
 
 ## Regenerating bindings
 
-The committed [`boringssl.nim`](boringssl.nim) only needs to be regenerated when the BoringSSL submodule is bumped or when the set of imported headers in [`generate_boringssl_ffi.nim`](generate_boringssl_ffi.nim) changes. The [`build.sh`](build.sh) script drives the whole flow:
+Regenerate the committed [`boringssl.nim`](boringssl.nim) whenever the BoringSSL submodule, [`prelude.nim`](prelude.nim), [`boringssl_types.nim`](boringssl_types.nim), or [`generate_boringssl_ffi.nim`](generate_boringssl_ffi.nim) changes. The [`build.sh`](build.sh) script drives the whole flow:
 
 ```sh
 ./build.sh
 ```
 
 It installs `futhark@0.15.0`, runs `generate_boringssl_ffi.nim` to emit `tmp_boringssl_ffi.nim`, and prepends `prelude.nim` to produce the final `boringssl.nim`.
+
+[`Check generated bindings`](.github/workflows/check-generated.yml) checks the entire pull request diff. If `boringssl.nim` changes, the PR must also change at least one of `prelude.nim`, `generate_boringssl_ffi.nim`, `boringssl_types.nim`, the `boringssl` submodule, or `build.sh`. This checks that source changes accompany generated changes; it does not verify that the generated output matches those sources.
 
 ## Updating BoringSSL and releasing
 
