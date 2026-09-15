@@ -2,7 +2,7 @@
 # Copyright (c) Status Research & Development GmbH 
 
 import futhark
-import std/json
+import std/[json, strutils]
 from os import parentDir, `/`
 
 include boringssl_types
@@ -62,3 +62,13 @@ importc:
   "openssl/crypto.h"
   "openssl/rand.h"
   "openssl/asn1.h"
+
+static:
+  # Keep generated source comments independent of the checkout directory.
+  const bindingsPath = currentSourcePath.parentDir / "tmp_boringssl_ffi.nim"
+  writeFile(
+    bindingsPath,
+    readFile(bindingsPath).replace(
+      "Generated based on " & currentSourcePath.parentDir & "/", "Generated based on "
+    ),
+  )
