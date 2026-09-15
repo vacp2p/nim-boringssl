@@ -52,7 +52,7 @@ BoringSSL is a C++ library, so [`config.nims`](config.nims) overrides the linker
 ### Platform notes
 
 - **Windows**: builds with `clang` (llvm-mingw) and assembles `.asm` files with [NASM](https://www.nasm.us/). NASM must be on `PATH`.
-- **Linux i386**: requires `-msse2` (set automatically).
+- **Linux i386**: no longer supported.
 - **Threads**: bindings are built with `--threads:on` for testing; downstream consumers may build either way.
 
 ## Regenerating bindings
@@ -123,7 +123,7 @@ Pass extra flags through `NIMFLAGS`, e.g.:
 NIMFLAGS="--mm:orc" nimble test
 ```
 
-CI exercises Linux (amd64, i386, gcc-14), macOS (arm64) and Windows (amd64) against Nim 2.2 with both `refc` and `orc` memory managers.
+CI exercises Linux amd64 (default GCC and GCC 14), macOS (arm64) and Windows (amd64) against Nim 2.2 with both `refc` and `orc` memory managers.
 
 ## Formatting
 
