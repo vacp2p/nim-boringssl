@@ -256,9 +256,9 @@ when BORINGSSL_USE_ASM:
     {.compile("./boringssl/gen/bcm/x86_64-mont5-linux.S", boringsslPerFileFlags).}
 
   when defined(windows):
-    import std/[macros, md5, pathnorm]
+    import std/[compilesettings, macros, md5, pathnorm]
     const baseDir = srcPath
-    const outDir = baseDir
+    const outDir = querySetting(nimcacheDir) & "/nim_boringssl_asm"
     const asmFiles = [
       "./boringssl/gen/bcm/aes-gcm-avx2-x86_64-win.asm",
       "./boringssl/gen/bcm/aes-gcm-avx512-x86_64-win.asm",
@@ -297,6 +297,7 @@ when BORINGSSL_USE_ASM:
           {.link: `objLit`.}
 
     static:
+      createDir(outDir)
       let nasmIncludeDir =
         normalizePath(baseDir / "./boringssl/gen", dirSep = '/') & "/"
       let nasmPrefixIncludes =
